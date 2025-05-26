@@ -38,7 +38,7 @@
         ],
         "x": 34,
         "y": 1719,
-        "w": 992,
+        "w": 1092,
         "h": 262
     },
     {
@@ -278,17 +278,17 @@
             "filter_modbus_tags",
             "debug_output",
             "f76507ef24e89f5d",
-            "b0b0082253400cef",
-            "36c18d3f22455110",
             "ba78053e5aaa7eed",
             "023cde579789cf6c",
             "f9d70936d5ff8c9b",
-            "510b431ad3e38e97"
+            "510b431ad3e38e97",
+            "08c0de3d9a6fc2c8",
+            "53582435e115617e"
         ],
         "x": 34,
         "y": 439,
         "w": 1092,
-        "h": 262
+        "h": 222
     },
     {
         "id": "28d6aa434baf0184",
@@ -316,7 +316,9 @@
             "45113a7508b326f3",
             "7edc65431e4f629c",
             "7510c110eb4d4481",
-            "3d33c8da5bb204cf"
+            "3d33c8da5bb204cf",
+            "c6152156af323fc9",
+            "a2917e2f62739f51"
         ],
         "x": 34,
         "y": 2039,
@@ -519,7 +521,7 @@
     {
         "id": "f905b5f3395bcec1",
         "type": "modbus-client",
-        "name": "PEM1",
+        "name": "AEM1",
         "clienttype": "tcp",
         "bufferCommands": true,
         "stateLogEnabled": false,
@@ -904,7 +906,7 @@
         "z": "0e1f3206f48adf14",
         "g": "5258e746159f915c",
         "name": "Process Test Sequence",
-        "func": "// Initialize index to track the current row being processed\nvar index = 0;\n\n// Store CSV data from the incoming message payload\nvar data = msg.payload;\n\nlet timeoutID2 = flow.get(\"timeoutID2\");\n\n// Ensure the data is an array before processing\nif (!Array.isArray(data) || data.length === 0) {\n    node.error(\"CSV data is empty or not an array\", msg);\n    return null;\n}\n\nfunction processNextRow() {\n    // Check if all rows have been processed\n    if (index >= data.length) {\n        node.status({ text: \"Test Completed\" });\n        flow.set(\"testStep\", \"Test Completed\");\n        var triggerMsg = { payload: \"Test Completed\" };\n        node.send([null, triggerMsg]);\n        return;\n    }\n\n    var row = data[index];\n\n    // Validate row data before processing\n    if (!row || row.Duration === undefined) {\n        node.error(`Invalid row data at index ${index}: ${JSON.stringify(row)}`, msg);\n        return;\n    }\n\n    node.status({ text: `Row ${index + 1}: Processing setpoints` });\n    flow.set(\"testStep\", \"Step\" + (index + 1) + \" Processing setpoints\");\n\n    let modbusValues = [];\n    let address = 100; // Starting Modbus address, adjust as needed\n\n    // Process all elements in the row except 'Test Step' and 'Duration'\n    Object.keys(row).forEach(tag => {\n        if (tag !== \"Test_step\" && tag !== \"Duration\") {\n            let buffer = Buffer.alloc(4);\n            buffer.writeFloatBE(parseFloat(row[tag]), 0);\n            modbusValues.push(buffer.readUInt16BE(2)); // High 16 bits\n            modbusValues.push(buffer.readUInt16BE(0)); // Low 16 bits\n        }\n    });\n\n    // Ensure modbusValues length is even (required for Modbus FC16)\n    if (modbusValues.length % 2 !== 0) {\n        node.error(\"Invalid register quantity: Must be an even number\", msg);\n        return;\n    }\n\n    // Create Modbus write message with all setpoints\n    var combinedMsg = {\n        payload: {\n            'unitId': 1,\n            'fc': 16,  // Function Code: Write Multiple Registers\n            'address': address,  // Starting address for the first tag.  Modbus Address (400001 - 400001 = 10 for 0-based addressing)\n            'quantity': modbusValues.length,\n            'value': modbusValues\n        }\n    };\n\n    // Retrieve test duration and initialize counter\n    var duration = parseInt(row.Duration);\n    var counter = 0;\n\n    function loop() {\n        let stopTest = flow.get(\"stopTest\");\n        let permStatus = flow.get(\"permStatus\");\n        let modHoldReg = flow.get(\"modHoldReg\") || [];\n\n        if (stopTest === true || permStatus === false) {\n            let statusMessage = \"Stopped\";\n            node.status({ text: statusMessage });\n            flow.set(\"testStep\", statusMessage);\n\n            if (timeoutID2) {\n                clearTimeout(timeoutID2);\n                flow.set(\"timeoutID2\", null); // Clear the timeout ID from flow\n            }\n\n            let currentSetpoint = modHoldReg.find(entry => entry[\"Tag Name\"] === \"Current_Setpoint\");\n            let voltageSetpoint = modHoldReg.find(entry => entry[\"Tag Name\"] === \"Voltage_Setpoint\");\n\n            let resetMsg = {\n                payload: {\n                    'unitId': 1,\n                    'fc': 16,\n                    'address': Math.min(currentSetpoint[\"MODBUS Start Address\"], voltageSetpoint[\"MODBUS Start Address\"]) - 400001,\n                    'quantity': 4,\n                    'value': [0, 0, 0, 0]  // Set both to zero\n                }\n            };\n\n            var triggerMsg = { payload: \"Test Completed\" };\n\n            // Send email alert if permStatus is false\n            if (permStatus === false) {\n                var emailMsg = {\n                    topic: \"ALERT: Test Stopped Due to permStatus\",\n                    payload: \"The test has been stopped because permStatus is FALSE. Please check the system immediately.\"\n                };\n                node.send([resetMsg, triggerMsg, emailMsg]); // Send email as third output\n            } else {\n                node.send([resetMsg, triggerMsg]);\n            }\n            return;\n        }\n\n        if (counter < duration) {\n            node.send([combinedMsg, null]);\n            counter++;\n            timeoutID2 = setTimeout(loop, 1000); // Check conditions every second\n            flow.set(\"timeoutID2\", timeoutID2); // Store the timeout ID in flow\n        } else {\n            index++;\n            processNextRow();\n        }\n    }\n\n\n    loop(); // Start the counter loop\n}\n\n// Start processing the first row\n// Clear timeout if test is stopped\nif (flow.get(\"testStep\") === \"Stopped\") {\n    if (timeoutID2) {\n        clearTimeout(timeoutID2);\n        flow.set(\"timeoutID2\", null); // Clear the timeout ID from flow\n    }\n} else {\n    processNextRow();\n}\n\n\nreturn null;\n",
+        "func": "// Initialize index to track the current row being processed\nvar index = 0;\n\n// Store CSV data from the incoming message payload\nvar data = msg.payload;\n\nlet timeoutID2 = flow.get(\"timeoutID2\");\n\n// Ensure the data is an array before processing\nif (!Array.isArray(data) || data.length === 0) {\n    node.error(\"CSV data is empty or not an array\", msg);\n    return null;\n}\n\nfunction processNextRow() {\n    // Check if all rows have been processed\n    if (index >= data.length) {\n        node.status({ text: \"Test Completed\" });\n        flow.set(\"testStep\", \"Test Completed\");\n        var triggerMsg = { payload: \"Test Completed\" };\n        node.send([null, triggerMsg]);\n        return;\n    }\n\n    var row = data[index];\n\n    // Validate row data before processing\n    if (!row || row.Duration === undefined) {\n        node.error(`Invalid row data at index ${index}: ${JSON.stringify(row)}`, msg);\n        return;\n    }\n\n    node.status({ text: `Row ${index + 1}: Processing setpoints` });\n    flow.set(\"testStep\", \"Step\" + (index + 1) + \" Processing setpoints\");\n\n    let modbusValues = [];\n    let address = 100; // Starting Modbus address, adjust as needed\n\n    // Process all elements in the row except 'Test Step' and 'Duration'\n    Object.keys(row).forEach(tag => {\n        if (tag !== \"Test_step\" && tag !== \"Duration\") {\n            let buffer = Buffer.alloc(4);\n            buffer.writeFloatBE(parseFloat(row[tag]), 0);\n            modbusValues.push(buffer.readUInt16BE(2)); // High 16 bits\n            modbusValues.push(buffer.readUInt16BE(0)); // Low 16 bits\n        }\n    });\n\n    // Ensure modbusValues length is even (required for Modbus FC16)\n    if (modbusValues.length % 2 !== 0) {\n        node.error(\"Invalid register quantity: Must be an even number\", msg);\n        return;\n    }\n\n    // Create Modbus write message with all setpoints\n    var combinedMsg = {\n        payload: {\n            'unitId': 1,\n            'fc': 16,  // Function Code: Write Multiple Registers\n            'address': address,  // Starting address for the first tag.  Modbus Address (400001 - 400001 = 10 for 0-based addressing)\n            'quantity': modbusValues.length,\n            'value': modbusValues\n        }\n    };\n\n    // Retrieve test duration and initialize counter\n    var duration = parseInt(row.Duration);\n    var counter = 0;\n\n    function loop() {\n        let stopTest = flow.get(\"stopTest\");\n        let permStatus = flow.get(\"permStatus\");\n        let modHoldReg = flow.get(\"modHoldReg\") || [];\n\n        if (stopTest === true || permStatus === false) {\n            let statusMessage = \"Stopped\";\n            node.status({ text: statusMessage });\n            flow.set(\"testStep\", statusMessage);\n\n            if (timeoutID2) {\n                clearTimeout(timeoutID2);\n                flow.set(\"timeoutID2\", null); // Clear the timeout ID from flow\n            }\n\n            let currentSetpoint = modHoldReg.find(entry => entry[\"Tag Name\"] === \"Current_Setpoint\");\n            let voltageSetpoint = modHoldReg.find(entry => entry[\"Tag Name\"] === \"Voltage_Setpoint\");\n\n            let resetMsg = {\n                payload: {\n                    'unitId': 1,\n                    'fc': 16,\n                    'address': Math.min(currentSetpoint[\"MODBUS Start Address\"], voltageSetpoint[\"MODBUS Start Address\"]) - 400001,\n                    'quantity': 4,\n                    'value': [0, 0, 0, 0]  // Set both to zero\n                }\n            };\n\n            var triggerMsg = { payload: \"Test Completed\" };\n\n            // Send email alert if permStatus is false\n            if (permStatus === false) {\n                var emailMsg = {\n                    topic: \"ALERT: Test Stand AEM1 Stopped Due to permStatus\",\n                    payload: \"The test on AEM1 has been stopped because permStatus is FALSE. Please check the system immediately.\"\n                };\n                node.send([resetMsg, triggerMsg, emailMsg]); // Send email as third output\n            } else {\n                node.send([resetMsg, triggerMsg]);\n            }\n            return;\n        }\n\n        if (counter < duration) {\n            node.send([combinedMsg, null]);\n            counter++;\n            timeoutID2 = setTimeout(loop, 1000); // Check conditions every second\n            flow.set(\"timeoutID2\", timeoutID2); // Store the timeout ID in flow\n        } else {\n            index++;\n            processNextRow();\n        }\n    }\n\n\n    loop(); // Start the counter loop\n}\n\n// Start processing the first row\n// Clear timeout if test is stopped\nif (flow.get(\"testStep\") === \"Stopped\") {\n    if (timeoutID2) {\n        clearTimeout(timeoutID2);\n        flow.set(\"timeoutID2\", null); // Clear the timeout ID from flow\n    }\n} else {\n    processNextRow();\n}\n\n\nreturn null;\n",
         "outputs": 3,
         "timeout": "",
         "noerr": 0,
@@ -934,7 +936,7 @@
         "z": "0e1f3206f48adf14",
         "g": "5258e746159f915c",
         "name": "debug_Test Sequence Script",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1019,7 +1021,7 @@
         "createDir": true,
         "overwriteFile": "false",
         "encoding": "none",
-        "x": 900,
+        "x": 1000,
         "y": 1820,
         "wires": [
             []
@@ -1048,7 +1050,7 @@
         "type": "csv",
         "z": "0e1f3206f48adf14",
         "g": "06c6cdf71851940d",
-        "name": "",
+        "name": "Process PV data",
         "spec": "rfc",
         "sep": ",",
         "hdrin": "",
@@ -1060,7 +1062,7 @@
         "strings": true,
         "include_empty_strings": "",
         "include_null_values": "",
-        "x": 730,
+        "x": 770,
         "y": 1820,
         "wires": [
             [
@@ -1811,7 +1813,7 @@
         "z": "0e1f3206f48adf14",
         "g": "783a604ad685b5f5",
         "name": "Read CSV File",
-        "filename": "/app/files/PEM1_Extended.csv",
+        "filename": "/app/files/wwEM1_Extended.csv",
         "filenameType": "str",
         "format": "utf8",
         "encoding": "utf8",
@@ -1820,8 +1822,8 @@
         "y": 540,
         "wires": [
             [
-                "36c18d3f22455110",
-                "csv_parser"
+                "csv_parser",
+                "08c0de3d9a6fc2c8"
             ]
         ]
     },
@@ -1844,8 +1846,8 @@
         "y": 540,
         "wires": [
             [
-                "b0b0082253400cef",
-                "filter_modbus_tags"
+                "filter_modbus_tags",
+                "53582435e115617e"
             ]
         ]
     },
@@ -1926,40 +1928,6 @@
                 "csv_input"
             ]
         ]
-    },
-    {
-        "id": "b0b0082253400cef",
-        "type": "debug",
-        "z": "0e1f3206f48adf14",
-        "g": "783a604ad685b5f5",
-        "name": "debug 8",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 660,
-        "y": 640,
-        "wires": []
-    },
-    {
-        "id": "36c18d3f22455110",
-        "type": "debug",
-        "z": "0e1f3206f48adf14",
-        "g": "783a604ad685b5f5",
-        "name": "debug 14",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 420,
-        "y": 660,
-        "wires": []
     },
     {
         "id": "ba78053e5aaa7eed",
@@ -2107,7 +2075,7 @@
         "g": "783a604ad685b5f5",
         "name": "Read extended tag databse from PLC code",
         "info": "Change path when PLC program changes",
-        "x": 420,
+        "x": 580,
         "y": 480,
         "wires": []
     },
@@ -2257,7 +2225,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 330,
+        "x": 350,
         "y": 1580,
         "wires": [
             [
@@ -2470,7 +2438,8 @@
         "y": 2220,
         "wires": [
             [
-                "2c986d49933c2836"
+                "2c986d49933c2836",
+                "a2917e2f62739f51"
             ]
         ]
     },
@@ -3082,7 +3051,7 @@
         "g": "5258e746159f915c",
         "name": "Send email alert",
         "info": "",
-        "x": 1220,
+        "x": 1260,
         "y": 1640,
         "wires": []
     },
@@ -3286,7 +3255,7 @@
         "z": "0e1f3206f48adf14",
         "g": "a9e7fb168fe4a14b",
         "name": "Get alarms",
-        "func": "// Define the alarm messages\nconst alarms = {\n    \"LT201_Timer.Done\": \"SEP200 low. System will shut down if level remains low.\",\n    \"LT203_Timer.Done\": \"SEP200 over-filled. System will shut down if level remains high.\",\n    \"LT301_Timer.Done\": \"SEP300 low. System will shut down if level remains low.\",\n    \"LT303_Timer.Done\": \"SEP300 over-filled. System will shut down if level remains high.\",\n    \"ResinChange_Alarm\": \"Change resin bottle after this run.\",\n    \"Temp_Alarm\": \"Water temperature approaching shut down limit.\",\n    \"CellTemp_Alarm\": \"Cell temperature approaching shut down limit.\",\n    \"InPressure_Alarm\": \"Inlet pressure approaching limit.\",\n    \"Pressure_Alarm\": \"Backpressure approaching shut down limit.\",\n    \"PressureDrop_Alarm\": \"Backpressure approaching lower shut down limit.\",\n    \"PressureDrop_SDAlarm\": \"Backpressure too low. System will shut down.\",\n    \"Conductivity_Alarm\": \"Conductivity approaching maximum acceptable level.\",\n    \"Flow_Alarm\": \"Flow control may be malfunctioning.\",\n    \"Current_Alarm\": \"Cell current deviating. Power supply may be malfunctioning.\",\n    \"UnderVoltage_Alarm\": \"Cell voltage is dropping below minimum desired voltage.\",\n    \"OverVoltage_Alarm\": \"Cell voltage is rising above maximum desired voltage.\",\n    \"LEL_Alarm\": \"Caution: Lower LEL limit reached.\",\n    \"Leak Detected\": \"Water detected. Check for leaks.\",\n    \"Leak Confirmed\": \"Leak confirmed. System will shut down.\",\n    \"HCDVoltage_Alarm\": \"Voltage powering LEL sensor deviating from required voltage.\",\n    \"Fume Hood OK\": \"Low flow detected in fume hood. System will shut down.\",\n    \"EStop OK\": \"EStop activated. System will shut down.\",\n    \"Air Monitor OK\": \"Room air monitor error. System will shut down.\",\n    \"Temp_SDAlarm\": \"Water temperature reached maximum. System will shut down.\",\n    \"TCError_Alarm\": \"Thermocouple error. System will shut down.\",\n    \"InPressure_SDAlarm\": \"Inlet pressure reached limit. System will shut down.\",\n    \"Pressure_SDAlarm\": \"Backpressure reached limit. System will shut down.\",\n    \"Conductivity_SDAlarm\": \"Conductivity reached limit. System will shut down.\",\n    \"Flow_SDTimer.Done\": \"Flow control malfunctioning. System will shut down.\",\n    \"UnderVoltage_SDTimer.Done\": \"Cell voltage too low. System will shut down.\",\n    \"OverVoltage_SDTimer.Done\": \"Cell voltage too high. System will shut down.\",\n    \"Current_SDTimer.Done\": \"Cell current major deviation from SP. System will shut down.\",\n    \"LT201_SDTimer.Done\": \"SEP200 low level uncorrected. System will shut down.\",\n    \"LT203_SDTimer.Done\": \"SEP200 over-fill uncorrected. System will shut down.\",\n    \"LT301_SDTimer.Done\": \"SEP300 low level uncorrected. System will shut down.\",\n    \"LT303_SDTimer.Done\": \"SEP300 over-fill uncorrected. System will shut down.\",\n    \"HTLC_HTR201\": \"HTR201 temperature limit reached. System will shut down.\",\n    \"HTLC_HTRCell\": \"HTRCell temperature limit reached. System will shut down.\",\n    \"HCDVoltage_SDTimer.Done\": \"Voltage powering LEL sensor uncorrected. System will shut down.\",\n    \"PressureDrop_SDTimer.Done\": \"Backpressure dropped below minimum. System will shut down.\",\n    \"CellTemp_SDAlarm\": \"Cell temperature reached limit. System will shut down.\",\n    \"LEL_SDAlarm\": \"Higher LEL limit reached. System will shut down.\",\n    \"Battery Low\": \"UPS battery low.\",\n    \"Power Lost\": \"Power lost. UPS in battery mode.\",\n    \"Battery Fault\": \"UPS battery fault.\",\n    \"PS110\": \"Nitrogen purge pressure low.\",\n    \"PS110_Bad\": \"PS110 Bad\"\n}\n\n// Store the alarms object as a flow variable\nflow.set(\"alarms\", alarms);\n\nnode.status({ fill: \"green\", shape: \"dot\", text: \"Alarms stored in flow\" });\n\n// Get the number of alarms dynamically\nconst numAlarms = Object.keys(alarms).length;\n\n// Define the starting Modbus address for alarm coils\nconst startAddress = 100;  // Modbus address 00100\n\n// Create the Modbus Flex Read payload\nmsg.payload = {\n    'fc': 1,  // Function code 1 (Read Coils)\n    'unitid': 1,  // Modbus device ID (change if necessary)\n    'address': startAddress,  // Starting coil address\n    'quantity': numAlarms  // Dynamically set quantity based on alarm count\n};\n\nreturn msg;\n",
+        "func": "// Define the alarm messages\nconst alarms = {\n    \"LT201_Timer.Done\": \"SEP200 low. System will shut down if level remains low.\",\n    \"LT203_Timer.Done\": \"SEP200 over-filled. System will shut down if level remains high.\",\n    \"LT301_Timer.Done\": \"SEP300 low. System will shut down if level remains low.\",\n    \"LT303_Timer.Done\": \"SEP300 over-filled. System will shut down if level remains high.\",\n    \"ResinChange_Alarm\": \"Change resin bottle after this run.\",\n    \"Temp_Alarm\": \"Water temperature approaching shut down limit.\",\n    \"CellTemp_Alarm\": \"Cell temperature approaching shut down limit.\",\n    \"InPressure_Alarm\": \"Inlet pressure approaching limit.\",\n    \"Pressure_Alarm\": \"Backpressure approaching shut down limit.\",\n    \"PressureDrop_Alarm\": \"Backpressure approaching lower shut down limit.\",\n    \"PressureDrop_SDAlarm\": \"Backpressure too low. System will shut down.\",\n    \"Conductivity_Alarm\": \"Conductivity approaching maximum acceptable level.\",\n    \"Flow_Alarm\": \"Flow control may be malfunctioning.\",\n    \"Current_Alarm\": \"Cell current deviating. Power supply may be malfunctioning.\",\n    \"UnderVoltage_Alarm\": \"Cell voltage is dropping below minimum desired voltage.\",\n    \"OverVoltage_Alarm\": \"Cell voltage is rising above maximum desired voltage.\",\n    \"LEL_Alarm\": \"Caution: Lower LEL limit reached.\",\n    \"Leak Detected\": \"Water detected. Check for leaks.\",\n    \"Leak Confirmed\": \"Leak confirmed. System will shut down.\",\n    \"HCDVoltage_Alarm\": \"Voltage powering LEL sensor deviating from required voltage.\",\n    \"Fume Hood OK\": \"Low flow detected in fume hood. System will shut down.\",\n    \"EStop_Not_Tripped\": \"EStop activated. System will shut down.\",\n    \"Air Monitor OK\": \"Room air monitor error. System will shut down.\",\n    \"Temp_SDAlarm\": \"Water temperature reached maximum. System will shut down.\",\n    \"TCError_Alarm\": \"Thermocouple error. System will shut down.\",\n    \"InPressure_SDAlarm\": \"Inlet pressure reached limit. System will shut down.\",\n    \"Pressure_SDAlarm\": \"Backpressure reached limit. System will shut down.\",\n    \"Conductivity_SDAlarm\": \"Conductivity reached limit. System will shut down.\",\n    \"Flow_SDTimer.Done\": \"Flow control malfunctioning. System will shut down.\",\n    \"UnderVoltage_SDTimer.Done\": \"Cell voltage too low. System will shut down.\",\n    \"OverVoltage_SDTimer.Done\": \"Cell voltage too high. System will shut down.\",\n    \"Current_SDTimer.Done\": \"Cell current major deviation from SP. System will shut down.\",\n    \"LT201_SDTimer.Done\": \"SEP200 low level uncorrected. System will shut down.\",\n    \"LT203_SDTimer.Done\": \"SEP200 over-fill uncorrected. System will shut down.\",\n    \"LT301_SDTimer.Done\": \"SEP300 low level uncorrected. System will shut down.\",\n    \"LT303_SDTimer.Done\": \"SEP300 over-fill uncorrected. System will shut down.\",\n    \"HTLC_HTR201\": \"HTR201 temperature limit reached. System will shut down.\",\n    \"HTLC_HTRCell\": \"HTRCell temperature limit reached. System will shut down.\",\n    \"HCDVoltage_SDTimer.Done\": \"Voltage powering LEL sensor uncorrected. System will shut down.\",\n    \"PressureDrop_SDTimer.Done\": \"Backpressure dropped below minimum. System will shut down.\",\n    \"CellTemp_SDAlarm\": \"Cell temperature reached limit. System will shut down.\",\n    \"LEL_SDAlarm\": \"Higher LEL limit reached. System will shut down.\",\n    \"Battery Low\": \"UPS battery low.\",\n    \"Power Lost\": \"Power lost. UPS in battery mode.\",\n    \"Battery Fault\": \"UPS battery fault.\",\n    \"PS110\": \"Nitrogen purge pressure low.\",\n    \"PS110_Bad\": \"PS110 Bad\"\n}\n\n// Store the alarms object as a flow variable\nflow.set(\"alarms\", alarms);\n\nnode.status({ fill: \"green\", shape: \"dot\", text: \"Alarms stored in flow\" });\n\n// Get the number of alarms dynamically\nconst numAlarms = Object.keys(alarms).length;\n\n// Define the starting Modbus address for alarm coils\nconst startAddress = 100;  // Modbus address 00100\n\n// Create the Modbus Flex Read payload\nmsg.payload = {\n    'fc': 1,  // Function code 1 (Read Coils)\n    'unitid': 1,  // Modbus device ID (change if necessary)\n    'address': startAddress,  // Starting coil address\n    'quantity': numAlarms  // Dynamically set quantity based on alarm count\n};\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3328,7 +3297,7 @@
         "z": "0e1f3206f48adf14",
         "g": "28d6aa434baf0184",
         "name": "Reset",
-        "func": "// First, send Reset = true\nvar msg1 = { payload: { \"tag\": \"Reset\", \"setpoint\": true } };\n\n// Create a second message to set it back to false after 1 second\nsetTimeout(() => {\n    var msg2 = { payload: { \"tag\": \"Reset\", \"setpoint\": false } };\n    node.send(msg2);\n}, 1000);\n\n// Send the first message immediately\nreturn msg1;\n",
+        "func": "// First, send Reset = true\nvar msg1 = { payload: { \"tag\": \"HMI_Reset\", \"setpoint\": true } };\n\n// Create a second message to set it back to false after 1 second\nsetTimeout(() => {\n    var msg2 = { payload: { \"tag\": \"HMI_Reset\", \"setpoint\": false } };\n    node.send(msg2);\n}, 1000);\n\n// Send the first message immediately\nreturn msg1;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3339,7 +3308,8 @@
         "y": 2320,
         "wires": [
             [
-                "78c83855ada6c722"
+                "78c83855ada6c722",
+                "c6152156af323fc9"
             ]
         ]
     },
@@ -6031,8 +6001,8 @@
         "secure": true,
         "tls": false,
         "name": "udelcch@gmail.com",
-        "dname": "PEM1",
-        "x": 1070,
+        "dname": "Email Notifier",
+        "x": 1090,
         "y": 1640,
         "wires": []
     },
@@ -6108,6 +6078,120 @@
         "bucket": "my-bucket",
         "x": 760,
         "y": 1940,
+        "wires": []
+    },
+    {
+        "id": "c6152156af323fc9",
+        "type": "debug",
+        "z": "0e1f3206f48adf14",
+        "g": "28d6aa434baf0184",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 2320,
+        "wires": []
+    },
+    {
+        "id": "a2917e2f62739f51",
+        "type": "debug",
+        "z": "0e1f3206f48adf14",
+        "g": "28d6aa434baf0184",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 2280,
+        "wires": []
+    },
+    {
+        "id": "6be218ec5f0979aa",
+        "type": "inject",
+        "z": "0e1f3206f48adf14",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 720,
+        "wires": [
+            [
+                "08c0de3d9a6fc2c8",
+                "80cadd285f921414"
+            ]
+        ]
+    },
+    {
+        "id": "08c0de3d9a6fc2c8",
+        "type": "debug",
+        "z": "0e1f3206f48adf14",
+        "g": "783a604ad685b5f5",
+        "name": "debug 18",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "80cadd285f921414",
+        "type": "debug",
+        "z": "0e1f3206f48adf14",
+        "name": "debug 20",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 340,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "53582435e115617e",
+        "type": "debug",
+        "z": "0e1f3206f48adf14",
+        "g": "783a604ad685b5f5",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 620,
         "wires": []
     }
 ]
