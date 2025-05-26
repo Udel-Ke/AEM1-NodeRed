@@ -1651,7 +1651,8 @@
             "214a8a9f249e5677",
             "62c4e491e6bcbed7",
             "c7de23c01c2709f7",
-            "1b952520d5aaf90b"
+            "1b952520d5aaf90b",
+            "56a3e6090f3f3f13"
         ],
         "x": 375,
         "y": 60,
@@ -1887,7 +1888,7 @@
         "z": "0e1f3206f48adf14",
         "g": "783a604ad685b5f5",
         "name": "Debug Coil & Float Tags",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -6150,7 +6151,7 @@
         "z": "0e1f3206f48adf14",
         "g": "783a604ad685b5f5",
         "name": "debug 18",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -6183,7 +6184,7 @@
         "z": "0e1f3206f48adf14",
         "g": "783a604ad685b5f5",
         "name": "debug 8",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -6193,5 +6194,148 @@
         "x": 620,
         "y": 620,
         "wires": []
+    },
+    {
+        "id": "heartbeat_request",
+        "type": "function",
+        "z": "0e1f3206f48adf14",
+        "name": "Read Heartbeat Register",
+        "func": "msg.payload = {\n    unitid: 1,\n    fc: 1,\n    address: 0,\n    quantity: 1\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 4800,
+        "wires": [
+            [
+                "heartbeat_modbus"
+            ]
+        ]
+    },
+    {
+        "id": "heartbeat_modbus",
+        "type": "modbus-flex-getter",
+        "z": "0e1f3206f48adf14",
+        "name": "PLC Heartbeat Poll",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "showWarnings": true,
+        "logIOActivities": false,
+        "server": "f905b5f3395bcec1",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": true,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 610,
+        "y": 4800,
+        "wires": [
+            [
+                "heartbeat_success"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "heartbeat_success",
+        "type": "function",
+        "z": "0e1f3206f48adf14",
+        "name": "Store Heartbeat Timestamp",
+        "func": "flow.set(\"lastHeartbeat\", Date.now());\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 4800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "heartbeat_check",
+        "type": "function",
+        "z": "0e1f3206f48adf14",
+        "name": "Check Last Heartbeat",
+        "func": "const now = Date.now();\nconst last = flow.get(\"lastHeartbeat\") || 0;\n\nif ((now - last) > 5000) {\n    flow.set(\"stopTest\", true);\n    node.warn(\"PLC UNRESPONSIVE — Aborting test.\");\n    return { payload: \"PLC unresponsive — Test aborted\" };\n} else {\n    return null;\n}\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 4860,
+        "wires": [
+            [
+                "heartbeat_alert"
+            ]
+        ]
+    },
+    {
+        "id": "heartbeat_alert",
+        "type": "debug",
+        "z": "0e1f3206f48adf14",
+        "name": "PLC Watchdog Alert",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 4860,
+        "wires": []
+    },
+    {
+        "id": "56a3e6090f3f3f13",
+        "type": "link in",
+        "z": "0e1f3206f48adf14",
+        "name": "HeartBeat_Check",
+        "links": [
+            "49263ca4933dbd63"
+        ],
+        "x": 165,
+        "y": 4740,
+        "wires": [
+            [
+                "heartbeat_request",
+                "dd03e86f89549f23"
+            ]
+        ]
+    },
+    {
+        "id": "dd03e86f89549f23",
+        "type": "delay",
+        "z": "0e1f3206f48adf14",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 320,
+        "y": 4860,
+        "wires": [
+            [
+                "heartbeat_check"
+            ]
+        ]
     }
 ]
