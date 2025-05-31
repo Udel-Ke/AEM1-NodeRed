@@ -512,7 +512,8 @@
             "25678c82a19b1e2d",
             "fc3e49778ffffccf",
             "2ab23c7acd8dd360",
-            "ebedd42d3d73fc5c"
+            "ebedd42d3d73fc5c",
+            "5bf7034acf6e3d8c"
         ],
         "x": 14,
         "y": 3439,
@@ -1742,7 +1743,7 @@
         "z": "0e1f3206f48adf14",
         "g": "06c6cdf71851940d",
         "name": "Get flow data",
-        "func": "let logData = flow.get(\"logData\") || {};\nlet testStep = flow.get(\"testStep\") || 0;\n\nlet logDataWithStep = {\n    step: testStep,\n    ...logData\n};\n\nmsg.payload = logDataWithStep;\nreturn msg;",
+        "func": "let logData = flow.get(\"logData\") || {};\nlet testStep = flow.get(\"testStep\") || 0;\n\nlet logDataWithStep = {\n    ...logData,\n    step: testStep\n};\n\nmsg.payload = logDataWithStep;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3652,7 +3653,8 @@
         "y": 3480,
         "wires": [
             [
-                "655caca86ec029a9"
+                "655caca86ec029a9",
+                "5bf7034acf6e3d8c"
             ]
         ]
     },
@@ -6265,7 +6267,7 @@
         "type": "function",
         "z": "0e1f3206f48adf14",
         "name": "Check Last Heartbeat",
-        "func": "const now = Date.now();\nconst last = flow.get(\"lastHeartbeat\") || 0;\n\nif ((now - last) > 5000) {\n    flow.set(\"stopTest\", true);\n    node.warn(\"PLC UNRESPONSIVE — Aborting test.\");\n    return { payload: \"PLC unresponsive — Test aborted\" };\n} else {\n    return null;\n}\n",
+        "func": "const now = Date.now();\nconst last = flow.get(\"lastHeartbeat\") || 0;\n\nif ((now - last) > 5000) {\n    flow.set(\"stopTest\", true);\n    //node.warn(\"PLC UNRESPONSIVE — Aborting test.\");\n    return { payload: \"PLC unresponsive — Test aborted\" };\n} else {\n    return null;\n}\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -6285,7 +6287,7 @@
         "type": "debug",
         "z": "0e1f3206f48adf14",
         "name": "PLC Watchdog Alert",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -6427,5 +6429,22 @@
                 "32c96a4e68fc9d38"
             ]
         ]
+    },
+    {
+        "id": "5bf7034acf6e3d8c",
+        "type": "debug",
+        "z": "0e1f3206f48adf14",
+        "g": "adbe011cfa336e78",
+        "name": "debug 25",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 3480,
+        "wires": []
     }
 ]

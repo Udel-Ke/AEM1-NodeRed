@@ -2,7 +2,14 @@
     "name": "AEM1-Nodered",
     "description": "A Node-RED Project",
     "version": "0.0.1",
-    "dependencies": {},
+    "dependencies": {
+        "node-red-contrib-influxdb": "0.7.0",
+        "node-red-contrib-modbus": "5.43.0",
+        "node-red-contrib-ui-svg": "2.3.3",
+        "node-red-dashboard": "3.6.5",
+        "node-red-node-email": "3.0.3",
+        "node-red-node-ui-table": "0.4.4"
+    },
     "node-red": {
         "settings": {
             "flowFile": "flows.json",
