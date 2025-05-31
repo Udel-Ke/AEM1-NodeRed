@@ -164,7 +164,7 @@
         ],
         "x": 974,
         "y": 279,
-        "w": 972,
+        "w": 992,
         "h": 142
     },
     {
@@ -521,6 +521,36 @@
         "h": 862
     },
     {
+        "id": "cade13d4f42d5807",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": 8086,
+        "protocol": "http",
+        "database": "database",
+        "name": "CCH_influxDB",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "http://influxdb:8086",
+        "timeout": 10,
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "ca731339695e2524",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": 8086,
+        "protocol": "http",
+        "database": "database",
+        "name": "CCHCloud",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "https://us-east-1-1.aws.cloud2.influxdata.com/",
+        "timeout": 10,
+        "rejectUnauthorized": true
+    },
+    {
         "id": "f905b5f3395bcec1",
         "type": "modbus-client",
         "name": "AEM1",
@@ -549,6 +579,103 @@
         "showErrors": false,
         "showWarnings": true,
         "showLogs": true
+    },
+    {
+        "id": "3c1a688be99acbdc",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
     },
     {
         "id": "d3d55aa3f04b322d",
@@ -702,133 +829,6 @@
         "order": 27,
         "width": 10,
         "height": 1
-    },
-    {
-        "id": "3c1a688be99acbdc",
-        "type": "ui_base",
-        "theme": {
-            "name": "theme-light",
-            "lightTheme": {
-                "default": "#0094CE",
-                "baseColor": "#0094CE",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
-                "reset": false
-            },
-            "darkTheme": {
-                "default": "#097479",
-                "baseColor": "#097479",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
-            },
-            "customTheme": {
-                "name": "Untitled Theme 1",
-                "default": "#4B7930",
-                "baseColor": "#4B7930",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-            },
-            "themeState": {
-                "base-color": {
-                    "default": "#0094CE",
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-titlebar-backgroundColor": {
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-backgroundColor": {
-                    "value": "#fafafa",
-                    "edited": false
-                },
-                "page-sidebar-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-textColor": {
-                    "value": "#1bbfff",
-                    "edited": false
-                },
-                "group-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "widget-textColor": {
-                    "value": "#111111",
-                    "edited": false
-                },
-                "widget-backgroundColor": {
-                    "value": "#0094ce",
-                    "edited": false
-                },
-                "widget-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "base-font": {
-                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-                }
-            },
-            "angularTheme": {
-                "primary": "indigo",
-                "accents": "blue",
-                "warn": "red",
-                "background": "grey",
-                "palette": "light"
-            }
-        },
-        "site": {
-            "name": "Node-RED Dashboard",
-            "hideToolbar": "false",
-            "allowSwipe": "false",
-            "lockMenu": "false",
-            "allowTempTheme": "true",
-            "dateFormat": "DD/MM/YYYY",
-            "sizes": {
-                "sx": 48,
-                "sy": 48,
-                "gx": 6,
-                "gy": 6,
-                "cx": 6,
-                "cy": 6,
-                "px": 0,
-                "py": 0
-            }
-        }
-    },
-    {
-        "id": "cade13d4f42d5807",
-        "type": "influxdb",
-        "hostname": "127.0.0.1",
-        "port": 8086,
-        "protocol": "http",
-        "database": "database",
-        "name": "CCH_influxDB",
-        "usetls": false,
-        "tls": "",
-        "influxdbVersion": "2.0",
-        "url": "http://influxdb:8086",
-        "timeout": 10,
-        "rejectUnauthorized": true
-    },
-    {
-        "id": "ca731339695e2524",
-        "type": "influxdb",
-        "hostname": "127.0.0.1",
-        "port": 8086,
-        "protocol": "http",
-        "database": "database",
-        "name": "CCHCloud",
-        "usetls": false,
-        "tls": "",
-        "influxdbVersion": "2.0",
-        "url": "https://us-east-1-1.aws.cloud2.influxdata.com/",
-        "timeout": 10,
-        "rejectUnauthorized": true
     },
     {
         "id": "401a02e5f0a36a3a",
@@ -4606,6 +4606,397 @@
         ]
     },
     {
+        "id": "c6152156af323fc9",
+        "type": "debug",
+        "z": "0e1f3206f48adf14",
+        "g": "28d6aa434baf0184",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 2320,
+        "wires": []
+    },
+    {
+        "id": "a2917e2f62739f51",
+        "type": "debug",
+        "z": "0e1f3206f48adf14",
+        "g": "28d6aa434baf0184",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 2280,
+        "wires": []
+    },
+    {
+        "id": "6be218ec5f0979aa",
+        "type": "inject",
+        "z": "0e1f3206f48adf14",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 720,
+        "wires": [
+            [
+                "08c0de3d9a6fc2c8",
+                "80cadd285f921414"
+            ]
+        ]
+    },
+    {
+        "id": "08c0de3d9a6fc2c8",
+        "type": "debug",
+        "z": "0e1f3206f48adf14",
+        "g": "783a604ad685b5f5",
+        "name": "debug 18",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "80cadd285f921414",
+        "type": "debug",
+        "z": "0e1f3206f48adf14",
+        "name": "debug 20",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 340,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "53582435e115617e",
+        "type": "debug",
+        "z": "0e1f3206f48adf14",
+        "g": "783a604ad685b5f5",
+        "name": "debug 8",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "heartbeat_request",
+        "type": "function",
+        "z": "0e1f3206f48adf14",
+        "name": "Read Heartbeat Register",
+        "func": "msg.payload = {\n    unitid: 1,\n    fc: 1,\n    address: 0,\n    quantity: 1\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 4800,
+        "wires": [
+            [
+                "heartbeat_modbus"
+            ]
+        ]
+    },
+    {
+        "id": "heartbeat_success",
+        "type": "function",
+        "z": "0e1f3206f48adf14",
+        "name": "Store Heartbeat Timestamp",
+        "func": "flow.set(\"lastHeartbeat\", Date.now());\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 4800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "heartbeat_check",
+        "type": "function",
+        "z": "0e1f3206f48adf14",
+        "name": "Check Last Heartbeat",
+        "func": "const now = Date.now();\nconst last = flow.get(\"lastHeartbeat\") || 0;\n\nif ((now - last) > 5000) {\n    flow.set(\"stopTest\", true);\n    //node.warn(\"PLC UNRESPONSIVE — Aborting test.\");\n    return { payload: \"PLC unresponsive — Test aborted\" };\n} else {\n    return null;\n}\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 4860,
+        "wires": [
+            [
+                "heartbeat_alert"
+            ]
+        ]
+    },
+    {
+        "id": "heartbeat_alert",
+        "type": "debug",
+        "z": "0e1f3206f48adf14",
+        "name": "PLC Watchdog Alert",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 4860,
+        "wires": []
+    },
+    {
+        "id": "56a3e6090f3f3f13",
+        "type": "link in",
+        "z": "0e1f3206f48adf14",
+        "name": "HeartBeat_Check",
+        "links": [
+            "49263ca4933dbd63"
+        ],
+        "x": 165,
+        "y": 4740,
+        "wires": [
+            [
+                "heartbeat_request",
+                "dd03e86f89549f23"
+            ]
+        ]
+    },
+    {
+        "id": "dd03e86f89549f23",
+        "type": "delay",
+        "z": "0e1f3206f48adf14",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 320,
+        "y": 4860,
+        "wires": [
+            [
+                "heartbeat_check",
+                "98d9105a0fe9c4f2"
+            ]
+        ]
+    },
+    {
+        "id": "b429b5a8c896f336",
+        "type": "comment",
+        "z": "0e1f3206f48adf14",
+        "g": "783a604ad685b5f5",
+        "name": "ModBus Address Principles",
+        "info": "400001-400100: PV\n400101-400200: SP\n400201-400300: CV (control value)\n400301-400400: system",
+        "x": 850,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "32c96a4e68fc9d38",
+        "type": "debug",
+        "z": "0e1f3206f48adf14",
+        "name": "debug 14",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 5000,
+        "wires": []
+    },
+    {
+        "id": "98d9105a0fe9c4f2",
+        "type": "function",
+        "z": "0e1f3206f48adf14",
+        "name": "modbus_heartbeat generator",
+        "func": "msg.payload = {\n    tag: \"modbus_heartbeat\",  // assign value to modbus_heartbeat in PLC\n    setpoint: Math.random()          // random value\n};\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 220,
+        "y": 4980,
+        "wires": [
+            [
+                "9d7c0453e92f3eb0"
+            ]
+        ]
+    },
+    {
+        "id": "9d7c0453e92f3eb0",
+        "type": "function",
+        "z": "0e1f3206f48adf14",
+        "name": "Single holdReg write",
+        "func": "// Retrieve the input tag and setpoint\nlet { tag, setpoint } = msg.payload;\n\n// Retrieve the modHoldReg mapping from the flow context\nlet modHoldReg = flow.get(\"modHoldReg\") || [];\n\n// Find the corresponding Modbus entry\nlet modbusEntry = modHoldReg.find(entry => entry[\"Tag Name\"] === tag);\n\nif (!modbusEntry) {\n    node.error(`Tag ${tag} not found in modHoldReg`, msg);\n    return null;\n}\n\n// Get Modbus start address and data type\nlet address = modbusEntry[\"MODBUS Start Address\"];\nlet dataType = modbusEntry[\"Data Type\"];\n\n// Convert setpoint value to Modbus register format\nlet buffer = Buffer.alloc(4);\n\nif (dataType === \"F32\") {\n    buffer.writeFloatBE(setpoint, 0);  // Convert float to buffer (big-endian)\n} else if (dataType === \"S32\") {\n    buffer.writeInt32BE(setpoint, 0);  // Convert integer to buffer\n} else {\n    node.error(`Unsupported data type: ${dataType} for tag ${tag}`, msg);\n    return null;\n}\n\n// Split buffer into two 16-bit registers (Modbus uses 16-bit words)\nlet registerValues = [\n    buffer.readUInt16BE(2),  // High 16 bits\n    buffer.readUInt16BE(0)   // Low 16 bits\n];\n\n// Construct Modbus Flex Write message with quantity\nmsg.payload = {\n    value: registerValues,\n    fc: 16,  // Function Code 16 (Write Multiple Registers)\n    address: address - 400001,  // Convert absolute to zero-based address\n    quantity: 2,  // Writing two 16-bit registers (32-bit value)\n    unitid: 1  // Change if necessary based on your PLC setup\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 4980,
+        "wires": [
+            [
+                "1891ff190c2b30dc",
+                "32c96a4e68fc9d38"
+            ]
+        ]
+    },
+    {
+        "id": "5bf7034acf6e3d8c",
+        "type": "debug",
+        "z": "0e1f3206f48adf14",
+        "g": "adbe011cfa336e78",
+        "name": "debug 25",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 3480,
+        "wires": []
+    },
+    {
+        "id": "c44813d86362a8f3",
+        "type": "influxdb out",
+        "z": "0e1f3206f48adf14",
+        "influxdb": "cade13d4f42d5807",
+        "name": "testInfluxDB",
+        "measurement": "FlowMeter",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "my-org",
+        "bucket": "my-bucket",
+        "x": 2130,
+        "y": 2840,
+        "wires": []
+    },
+    {
+        "id": "2420445d3171ac4b",
+        "type": "influxdb out",
+        "z": "0e1f3206f48adf14",
+        "influxdb": "ca731339695e2524",
+        "name": "",
+        "measurement": "sensor_data",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "Test Lab",
+        "bucket": "PEM1",
+        "x": 2110,
+        "y": 2780,
+        "wires": []
+    },
+    {
+        "id": "da753e14585654ba",
+        "type": "influxdb out",
+        "z": "0e1f3206f48adf14",
+        "g": "06c6cdf71851940d",
+        "influxdb": "ca731339695e2524",
+        "name": "",
+        "measurement": "AEM1_PV",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "Test Lab",
+        "bucket": "AEM1",
+        "x": 800,
+        "y": 1900,
+        "wires": []
+    },
+    {
+        "id": "fb1ec398897fa4c8",
+        "type": "influxdb out",
+        "z": "0e1f3206f48adf14",
+        "g": "06c6cdf71851940d",
+        "influxdb": "cade13d4f42d5807",
+        "name": "LocalInfluxDB",
+        "measurement": "AEM1",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "my-org",
+        "bucket": "my-bucket",
+        "x": 760,
+        "y": 1940,
+        "wires": []
+    },
+    {
         "id": "08288dd29ba947c3",
         "type": "modbus-response",
         "z": "0e1f3206f48adf14",
@@ -4817,6 +5208,32 @@
         ]
     },
     {
+        "id": "heartbeat_modbus",
+        "type": "modbus-flex-getter",
+        "z": "0e1f3206f48adf14",
+        "name": "PLC Heartbeat Poll",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "showWarnings": true,
+        "logIOActivities": false,
+        "server": "f905b5f3395bcec1",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": true,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 610,
+        "y": 4800,
+        "wires": [
+            [
+                "heartbeat_success"
+            ],
+            []
+        ]
+    },
+    {
         "id": "bbfb835cba9a9b5a",
         "type": "modbus-flex-write",
         "z": "0e1f3206f48adf14",
@@ -4917,6 +5334,26 @@
         "startDelayTime": "",
         "x": 1050,
         "y": 4440,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "1891ff190c2b30dc",
+        "type": "modbus-flex-write",
+        "z": "0e1f3206f48adf14",
+        "name": "modbus_heartbeat write",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "server": "f905b5f3395bcec1",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 790,
+        "y": 4920,
         "wires": [
             [],
             []
@@ -5889,7 +6326,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 1850,
+        "x": 1870,
         "y": 380,
         "wires": [
             []
@@ -5915,6 +6352,24 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "5a3ab29e6c62a71c",
+        "type": "e-mail",
+        "z": "0e1f3206f48adf14",
+        "g": "5258e746159f915c",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "authtype": "BASIC",
+        "saslformat": true,
+        "token": "oauth2Response.access_token",
+        "secure": true,
+        "tls": false,
+        "name": "udelcch@gmail.com",
+        "dname": "Email Notifier",
+        "x": 1090,
+        "y": 1640,
+        "wires": []
     },
     {
         "id": "81b6eb9b5e5dcf0a",
@@ -5990,461 +6445,6 @@
         "cts": false,
         "x": 810,
         "y": 2780,
-        "wires": []
-    },
-    {
-        "id": "5a3ab29e6c62a71c",
-        "type": "e-mail",
-        "z": "0e1f3206f48adf14",
-        "g": "5258e746159f915c",
-        "server": "smtp.gmail.com",
-        "port": "465",
-        "authtype": "BASIC",
-        "saslformat": true,
-        "token": "oauth2Response.access_token",
-        "secure": true,
-        "tls": false,
-        "name": "udelcch@gmail.com",
-        "dname": "Email Notifier",
-        "x": 1090,
-        "y": 1640,
-        "wires": []
-    },
-    {
-        "id": "c44813d86362a8f3",
-        "type": "influxdb out",
-        "z": "0e1f3206f48adf14",
-        "influxdb": "cade13d4f42d5807",
-        "name": "testInfluxDB",
-        "measurement": "FlowMeter",
-        "precision": "",
-        "retentionPolicy": "",
-        "database": "database",
-        "precisionV18FluxV20": "ms",
-        "retentionPolicyV18Flux": "",
-        "org": "my-org",
-        "bucket": "my-bucket",
-        "x": 2130,
-        "y": 2840,
-        "wires": []
-    },
-    {
-        "id": "2420445d3171ac4b",
-        "type": "influxdb out",
-        "z": "0e1f3206f48adf14",
-        "influxdb": "ca731339695e2524",
-        "name": "",
-        "measurement": "sensor_data",
-        "precision": "",
-        "retentionPolicy": "",
-        "database": "database",
-        "precisionV18FluxV20": "ms",
-        "retentionPolicyV18Flux": "",
-        "org": "Test Lab",
-        "bucket": "PEM1",
-        "x": 2110,
-        "y": 2780,
-        "wires": []
-    },
-    {
-        "id": "da753e14585654ba",
-        "type": "influxdb out",
-        "z": "0e1f3206f48adf14",
-        "g": "06c6cdf71851940d",
-        "influxdb": "ca731339695e2524",
-        "name": "",
-        "measurement": "AEM1_PV",
-        "precision": "",
-        "retentionPolicy": "",
-        "database": "database",
-        "precisionV18FluxV20": "ms",
-        "retentionPolicyV18Flux": "",
-        "org": "Test Lab",
-        "bucket": "AEM1",
-        "x": 800,
-        "y": 1900,
-        "wires": []
-    },
-    {
-        "id": "fb1ec398897fa4c8",
-        "type": "influxdb out",
-        "z": "0e1f3206f48adf14",
-        "g": "06c6cdf71851940d",
-        "influxdb": "cade13d4f42d5807",
-        "name": "LocalInfluxDB",
-        "measurement": "AEM1",
-        "precision": "",
-        "retentionPolicy": "",
-        "database": "database",
-        "precisionV18FluxV20": "ms",
-        "retentionPolicyV18Flux": "",
-        "org": "my-org",
-        "bucket": "my-bucket",
-        "x": 760,
-        "y": 1940,
-        "wires": []
-    },
-    {
-        "id": "c6152156af323fc9",
-        "type": "debug",
-        "z": "0e1f3206f48adf14",
-        "g": "28d6aa434baf0184",
-        "name": "debug 5",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 480,
-        "y": 2320,
-        "wires": []
-    },
-    {
-        "id": "a2917e2f62739f51",
-        "type": "debug",
-        "z": "0e1f3206f48adf14",
-        "g": "28d6aa434baf0184",
-        "name": "debug 6",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 670,
-        "y": 2280,
-        "wires": []
-    },
-    {
-        "id": "6be218ec5f0979aa",
-        "type": "inject",
-        "z": "0e1f3206f48adf14",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 160,
-        "y": 720,
-        "wires": [
-            [
-                "08c0de3d9a6fc2c8",
-                "80cadd285f921414"
-            ]
-        ]
-    },
-    {
-        "id": "08c0de3d9a6fc2c8",
-        "type": "debug",
-        "z": "0e1f3206f48adf14",
-        "g": "783a604ad685b5f5",
-        "name": "debug 18",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 400,
-        "y": 620,
-        "wires": []
-    },
-    {
-        "id": "80cadd285f921414",
-        "type": "debug",
-        "z": "0e1f3206f48adf14",
-        "name": "debug 20",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 340,
-        "y": 720,
-        "wires": []
-    },
-    {
-        "id": "53582435e115617e",
-        "type": "debug",
-        "z": "0e1f3206f48adf14",
-        "g": "783a604ad685b5f5",
-        "name": "debug 8",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 620,
-        "y": 620,
-        "wires": []
-    },
-    {
-        "id": "heartbeat_request",
-        "type": "function",
-        "z": "0e1f3206f48adf14",
-        "name": "Read Heartbeat Register",
-        "func": "msg.payload = {\n    unitid: 1,\n    fc: 1,\n    address: 0,\n    quantity: 1\n};\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 370,
-        "y": 4800,
-        "wires": [
-            [
-                "heartbeat_modbus"
-            ]
-        ]
-    },
-    {
-        "id": "heartbeat_modbus",
-        "type": "modbus-flex-getter",
-        "z": "0e1f3206f48adf14",
-        "name": "PLC Heartbeat Poll",
-        "showStatusActivities": true,
-        "showErrors": true,
-        "showWarnings": true,
-        "logIOActivities": false,
-        "server": "f905b5f3395bcec1",
-        "useIOFile": false,
-        "ioFile": "",
-        "useIOForPayload": false,
-        "emptyMsgOnFail": true,
-        "keepMsgProperties": false,
-        "delayOnStart": false,
-        "startDelayTime": "",
-        "x": 610,
-        "y": 4800,
-        "wires": [
-            [
-                "heartbeat_success"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "heartbeat_success",
-        "type": "function",
-        "z": "0e1f3206f48adf14",
-        "name": "Store Heartbeat Timestamp",
-        "func": "flow.set(\"lastHeartbeat\", Date.now());\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 880,
-        "y": 4800,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "heartbeat_check",
-        "type": "function",
-        "z": "0e1f3206f48adf14",
-        "name": "Check Last Heartbeat",
-        "func": "const now = Date.now();\nconst last = flow.get(\"lastHeartbeat\") || 0;\n\nif ((now - last) > 5000) {\n    flow.set(\"stopTest\", true);\n    //node.warn(\"PLC UNRESPONSIVE — Aborting test.\");\n    return { payload: \"PLC unresponsive — Test aborted\" };\n} else {\n    return null;\n}\n",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 500,
-        "y": 4860,
-        "wires": [
-            [
-                "heartbeat_alert"
-            ]
-        ]
-    },
-    {
-        "id": "heartbeat_alert",
-        "type": "debug",
-        "z": "0e1f3206f48adf14",
-        "name": "PLC Watchdog Alert",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 720,
-        "y": 4860,
-        "wires": []
-    },
-    {
-        "id": "56a3e6090f3f3f13",
-        "type": "link in",
-        "z": "0e1f3206f48adf14",
-        "name": "HeartBeat_Check",
-        "links": [
-            "49263ca4933dbd63"
-        ],
-        "x": 165,
-        "y": 4740,
-        "wires": [
-            [
-                "heartbeat_request",
-                "dd03e86f89549f23"
-            ]
-        ]
-    },
-    {
-        "id": "dd03e86f89549f23",
-        "type": "delay",
-        "z": "0e1f3206f48adf14",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "2",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 320,
-        "y": 4860,
-        "wires": [
-            [
-                "heartbeat_check",
-                "98d9105a0fe9c4f2"
-            ]
-        ]
-    },
-    {
-        "id": "b429b5a8c896f336",
-        "type": "comment",
-        "z": "0e1f3206f48adf14",
-        "g": "783a604ad685b5f5",
-        "name": "ModBus Address Principles",
-        "info": "400001-400100: PV\n400101-400200: SP\n400201-400300: CV (control value)\n400301-400400: system",
-        "x": 850,
-        "y": 620,
-        "wires": []
-    },
-    {
-        "id": "1891ff190c2b30dc",
-        "type": "modbus-flex-write",
-        "z": "0e1f3206f48adf14",
-        "name": "modbus_heartbeat write",
-        "showStatusActivities": false,
-        "showErrors": false,
-        "showWarnings": true,
-        "server": "f905b5f3395bcec1",
-        "emptyMsgOnFail": false,
-        "keepMsgProperties": false,
-        "delayOnStart": false,
-        "startDelayTime": "",
-        "x": 790,
-        "y": 4920,
-        "wires": [
-            [],
-            []
-        ]
-    },
-    {
-        "id": "32c96a4e68fc9d38",
-        "type": "debug",
-        "z": "0e1f3206f48adf14",
-        "name": "debug 14",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 780,
-        "y": 5000,
-        "wires": []
-    },
-    {
-        "id": "98d9105a0fe9c4f2",
-        "type": "function",
-        "z": "0e1f3206f48adf14",
-        "name": "modbus_heartbeat generator",
-        "func": "msg.payload = {\n    tag: \"modbus_heartbeat\",  // assign value to modbus_heartbeat in PLC\n    setpoint: Math.random()          // random value\n};\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 220,
-        "y": 4980,
-        "wires": [
-            [
-                "9d7c0453e92f3eb0"
-            ]
-        ]
-    },
-    {
-        "id": "9d7c0453e92f3eb0",
-        "type": "function",
-        "z": "0e1f3206f48adf14",
-        "name": "Single holdReg write",
-        "func": "// Retrieve the input tag and setpoint\nlet { tag, setpoint } = msg.payload;\n\n// Retrieve the modHoldReg mapping from the flow context\nlet modHoldReg = flow.get(\"modHoldReg\") || [];\n\n// Find the corresponding Modbus entry\nlet modbusEntry = modHoldReg.find(entry => entry[\"Tag Name\"] === tag);\n\nif (!modbusEntry) {\n    node.error(`Tag ${tag} not found in modHoldReg`, msg);\n    return null;\n}\n\n// Get Modbus start address and data type\nlet address = modbusEntry[\"MODBUS Start Address\"];\nlet dataType = modbusEntry[\"Data Type\"];\n\n// Convert setpoint value to Modbus register format\nlet buffer = Buffer.alloc(4);\n\nif (dataType === \"F32\") {\n    buffer.writeFloatBE(setpoint, 0);  // Convert float to buffer (big-endian)\n} else if (dataType === \"S32\") {\n    buffer.writeInt32BE(setpoint, 0);  // Convert integer to buffer\n} else {\n    node.error(`Unsupported data type: ${dataType} for tag ${tag}`, msg);\n    return null;\n}\n\n// Split buffer into two 16-bit registers (Modbus uses 16-bit words)\nlet registerValues = [\n    buffer.readUInt16BE(2),  // High 16 bits\n    buffer.readUInt16BE(0)   // Low 16 bits\n];\n\n// Construct Modbus Flex Write message with quantity\nmsg.payload = {\n    value: registerValues,\n    fc: 16,  // Function Code 16 (Write Multiple Registers)\n    address: address - 400001,  // Convert absolute to zero-based address\n    quantity: 2,  // Writing two 16-bit registers (32-bit value)\n    unitid: 1  // Change if necessary based on your PLC setup\n};\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 480,
-        "y": 4980,
-        "wires": [
-            [
-                "1891ff190c2b30dc",
-                "32c96a4e68fc9d38"
-            ]
-        ]
-    },
-    {
-        "id": "5bf7034acf6e3d8c",
-        "type": "debug",
-        "z": "0e1f3206f48adf14",
-        "g": "adbe011cfa336e78",
-        "name": "debug 25",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 810,
-        "y": 3480,
         "wires": []
     }
 ]
