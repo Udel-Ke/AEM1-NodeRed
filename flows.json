@@ -26,20 +26,26 @@
             "3ca569c54e5ebb61",
             "3a2e5ae01db4a464",
             "a54b88ebdc027299",
-            "562e1b5e88637fd1",
             "375e0ce60e51a32b",
             "d00973e02ef2d64c",
             "a1bf5e81cfcf58e3",
             "5811aec5a8ea97c9",
-            "94f03e995178a385",
             "438e39b4aba09a68",
             "da753e14585654ba",
-            "fb1ec398897fa4c8"
+            "fb1ec398897fa4c8",
+            "8bc7b7d40bdb88bf",
+            "9a97bbc72a0e3555",
+            "fdd2080b0ef3c2a6",
+            "2ff1bd7c6ae39338",
+            "3ae3b1dd7f0614df",
+            "97a3bdd717fc1c74",
+            "3f375b16d38d431e",
+            "95c4912ac6b8d658"
         ],
         "x": 34,
-        "y": 1719,
+        "y": 1699,
         "w": 1092,
-        "h": 262
+        "h": 322
     },
     {
         "id": "5258e746159f915c",
@@ -67,13 +73,10 @@
             "db7d84da82eb83ee",
             "bfa18773572a7fef",
             "1adcfbfd7586ce6b",
-            "b6f7853f398c93d3",
-            "8ad41d8b3762ac44",
             "a28627b538e4350e",
             "3655c26dfb4896fd",
             "ffaf214f88de0731",
             "d38f94132ffbf8d2",
-            "5b8cf5d0895f5826",
             "3c9c30b75e7298df",
             "33d09f0b8f4f9363",
             "2a7dda672fc3e645",
@@ -376,7 +379,7 @@
         ],
         "x": 474,
         "y": 19,
-        "w": 592,
+        "w": 692,
         "h": 222
     },
     {
@@ -908,7 +911,7 @@
         "z": "0e1f3206f48adf14",
         "g": "5258e746159f915c",
         "name": "Process Test Sequence",
-        "func": "// Initialize index to track the current row being processed\nvar index = 0;\n\n// Store CSV data from the incoming message payload\nvar data = msg.payload;\n\nlet timeoutID2 = flow.get(\"timeoutID2\");\n\n// Ensure the data is an array before processing\nif (!Array.isArray(data) || data.length === 0) {\n    node.error(\"CSV data is empty or not an array\", msg);\n    return null;\n}\n\nfunction processNextRow() {\n    // Check if all rows have been processed\n    if (index >= data.length) {\n        node.status({ text: \"Test Completed\" });\n        flow.set(\"testStep\", \"Test Completed\");\n        var triggerMsg = { payload: \"Test Completed\" };\n        node.send([null, triggerMsg]);\n        return;\n    }\n\n    var row = data[index];\n\n    // Validate row data before processing\n    if (!row || row.Duration === undefined) {\n        node.error(`Invalid row data at index ${index}: ${JSON.stringify(row)}`, msg);\n        return;\n    }\n\n    node.status({ text: `Row ${index + 1}: Processing setpoints` });\n    flow.set(\"testStep\", \"Test Step\" + (index + 1));\n\n    let modbusValues = [];\n    let address = 100; // Starting Modbus address, adjust as needed\n\n    // Process all elements in the row except 'Test Step' and 'Duration'\n    Object.keys(row).forEach(tag => {\n        if (tag !== \"Test_step\" && tag !== \"Duration\") {\n            let buffer = Buffer.alloc(4);\n            buffer.writeFloatBE(parseFloat(row[tag]), 0);\n            modbusValues.push(buffer.readUInt16BE(2)); // High 16 bits\n            modbusValues.push(buffer.readUInt16BE(0)); // Low 16 bits\n        }\n    });\n\n    // Ensure modbusValues length is even (required for Modbus FC16)\n    if (modbusValues.length % 2 !== 0) {\n        node.error(\"Invalid register quantity: Must be an even number\", msg);\n        return;\n    }\n\n    // Create Modbus write message with all setpoints\n    var combinedMsg = {\n        payload: {\n            'unitId': 1,\n            'fc': 16,  // Function Code: Write Multiple Registers\n            'address': address,  // Starting address for the first tag.  Modbus Address (400001 - 400001 = 10 for 0-based addressing)\n            'quantity': modbusValues.length,\n            'value': modbusValues\n        }\n    };\n\n    // Retrieve test duration and initialize counter\n    var duration = parseInt(row.Duration);\n    var counter = 0;\n\n    function loop() {\n        let stopTest = flow.get(\"stopTest\");\n        let permStatus = flow.get(\"permStatus\");\n        let modHoldReg = flow.get(\"modHoldReg\") || [];\n\n        if (stopTest === true || permStatus === false) {\n            let statusMessage = \"Stopped\";\n            node.status({ text: statusMessage });\n            flow.set(\"testStep\", statusMessage);\n\n            if (timeoutID2) {\n                clearTimeout(timeoutID2);\n                flow.set(\"timeoutID2\", null); // Clear the timeout ID from flow\n            }\n\n            let currentSetpoint = modHoldReg.find(entry => entry[\"Tag Name\"] === \"Current_Setpoint\");\n            let voltageSetpoint = modHoldReg.find(entry => entry[\"Tag Name\"] === \"Voltage_Setpoint\");\n\n            let resetMsg = {\n                payload: {\n                    'unitId': 1,\n                    'fc': 16,\n                    'address': Math.min(currentSetpoint[\"MODBUS Start Address\"], voltageSetpoint[\"MODBUS Start Address\"]) - 400001,\n                    'quantity': 4,\n                    'value': [0, 0, 0, 0]  // Set both to zero\n                }\n            };\n\n            var triggerMsg = { payload: \"Test Completed\" };\n\n            // Send email alert if permStatus is false\n            if (permStatus === false) {\n                var emailMsg = {\n                    topic: \"ALERT: Test Stand AEM1 Stopped Due to permStatus\",\n                    payload: \"The test on AEM1 has been stopped because permStatus is FALSE. Please check the system immediately.\"\n                };\n                node.send([resetMsg, triggerMsg, emailMsg]); // Send email as third output\n            } else {\n                node.send([resetMsg, triggerMsg]);\n            }\n            return;\n        }\n\n        if (counter < duration) {\n            node.send([combinedMsg, null]);\n            counter++;\n            timeoutID2 = setTimeout(loop, 1000); // Check conditions every second\n            flow.set(\"timeoutID2\", timeoutID2); // Store the timeout ID in flow\n        } else {\n            index++;\n            processNextRow();\n        }\n    }\n\n\n    loop(); // Start the counter loop\n}\n\n// Start processing the first row\n// Clear timeout if test is stopped\nif (flow.get(\"testStep\") === \"Stopped\") {\n    if (timeoutID2) {\n        clearTimeout(timeoutID2);\n        flow.set(\"timeoutID2\", null); // Clear the timeout ID from flow\n    }\n} else {\n    processNextRow();\n}\n\n\nreturn null;\n",
+        "func": "// Initialize index to track the current row being processed\nvar index = 0;\n\n// Store CSV data from the incoming message payload\nvar data = msg.payload;\n\nlet timeoutID2 = flow.get(\"timeoutID2\");\n\n// Ensure the data is an array before processing\nif (!Array.isArray(data) || data.length === 0) {\n    node.error(\"CSV data is empty or not an array\", msg);\n    return null;\n}\n\nfunction processNextRow() {\n    // Check if all rows have been processed\n    if (index >= data.length) {\n        node.status({ text: \"Test Completed\" });\n        flow.set(\"testStep\", \"Test Completed\");\n        var triggerMsg = { payload: \"Test Completed\" };\n        node.send([null, triggerMsg]);\n        return;\n    }\n\n    var row = data[index];\n\n    // Validate row data before processing\n    if (!row || row.Duration === undefined) {\n        node.error(`Invalid row data at index ${index}: ${JSON.stringify(row)}`, msg);\n        return;\n    }\n\n    node.status({ text: `Row ${index + 1}: Processing setpoints` });\n    flow.set(\"testStep\", \"Test Step\" + (index + 1));\n    flow.set(\"scriptStep\", (index+1));\n\n    let modbusValues = [];\n    let address = 100; // Starting Modbus address, adjust as needed\n\n    // Process all elements in the row except 'Test Step' and 'Duration'\n    Object.keys(row).forEach(tag => {\n        if (tag !== \"Test_step\" && tag !== \"Duration\") {\n            let buffer = Buffer.alloc(4);\n            buffer.writeFloatBE(parseFloat(row[tag]), 0);\n            modbusValues.push(buffer.readUInt16BE(2)); // High 16 bits\n            modbusValues.push(buffer.readUInt16BE(0)); // Low 16 bits\n        }\n    });\n\n    // Ensure modbusValues length is even (required for Modbus FC16)\n    if (modbusValues.length % 2 !== 0) {\n        node.error(\"Invalid register quantity: Must be an even number\", msg);\n        return;\n    }\n\n    // Create Modbus write message with all setpoints\n    var combinedMsg = {\n        payload: {\n            'unitId': 1,\n            'fc': 16,  // Function Code: Write Multiple Registers\n            'address': address,  // Starting address for the first tag.  Modbus Address (400001 - 400001 = 10 for 0-based addressing)\n            'quantity': modbusValues.length,\n            'value': modbusValues\n        }\n    };\n\n    // Retrieve test duration and initialize counter\n    var duration = parseInt(row.Duration);\n    var counter = 0;\n\n    function loop() {\n        let stopTest = flow.get(\"stopTest\");\n        let permStatus = flow.get(\"permStatus\");\n        let modHoldReg = flow.get(\"modHoldReg\") || [];\n\n        if (stopTest === true || permStatus === false) {\n            let statusMessage = \"Stopped\";\n            node.status({ text: statusMessage });\n            flow.set(\"testStep\", statusMessage);\n\n            if (timeoutID2) {\n                clearTimeout(timeoutID2);\n                flow.set(\"timeoutID2\", null); // Clear the timeout ID from flow\n            }\n\n            let currentSetpoint = modHoldReg.find(entry => entry[\"Tag Name\"] === \"Current_Setpoint\");\n            let voltageSetpoint = modHoldReg.find(entry => entry[\"Tag Name\"] === \"Voltage_Setpoint\");\n\n            let resetMsg = {\n                payload: {\n                    'unitId': 1,\n                    'fc': 16,\n                    'address': Math.min(currentSetpoint[\"MODBUS Start Address\"], voltageSetpoint[\"MODBUS Start Address\"]) - 400001,\n                    'quantity': 4,\n                    'value': [0, 0, 0, 0]  // Set both to zero\n                }\n            };\n\n            var triggerMsg = { payload: \"Test Completed\" };\n\n            // Send email alert if permStatus is false\n            if (permStatus === false) {\n                var emailMsg = {\n                    topic: \"ALERT: Test Stand AEM1 Stopped Due to permStatus\",\n                    payload: \"The test on AEM1 has been stopped because permStatus is FALSE. Please check the system immediately.\"\n                };\n                node.send([resetMsg, triggerMsg, emailMsg]); // Send email as third output\n            } else {\n                node.send([resetMsg, triggerMsg]);\n            }\n            return;\n        }\n\n        if (counter < duration) {\n            node.send([combinedMsg, null]);\n            counter++;\n            timeoutID2 = setTimeout(loop, 1000); // Check conditions every second\n            flow.set(\"timeoutID2\", timeoutID2); // Store the timeout ID in flow\n        } else {\n            index++;\n            processNextRow();\n        }\n    }\n\n\n    loop(); // Start the counter loop\n}\n\n// Start processing the first row\n// Clear timeout if test is stopped\nif (flow.get(\"testStep\") === \"Stopped\") {\n    if (timeoutID2) {\n        clearTimeout(timeoutID2);\n        flow.set(\"timeoutID2\", null); // Clear the timeout ID from flow\n    }\n} else {\n    processNextRow();\n}\n\n\nreturn null;\n",
         "outputs": 3,
         "timeout": "",
         "noerr": 0,
@@ -996,7 +999,7 @@
         "z": "0e1f3206f48adf14",
         "g": "8523ba6f048159f6",
         "name": "Modbus Data Parsing",
-        "func": "// Ensure payload is received\nif (!msg.payload) {\n    node.warn(\"Missing payload\");\n    return null;\n}\n\n// Retrieve all hold register tag names from flow context\nlet tags_400001_400100 = flow.get(\"tags_400001_400100\") || [];\nlet parsedData = {};\nlet buffer = Buffer.alloc(4);\n\n// Add timestamp\nlet timestamp = new Date().toISOString();\nparsedData[\"timestamp\"] = timestamp;\n\n// Process Modbus response dynamically\nfor (let i = 0; i < tags_400001_400100.length; i++) {\n    let tagName = tags_400001_400100[i];\n\n    // Ensure we have enough data for each tag (each float takes 2 registers)\n    if ((i * 2 + 1) < msg.payload.length) {\n        buffer.writeUInt16BE(msg.payload[i * 2], 2);\n        buffer.writeUInt16BE(msg.payload[i * 2 + 1], 0);\n        parsedData[tagName] = parseFloat(buffer.readFloatBE(0).toFixed(3)); // Keep only 3 decimal places\n    } else {\n        node.warn(`Insufficient data for tag: ${tagName}`);\n        parsedData[tagName] = null; // Assign null if data is missing\n    }\n}\n\n// Set the parsed data as the new payload\nmsg.payload = parsedData;\nflow.set(\"modHoldReg001-100_PV\", msg.payload);\n\n// Extract the timestamp\nvar logData = { \"timestamp\": parsedData.timestamp };\n\n// Get the first 13 tags\nvar keys = Object.keys(parsedData).filter(key => key !== \"timestamp\").slice(0, 14);\n\n// Populate logData with selected tags\nkeys.forEach(key => {\n    logData[key] = parsedData[key];\n});\n\n// Save logData back to flow context\nflow.set(\"logData\", logData);\n\n\nreturn msg;\n",
+        "func": "// Ensure payload is received\nif (!msg.payload) {\n    node.warn(\"Missing payload\");\n    return null;\n}\n\n// Retrieve all hold register tag names from flow context\nlet tags_400001_400100 = flow.get(\"tags_400001_400100\") || [];\nlet parsedData = {};\nlet buffer = Buffer.alloc(4);\n\n// Define tags to keep at 3 decimal places\nconst threeDecimalTags = [\"Cell1_Voltage\", \"Cell2_Voltage\", \"Cell3_Voltage\", \"CT201_PV\", \"CT210_PV\"];\n\n// Add timestamp\nlet timestamp = new Date().toISOString();\nparsedData[\"timestamp\"] = timestamp;\n\n// Process Modbus response dynamically\nfor (let i = 0; i < tags_400001_400100.length; i++) {\n    let tagName = tags_400001_400100[i];\n\n    // Ensure we have enough data for each tag (each float takes 2 registers)\n    if ((i * 2 + 1) < msg.payload.length) {\n        buffer.writeUInt16BE(msg.payload[i * 2], 2);\n        buffer.writeUInt16BE(msg.payload[i * 2 + 1], 0);\n        let rawValue = buffer.readFloatBE(0);\n\n        // Apply conditional rounding\n        parsedData[tagName] = parseFloat(\n            rawValue.toFixed(threeDecimalTags.includes(tagName) ? 3 : 1)\n        );\n    } else {\n        node.warn(`Insufficient data for tag: ${tagName}`);\n        parsedData[tagName] = null;\n    }\n}\n\n// Set the parsed data as the new payload\nmsg.payload = parsedData;\nflow.set(\"modHoldReg001-100_PV\", msg.payload);\n\n// Extract the timestamp\nvar logData = { \"timestamp\": parsedData.timestamp };\n\n// Get the first 14 tags (excluding timestamp)\nvar keys = Object.keys(parsedData).filter(key => key !== \"timestamp\").slice(0, 14);\n\n// Populate logData with selected tags\nkeys.forEach(key => {\n    logData[key] = parsedData[key];\n});\n\n// Save logData back to flow context\nflow.set(\"logData\", logData);\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1743,20 +1746,18 @@
         "z": "0e1f3206f48adf14",
         "g": "06c6cdf71851940d",
         "name": "Get flow data",
-        "func": "let logData = flow.get(\"logData\") || {};\nlet testStep = flow.get(\"testStep\") || 0;\n\nlet logDataWithStep = {\n    ...logData,\n    step: testStep\n};\n\nmsg.payload = logDataWithStep;\nreturn msg;",
+        "func": "// Optional: stop if test is done\nlet testStep = flow.get(\"testStep\");\nif (testStep === \"Test Completed\") {\n    let timeoutID = flow.get(\"logTimeoutID\");\n    if (timeoutID) {\n        clearTimeout(timeoutID);\n        flow.set(\"logTimeoutID\", null);\n    }\n    return null;\n}\n\n// Clear previous timeout to avoid stacking\nlet timeoutID = flow.get(\"logTimeoutID\");\nif (timeoutID) {\n    clearTimeout(timeoutID);\n}\n\n// Fetch logging interval (in seconds)\nlet interval = flow.get(\"logIntervalSec\") || 5;\n\n// Assemble the logging data\nlet logData = flow.get(\"logData\") || {};\nlet currentStep = flow.get(\"scriptStep\") || 0;\n\nlet logDataWithStep = {\n    ...logData,\n    step: currentStep\n};\n\n// Send to CSV writer\nnode.send([logDataWithStep]);\n\n// Schedule next log\nlet newTimeout = setTimeout(() => {\n    node.send([{ payload: \"triggerLog\" }]); // this goes into switch\n}, interval * 1000);\nflow.set(\"logTimeoutID\", newTimeout);\n\nreturn null;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 590,
-        "y": 1820,
+        "x": 410,
+        "y": 1860,
         "wires": [
             [
-                "6d065f0ebbf0e7aa",
-                "da753e14585654ba",
-                "fb1ec398897fa4c8"
+                "2ff1bd7c6ae39338"
             ]
         ]
     },
@@ -1773,7 +1774,7 @@
         "y": 1820,
         "wires": [
             [
-                "562e1b5e88637fd1"
+                "3ae3b1dd7f0614df"
             ]
         ]
     },
@@ -1785,7 +1786,7 @@
         "name": "Data logging management",
         "info": "",
         "x": 170,
-        "y": 1780,
+        "y": 1740,
         "wires": []
     },
     {
@@ -2083,33 +2084,6 @@
         "wires": []
     },
     {
-        "id": "562e1b5e88637fd1",
-        "type": "trigger",
-        "z": "0e1f3206f48adf14",
-        "g": "06c6cdf71851940d",
-        "name": "Start test pulse",
-        "op1": "1",
-        "op2": "0",
-        "op1type": "str",
-        "op2type": "str",
-        "duration": "-1",
-        "extend": false,
-        "overrideDelay": false,
-        "units": "s",
-        "reset": "Stop data logging",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 380,
-        "y": 1820,
-        "wires": [
-            [
-                "3ca569c54e5ebb61",
-                "94f03e995178a385"
-            ]
-        ]
-    },
-    {
         "id": "375e0ce60e51a32b",
         "type": "link in",
         "z": "0e1f3206f48adf14",
@@ -2135,25 +2109,8 @@
         "name": "Stop data logging after test complete",
         "info": "",
         "x": 420,
-        "y": 1880,
+        "y": 1920,
         "wires": []
-    },
-    {
-        "id": "b6f7853f398c93d3",
-        "type": "link in",
-        "z": "0e1f3206f48adf14",
-        "g": "5258e746159f915c",
-        "name": "Deploy pulse",
-        "links": [
-            "94f03e995178a385"
-        ],
-        "x": 75,
-        "y": 1580,
-        "wires": [
-            [
-                "8ad41d8b3762ac44"
-            ]
-        ]
     },
     {
         "id": "1fa25a2cb5e31ef6",
@@ -2194,7 +2151,7 @@
         "y": 1880,
         "wires": [
             [
-                "562e1b5e88637fd1"
+                "3ca569c54e5ebb61"
             ]
         ]
     },
@@ -2214,41 +2171,6 @@
                 "a1bf5e81cfcf58e3"
             ]
         ]
-    },
-    {
-        "id": "8ad41d8b3762ac44",
-        "type": "function",
-        "z": "0e1f3206f48adf14",
-        "g": "5258e746159f915c",
-        "name": "permStatus check pulse",
-        "func": "// Retrieve permissive status from flow context\nlet permStatus = flow.get(\"permStatus\");\n\n// Check permissive status\nif (permStatus === true) {\n    return null;  // If true, return null\n} else {\n    msg.payload = \"Stop test\";\n    return msg;\n}\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 350,
-        "y": 1580,
-        "wires": [
-            [
-                "5b8cf5d0895f5826"
-            ]
-        ]
-    },
-    {
-        "id": "94f03e995178a385",
-        "type": "link out",
-        "z": "0e1f3206f48adf14",
-        "g": "06c6cdf71851940d",
-        "name": "Pulse after test start",
-        "mode": "link",
-        "links": [
-            "b6f7853f398c93d3"
-        ],
-        "x": 535,
-        "y": 1780,
-        "wires": []
     },
     {
         "id": "a28627b538e4350e",
@@ -2323,29 +2245,12 @@
         "wires": []
     },
     {
-        "id": "5b8cf5d0895f5826",
-        "type": "debug",
-        "z": "0e1f3206f48adf14",
-        "g": "5258e746159f915c",
-        "name": "debug 11",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 520,
-        "y": 1640,
-        "wires": []
-    },
-    {
         "id": "1ee5227dd94e166a",
         "type": "function",
         "z": "0e1f3206f48adf14",
         "g": "1c1f20c3ada10fc1",
         "name": "Define initial value",
-        "func": "flow.set(\"stopTest\", false);\nflow.set(\"test_sequence_path\", \"C: \\Users\\gonnk\\OneDrive - University of Delaware - o365\\Code\\Node - red\\Log Tag.csv\")\nreturn msg;",
+        "func": "flow.set(\"stopTest\", false);\nflow.set(\"test_sequence_path\", \"C: \\Users\\gonnk\\OneDrive - University of Delaware - o365\\Code\\Node - red\\Log Tag.csv\")\nflow.set(\"systemStatus\",\"Auto_Standby\");\nflow.set(\"procedureStatus\", \"Standby\");\nflow.set(\"scriptStep\",0);\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3467,7 +3372,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 940,
+        "x": 1060,
         "y": 160,
         "wires": []
     },
@@ -4973,7 +4878,7 @@
         "retentionPolicyV18Flux": "",
         "org": "Test Lab",
         "bucket": "AEM1",
-        "x": 800,
+        "x": 840,
         "y": 1900,
         "wires": []
     },
@@ -4992,7 +4897,7 @@
         "retentionPolicyV18Flux": "",
         "org": "my-org",
         "bucket": "my-bucket",
-        "x": 760,
+        "x": 820,
         "y": 1940,
         "wires": []
     },
@@ -6445,6 +6350,218 @@
         "cts": false,
         "x": 810,
         "y": 2780,
+        "wires": []
+    },
+    {
+        "id": "8bc7b7d40bdb88bf",
+        "type": "function",
+        "z": "0e1f3206f48adf14",
+        "g": "06c6cdf71851940d",
+        "name": "Set currentLogFile",
+        "func": "let timestamp = new Date().toISOString().replace(/:/g, \"-\");  // Replace colon to avoid file system issues\nlet filename = `/app/files/${timestamp}.csv`;\n\nflow.set(\"currentLogFile\", filename);\nmsg.payload = filename;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 250,
+        "y": 1760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9a97bbc72a0e3555",
+        "type": "ui_dropdown",
+        "z": "0e1f3206f48adf14",
+        "g": "06c6cdf71851940d",
+        "name": "",
+        "label": "Log Frequency",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "78c63c00e1f5b7aa",
+        "order": 14,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "1",
+                "value": "1 sec",
+                "type": "str"
+            },
+            {
+                "label": "5",
+                "value": "5 sec",
+                "type": "str"
+            },
+            {
+                "label": "10",
+                "value": "10 sec",
+                "type": "str"
+            },
+            {
+                "label": "60",
+                "value": "60 sec",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 200,
+        "y": 1980,
+        "wires": [
+            [
+                "fdd2080b0ef3c2a6"
+            ]
+        ]
+    },
+    {
+        "id": "fdd2080b0ef3c2a6",
+        "type": "function",
+        "z": "0e1f3206f48adf14",
+        "g": "06c6cdf71851940d",
+        "name": "Set logIntervalSec",
+        "func": "flow.set(\"logIntervalSec\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 1980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2ff1bd7c6ae39338",
+        "type": "switch",
+        "z": "0e1f3206f48adf14",
+        "g": "06c6cdf71851940d",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "triggerLog",
+                "vt": "str"
+            },
+            {
+                "t": "neq",
+                "v": "triggerLog",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 410,
+        "y": 1800,
+        "wires": [
+            [
+                "3ca569c54e5ebb61"
+            ],
+            [
+                "6d065f0ebbf0e7aa",
+                "da753e14585654ba",
+                "fb1ec398897fa4c8"
+            ]
+        ]
+    },
+    {
+        "id": "3ae3b1dd7f0614df",
+        "type": "function",
+        "z": "0e1f3206f48adf14",
+        "g": "06c6cdf71851940d",
+        "name": "Trigger",
+        "func": "msg.payload = \"triggerLog\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 220,
+        "y": 1820,
+        "wires": [
+            [
+                "2ff1bd7c6ae39338"
+            ]
+        ]
+    },
+    {
+        "id": "97a3bdd717fc1c74",
+        "type": "function",
+        "z": "0e1f3206f48adf14",
+        "g": "06c6cdf71851940d",
+        "name": "Trigger",
+        "func": "msg.payload = \"triggerLog\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 1740,
+        "wires": [
+            [
+                "95c4912ac6b8d658"
+            ]
+        ]
+    },
+    {
+        "id": "3f375b16d38d431e",
+        "type": "inject",
+        "z": "0e1f3206f48adf14",
+        "g": "06c6cdf71851940d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 420,
+        "y": 1740,
+        "wires": [
+            [
+                "97a3bdd717fc1c74"
+            ]
+        ]
+    },
+    {
+        "id": "95c4912ac6b8d658",
+        "type": "debug",
+        "z": "0e1f3206f48adf14",
+        "g": "06c6cdf71851940d",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 1740,
         "wires": []
     }
 ]
