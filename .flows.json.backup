@@ -37,15 +37,15 @@
             "9a97bbc72a0e3555",
             "fdd2080b0ef3c2a6",
             "2ff1bd7c6ae39338",
-            "b66b52a8f05c0f10",
-            "5d96fb1a46f69630",
-            "2082d91dcae37a5b",
-            "d648f2a33d8d250e"
+            "3ae3b1dd7f0614df",
+            "97a3bdd717fc1c74",
+            "3f375b16d38d431e",
+            "95c4912ac6b8d658"
         ],
         "x": 34,
-        "y": 1679,
+        "y": 1699,
         "w": 1092,
-        "h": 342
+        "h": 322
     },
     {
         "id": "5258e746159f915c",
@@ -1746,15 +1746,15 @@
         "z": "0e1f3206f48adf14",
         "g": "06c6cdf71851940d",
         "name": "Get flow data",
-        "func": "let timeoutID = flow.get(\"logTimeoutID\");\nif (timeoutID) {\n    clearTimeout(timeoutID);\n}\n\n// Get interval from dropdown (default to 5 seconds)\nlet interval = flow.get(\"logIntervalSec\") || 5;\n\n// Fetch data to log\nlet logData = flow.get(\"logData\") || {};\nlet scriptStep = flow.get(\"scriptStep\") || 0;\n\nlet logDataWithStep = {\n    ...logData,\n    step: scriptStep\n};\n\nmsg.payload = logDataWithStep;\nnode.send([msg]);  // Send to CSV or next node\n\n// Schedule next log\nlet newTimeout = setTimeout(() => {\n    node.send([{ payload: \"triggerLog\" }]);  // feed this into the same function\n}, interval * 1000);\n\nflow.set(\"logTimeoutID\", newTimeout);\n\n// Don’t return immediately to avoid double-send\nreturn null;\n",
+        "func": "// Optional: stop if test is done\nlet testStep = flow.get(\"testStep\");\nif (testStep === \"Test Completed\") {\n    let timeoutID = flow.get(\"logTimeoutID\");\n    if (timeoutID) {\n        clearTimeout(timeoutID);\n        flow.set(\"logTimeoutID\", null);\n    }\n    return null;\n}\n\n// Clear previous timeout to avoid stacking\nlet timeoutID = flow.get(\"logTimeoutID\");\nif (timeoutID) {\n    clearTimeout(timeoutID);\n}\n\n// Fetch logging interval (in seconds)\nlet interval = flow.get(\"logIntervalSec\") || 5;\n\n// Assemble the logging data\nlet logData = flow.get(\"logData\") || {};\nlet currentStep = flow.get(\"scriptStep\") || 0;\n\nlet logDataWithStep = {\n    ...logData,\n    step: currentStep\n};\n\n// Send to CSV writer\nnode.send([logDataWithStep]);\n\n// Schedule next log\nlet newTimeout = setTimeout(() => {\n    node.send([{ payload: \"triggerLog\" }]); // this goes into switch\n}, interval * 1000);\nflow.set(\"logTimeoutID\", newTimeout);\n\nreturn null;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 370,
-        "y": 1820,
+        "x": 410,
+        "y": 1860,
         "wires": [
             [
                 "2ff1bd7c6ae39338"
@@ -1773,7 +1773,9 @@
         "x": 85,
         "y": 1820,
         "wires": [
-            []
+            [
+                "3ae3b1dd7f0614df"
+            ]
         ]
     },
     {
@@ -2106,8 +2108,8 @@
         "g": "06c6cdf71851940d",
         "name": "Stop data logging after test complete",
         "info": "",
-        "x": 460,
-        "y": 1880,
+        "x": 420,
+        "y": 1920,
         "wires": []
     },
     {
@@ -2148,7 +2150,9 @@
         "x": 190,
         "y": 1880,
         "wires": [
-            []
+            [
+                "3ca569c54e5ebb61"
+            ]
         ]
     },
     {
@@ -5498,7 +5502,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 840,
+        "x": 860,
         "y": 820,
         "wires": [
             [
@@ -6361,7 +6365,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 290,
+        "x": 250,
         "y": 1760,
         "wires": [
             []
@@ -6384,24 +6388,24 @@
         "multiple": false,
         "options": [
             {
-                "label": "1",
-                "value": "1 sec",
-                "type": "str"
+                "label": "1 s",
+                "value": 1,
+                "type": "num"
             },
             {
-                "label": "5",
-                "value": "5 sec",
-                "type": "str"
+                "label": "5 s",
+                "value": 5,
+                "type": "num"
             },
             {
-                "label": "10",
-                "value": "10 sec",
-                "type": "str"
+                "label": "10 s",
+                "value": 10,
+                "type": "num"
             },
             {
-                "label": "60",
-                "value": "60 sec",
-                "type": "str"
+                "label": "60 s",
+                "value": 60,
+                "type": "num"
             }
         ],
         "payload": "",
@@ -6458,53 +6462,63 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 530,
-        "y": 1820,
+        "x": 410,
+        "y": 1800,
         "wires": [
+            [
+                "3ca569c54e5ebb61"
+            ],
             [
                 "6d065f0ebbf0e7aa",
                 "da753e14585654ba",
                 "fb1ec398897fa4c8"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "b66b52a8f05c0f10",
-        "type": "switch",
-        "z": "0e1f3206f48adf14",
-        "g": "06c6cdf71851940d",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "triggerLog",
-                "vt": "str"
-            },
-            {
-                "t": "neq",
-                "v": "triggerLog",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 590,
-        "y": 1760,
-        "wires": [
-            [
-                "2082d91dcae37a5b"
-            ],
-            [
-                "d648f2a33d8d250e"
             ]
         ]
     },
     {
-        "id": "5d96fb1a46f69630",
+        "id": "3ae3b1dd7f0614df",
+        "type": "function",
+        "z": "0e1f3206f48adf14",
+        "g": "06c6cdf71851940d",
+        "name": "Trigger",
+        "func": "msg.payload = \"triggerLog\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 220,
+        "y": 1820,
+        "wires": [
+            [
+                "2ff1bd7c6ae39338"
+            ]
+        ]
+    },
+    {
+        "id": "97a3bdd717fc1c74",
+        "type": "function",
+        "z": "0e1f3206f48adf14",
+        "g": "06c6cdf71851940d",
+        "name": "Trigger",
+        "func": "msg.payload = \"triggerLog\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 1740,
+        "wires": [
+            [
+                "95c4912ac6b8d658"
+            ]
+        ]
+    },
+    {
+        "id": "3f375b16d38d431e",
         "type": "inject",
         "z": "0e1f3206f48adf14",
         "g": "06c6cdf71851940d",
@@ -6523,18 +6537,18 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "triggerLogss",
-        "payloadType": "str",
-        "x": 470,
-        "y": 1760,
+        "payload": "",
+        "payloadType": "date",
+        "x": 420,
+        "y": 1740,
         "wires": [
             [
-                "b66b52a8f05c0f10"
+                "97a3bdd717fc1c74"
             ]
         ]
     },
     {
-        "id": "2082d91dcae37a5b",
+        "id": "95c4912ac6b8d658",
         "type": "debug",
         "z": "0e1f3206f48adf14",
         "g": "06c6cdf71851940d",
@@ -6546,25 +6560,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 720,
-        "y": 1720,
-        "wires": []
-    },
-    {
-        "id": "d648f2a33d8d250e",
-        "type": "debug",
-        "z": "0e1f3206f48adf14",
-        "g": "06c6cdf71851940d",
-        "name": "debug 26",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 720,
-        "y": 1780,
+        "x": 700,
+        "y": 1740,
         "wires": []
     }
 ]

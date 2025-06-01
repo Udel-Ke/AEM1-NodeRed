@@ -40,11 +40,12 @@
             "3ae3b1dd7f0614df",
             "97a3bdd717fc1c74",
             "3f375b16d38d431e",
-            "95c4912ac6b8d658"
+            "95c4912ac6b8d658",
+            "3f9120833317f5fd"
         ],
         "x": 34,
         "y": 1699,
-        "w": 1092,
+        "w": 1072,
         "h": 322
     },
     {
@@ -1020,14 +1021,14 @@
         "z": "0e1f3206f48adf14",
         "g": "06c6cdf71851940d",
         "name": "Data logging to CSV",
-        "filename": "/app/files/data file.csv",
+        "filename": "currentLogFile",
         "filenameType": "str",
         "appendNewline": false,
         "createDir": true,
         "overwriteFile": "false",
         "encoding": "none",
-        "x": 1000,
-        "y": 1820,
+        "x": 980,
+        "y": 1780,
         "wires": [
             []
         ]
@@ -1067,8 +1068,8 @@
         "strings": true,
         "include_empty_strings": "",
         "include_null_values": "",
-        "x": 770,
-        "y": 1820,
+        "x": 750,
+        "y": 1780,
         "wires": [
             [
                 "8e6bccc8c5f45c9e",
@@ -1089,8 +1090,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 880,
-        "y": 1760,
+        "x": 1000,
+        "y": 1740,
         "wires": []
     },
     {
@@ -1753,8 +1754,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 410,
-        "y": 1860,
+        "x": 670,
+        "y": 1880,
         "wires": [
             [
                 "2ff1bd7c6ae39338"
@@ -1771,7 +1772,7 @@
             "7359636993bb200e"
         ],
         "x": 85,
-        "y": 1820,
+        "y": 1780,
         "wires": [
             [
                 "3ae3b1dd7f0614df"
@@ -4878,8 +4879,8 @@
         "retentionPolicyV18Flux": "",
         "org": "Test Lab",
         "bucket": "AEM1",
-        "x": 840,
-        "y": 1900,
+        "x": 880,
+        "y": 1820,
         "wires": []
     },
     {
@@ -4897,8 +4898,8 @@
         "retentionPolicyV18Flux": "",
         "org": "my-org",
         "bucket": "my-bucket",
-        "x": 820,
-        "y": 1940,
+        "x": 900,
+        "y": 1860,
         "wires": []
     },
     {
@@ -5502,7 +5503,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 840,
+        "x": 860,
         "y": 820,
         "wires": [
             [
@@ -6358,17 +6359,19 @@
         "z": "0e1f3206f48adf14",
         "g": "06c6cdf71851940d",
         "name": "Set currentLogFile",
-        "func": "let timestamp = new Date().toISOString().replace(/:/g, \"-\");  // Replace colon to avoid file system issues\nlet filename = `/app/files/${timestamp}.csv`;\n\nflow.set(\"currentLogFile\", filename);\nmsg.payload = filename;\nreturn msg;\n",
+        "func": "// Optional: stop if test is done\nlet testStep = flow.get(\"testStep\");\nif (testStep === \"Test Completed\" || testStep === \"Stopped\") {\n    let timeoutID = flow.get(\"csvRotationTimeoutID\");\n    if (timeoutID) {\n        clearTimeout(timeoutID);\n        flow.set(\"csvRotationTimeoutID\", null);\n    }\n    return null;\n}\n\n// Stop any previously scheduled timeout\nlet timeoutID = flow.get(\"csvRotationTimeoutID\");\nif (timeoutID) {\n    clearTimeout(timeoutID);\n}\n\n// Generate new timestamped file name\nlet timestamp = new Date().toISOString().replace(/:/g, \"-\");\nlet filename = `/app/files/${timestamp}.csv`;\n\nflow.set(\"currentLogFile\", filename);\n\n// Output the new filename\nmsg.payload = filename;\nnode.send([msg]);\n\n// Schedule the next filename rotation in 1 hour\nlet newTimeout = setTimeout(() => {\n    node.send([{ payload: \"rotateCSV\" }]);  // Loop back via switch node\n}, 3600000); // 1 hour in milliseconds\n\nflow.set(\"csvRotationTimeoutID\", newTimeout);\n\nreturn null;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 250,
-        "y": 1760,
+        "x": 410,
+        "y": 1860,
         "wires": [
-            []
+            [
+                "3f9120833317f5fd"
+            ]
         ]
     },
     {
@@ -6388,24 +6391,24 @@
         "multiple": false,
         "options": [
             {
-                "label": "1",
-                "value": "1 sec",
-                "type": "str"
+                "label": "1 s",
+                "value": 1,
+                "type": "num"
             },
             {
-                "label": "5",
-                "value": "5 sec",
-                "type": "str"
+                "label": "5 s",
+                "value": 5,
+                "type": "num"
             },
             {
-                "label": "10",
-                "value": "10 sec",
-                "type": "str"
+                "label": "10 s",
+                "value": 10,
+                "type": "num"
             },
             {
-                "label": "60",
-                "value": "60 sec",
-                "type": "str"
+                "label": "60 s",
+                "value": 60,
+                "type": "num"
             }
         ],
         "payload": "",
@@ -6462,8 +6465,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 410,
-        "y": 1800,
+        "x": 570,
+        "y": 1780,
         "wires": [
             [
                 "3ca569c54e5ebb61"
@@ -6481,18 +6484,21 @@
         "z": "0e1f3206f48adf14",
         "g": "06c6cdf71851940d",
         "name": "Trigger",
-        "func": "msg.payload = \"triggerLog\";\nreturn msg;",
-        "outputs": 1,
+        "func": "// Output 1: triggers data logging\nlet logTrigger = { payload: \"triggerLog\" };\n\n// Output 2: triggers CSV file rotation\nlet rotateTrigger = { payload: \"rotateCSV\" };\n\n// Send each to a different output\nreturn [logTrigger, rotateTrigger];",
+        "outputs": 2,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 220,
-        "y": 1820,
+        "x": 180,
+        "y": 1780,
         "wires": [
             [
                 "2ff1bd7c6ae39338"
+            ],
+            [
+                "3f9120833317f5fd"
             ]
         ]
     },
@@ -6563,5 +6569,37 @@
         "x": 700,
         "y": 1740,
         "wires": []
+    },
+    {
+        "id": "3f9120833317f5fd",
+        "type": "switch",
+        "z": "0e1f3206f48adf14",
+        "g": "06c6cdf71851940d",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "rotateCSV",
+                "vt": "str"
+            },
+            {
+                "t": "neq",
+                "v": "rotateCSV",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 350,
+        "y": 1800,
+        "wires": [
+            [
+                "8bc7b7d40bdb88bf"
+            ],
+            []
+        ]
     }
 ]
