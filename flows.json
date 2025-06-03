@@ -1658,7 +1658,8 @@
             "62c4e491e6bcbed7",
             "c7de23c01c2709f7",
             "1b952520d5aaf90b",
-            "56a3e6090f3f3f13"
+            "56a3e6090f3f3f13",
+            "3c13fa52a4957e3a"
         ],
         "x": 375,
         "y": 60,
@@ -6980,5 +6981,102 @@
         "x": 160,
         "y": 4620,
         "wires": []
+    },
+    {
+        "id": "fe5b2008e835142c",
+        "type": "ui_text_input",
+        "z": "0e1f3206f48adf14",
+        "name": "testID Input",
+        "label": "Test ID",
+        "tooltip": "",
+        "group": "78c63c00e1f5b7aa",
+        "order": 15,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 510,
+        "y": 5520,
+        "wires": [
+            [
+                "d574e9d2ae32d3ae",
+                "b3017782a7ed1b07"
+            ]
+        ]
+    },
+    {
+        "id": "d574e9d2ae32d3ae",
+        "type": "debug",
+        "z": "0e1f3206f48adf14",
+        "name": "debug 26",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 5460,
+        "wires": []
+    },
+    {
+        "id": "b3017782a7ed1b07",
+        "type": "function",
+        "z": "0e1f3206f48adf14",
+        "name": "Set testID",
+        "func": "flow.set(\"testID\", msg.payload);\nnode.status({ fill: \"green\", shape: \"dot\", text: \"Test ID set: \" + msg.payload });\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 5520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aff089f10d47c071",
+        "type": "function",
+        "z": "0e1f3206f48adf14",
+        "name": "Disable/Enable",
+        "func": "let systemRunning = flow.get(\"System_Running\") || false;\nmsg.enabled = systemRunning ? false : true;\ndelete msg.payload;\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 5520,
+        "wires": [
+            [
+                "fe5b2008e835142c"
+            ]
+        ]
+    },
+    {
+        "id": "3c13fa52a4957e3a",
+        "type": "link in",
+        "z": "0e1f3206f48adf14",
+        "name": "Enable/disable testID input",
+        "links": [
+            "49263ca4933dbd63"
+        ],
+        "x": 155,
+        "y": 5480,
+        "wires": [
+            [
+                "aff089f10d47c071"
+            ]
+        ]
     }
 ]

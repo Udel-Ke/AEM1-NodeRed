@@ -46,8 +46,8 @@
             "d67cd350e95814e5",
             "295be76956eeb3d1"
         ],
-        "x": 34,
-        "y": 1739,
+        "x": 54,
+        "y": 1779,
         "w": 1052,
         "h": 422
     },
@@ -93,7 +93,7 @@
         "x": 34,
         "y": 1379,
         "w": 1572,
-        "h": 302
+        "h": 342
     },
     {
         "id": "ad5ef647cb4ea746",
@@ -115,8 +115,8 @@
             "c64bdfa07c836a68",
             "fa4ba3044dddabf0"
         ],
-        "x": 34,
-        "y": 2479,
+        "x": 54,
+        "y": 2659,
         "w": 752,
         "h": 129.5
     },
@@ -333,8 +333,8 @@
             "c6152156af323fc9",
             "a2917e2f62739f51"
         ],
-        "x": 34,
-        "y": 2139,
+        "x": 54,
+        "y": 2279,
         "w": 832,
         "h": 322
     },
@@ -442,8 +442,8 @@
             "62c4e491e6bcbed7",
             "cf194dffbd2e48b6"
         ],
-        "x": 14,
-        "y": 2679,
+        "x": 54,
+        "y": 2879,
         "w": 892,
         "h": 202
     },
@@ -471,8 +471,8 @@
             "73963f73e4846a0f",
             "b9ad53a94a9cade2"
         ],
-        "x": 14,
-        "y": 2979,
+        "x": 54,
+        "y": 3199,
         "w": 772,
         "h": 242
     },
@@ -527,10 +527,75 @@
             "ebedd42d3d73fc5c",
             "5bf7034acf6e3d8c"
         ],
-        "x": 14,
-        "y": 3439,
+        "x": 54,
+        "y": 3639,
         "w": 1252,
         "h": 862
+    },
+    {
+        "id": "3c0806d8c07e2d4a",
+        "type": "group",
+        "z": "0e1f3206f48adf14",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "heartbeat_request",
+            "heartbeat_success",
+            "heartbeat_check",
+            "heartbeat_alert",
+            "56a3e6090f3f3f13",
+            "dd03e86f89549f23",
+            "32c96a4e68fc9d38",
+            "98d9105a0fe9c4f2",
+            "9d7c0453e92f3eb0",
+            "heartbeat_modbus",
+            "1891ff190c2b30dc",
+            "babd223a9d940a0a"
+        ],
+        "x": 54,
+        "y": 5019,
+        "w": 932,
+        "h": 362
+    },
+    {
+        "id": "b2387cf1c1f9066f",
+        "type": "group",
+        "z": "0e1f3206f48adf14",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "42e37092c2672e48",
+            "2425e4aac2f29b35",
+            "f78b0d87bd180969",
+            "fcaa640b2f7de25a",
+            "40cf32dbbea3cb5b",
+            "0f5641a1acf5eeda",
+            "a41148cd8fa6b452",
+            "e9289b689f0b5e3e",
+            "299053fa01342bc8",
+            "bd7d6e9091f594cc",
+            "8ee848ca2c5eacca",
+            "ebc99a25bec0f07d",
+            "38e0892783d5c8ca"
+        ],
+        "x": 54,
+        "y": 4579,
+        "w": 1172,
+        "h": 302
     },
     {
         "id": "cade13d4f42d5807",
@@ -1466,8 +1531,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "File path picker",
-        "x": 340,
-        "y": 2560,
+        "x": 360,
+        "y": 2740,
         "wires": [
             [
                 "65f4a6d329a20c56"
@@ -1489,8 +1554,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 520,
-        "y": 2560,
+        "x": 540,
+        "y": 2740,
         "wires": [
             [
                 "c64bdfa07c836a68"
@@ -1593,7 +1658,8 @@
             "62c4e491e6bcbed7",
             "c7de23c01c2709f7",
             "1b952520d5aaf90b",
-            "56a3e6090f3f3f13"
+            "56a3e6090f3f3f13",
+            "3c13fa52a4957e3a"
         ],
         "x": 375,
         "y": 60,
@@ -1689,8 +1755,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 690,
-        "y": 1860,
+        "x": 710,
+        "y": 1900,
         "wires": [
             [
                 "2ff1bd7c6ae39338"
@@ -1706,8 +1772,8 @@
         "links": [
             "7359636993bb200e"
         ],
-        "x": 105,
-        "y": 1820,
+        "x": 125,
+        "y": 1860,
         "wires": [
             [
                 "3ae3b1dd7f0614df"
@@ -1721,8 +1787,8 @@
         "g": "06c6cdf71851940d",
         "name": "Data logging management",
         "info": "",
-        "x": 190,
-        "y": 1780,
+        "x": 210,
+        "y": 1820,
         "wires": []
     },
     {
@@ -1743,8 +1809,8 @@
         "g": "ad5ef647cb4ea746",
         "name": "Test script select",
         "info": "",
-        "x": 140,
-        "y": 2520,
+        "x": 160,
+        "y": 2700,
         "wires": []
     },
     {
@@ -2031,8 +2097,8 @@
         "links": [
             "db7d84da82eb83ee"
         ],
-        "x": 75,
-        "y": 2000,
+        "x": 95,
+        "y": 2040,
         "wires": [
             [
                 "a1bf5e81cfcf58e3"
@@ -2047,8 +2113,8 @@
         "g": "06c6cdf71851940d",
         "name": "Stop data logging (Abort/Test Complete)",
         "info": "",
-        "x": 290,
-        "y": 2040,
+        "x": 310,
+        "y": 2080,
         "wires": []
     },
     {
@@ -2086,8 +2152,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 210,
-        "y": 2000,
+        "x": 230,
+        "y": 2040,
         "wires": [
             [
                 "f3fbb69e2e543607"
@@ -2103,8 +2169,8 @@
         "links": [
             "ad1436e2f7b892fd"
         ],
-        "x": 75,
-        "y": 2040,
+        "x": 95,
+        "y": 2080,
         "wires": [
             [
                 "a1bf5e81cfcf58e3"
@@ -2270,8 +2336,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 520,
-        "y": 2320,
+        "x": 540,
+        "y": 2460,
         "wires": [
             [
                 "2c986d49933c2836",
@@ -2301,8 +2367,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 140,
-        "y": 2220,
+        "x": 160,
+        "y": 2360,
         "wires": [
             [
                 "ac0118475b89b5f1"
@@ -2322,8 +2388,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 320,
-        "y": 2260,
+        "x": 340,
+        "y": 2400,
         "wires": [
             [
                 "78c83855ada6c722",
@@ -2344,8 +2410,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 320,
-        "y": 2340,
+        "x": 340,
+        "y": 2480,
         "wires": [
             [
                 "78c83855ada6c722"
@@ -2374,8 +2440,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 160,
-        "y": 2300,
+        "x": 180,
+        "y": 2440,
         "wires": [
             [
                 "a2cabbb3e1741f6d"
@@ -2412,8 +2478,8 @@
         "links": [
             "ad1436e2f7b892fd"
         ],
-        "x": 195,
-        "y": 2340,
+        "x": 215,
+        "y": 2480,
         "wires": [
             [
                 "a2cabbb3e1741f6d"
@@ -2429,8 +2495,8 @@
         "links": [
             "7359636993bb200e"
         ],
-        "x": 185,
-        "y": 2260,
+        "x": 205,
+        "y": 2400,
         "wires": [
             [
                 "ac0118475b89b5f1"
@@ -2493,8 +2559,8 @@
         "links": [
             "db7d84da82eb83ee"
         ],
-        "x": 195,
-        "y": 2380,
+        "x": 215,
+        "y": 2520,
         "wires": [
             [
                 "a2cabbb3e1741f6d"
@@ -2887,8 +2953,8 @@
         "g": "5258e746159f915c",
         "name": "Send email alert",
         "info": "",
-        "x": 1260,
-        "y": 1640,
+        "x": 1100,
+        "y": 1680,
         "wires": []
     },
     {
@@ -3077,8 +3143,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 610,
-        "y": 2780,
+        "x": 650,
+        "y": 2980,
         "wires": [
             [
                 "ui-table"
@@ -3098,8 +3164,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 230,
-        "y": 2780,
+        "x": 270,
+        "y": 2980,
         "wires": [
             [
                 "a10c1a2688a640bb"
@@ -3119,8 +3185,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 630,
-        "y": 2840,
+        "x": 670,
+        "y": 3040,
         "wires": [
             [
                 "ui-table"
@@ -3140,8 +3206,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 310,
-        "y": 2420,
+        "x": 330,
+        "y": 2560,
         "wires": [
             [
                 "78c83855ada6c722",
@@ -3171,8 +3237,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 380,
-        "y": 2720,
+        "x": 420,
+        "y": 2920,
         "wires": [
             [
                 "1eb68209c16b4838"
@@ -3188,8 +3254,8 @@
         "links": [
             "49263ca4933dbd63"
         ],
-        "x": 85,
-        "y": 2780,
+        "x": 125,
+        "y": 2980,
         "wires": [
             [
                 "1eb68209c16b4838"
@@ -3203,8 +3269,8 @@
         "g": "a9e7fb168fe4a14b",
         "name": "Alarm table and clear",
         "info": "",
-        "x": 140,
-        "y": 2720,
+        "x": 180,
+        "y": 2920,
         "wires": []
     },
     {
@@ -3214,8 +3280,8 @@
         "g": "28d6aa434baf0184",
         "name": "Single coil write for start/stop/reset",
         "info": "",
-        "x": 220,
-        "y": 2180,
+        "x": 240,
+        "y": 2320,
         "wires": []
     },
     {
@@ -3316,8 +3382,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1480,
-        "y": 2180,
+        "x": 1980,
+        "y": 2120,
         "wires": [
             []
         ]
@@ -3343,8 +3409,8 @@
         "topic": "",
         "payload": "{\"state\": \"ON\"}",
         "payloadType": "json",
-        "x": 1270,
-        "y": 2160,
+        "x": 1770,
+        "y": 2100,
         "wires": [
             [
                 "d3bc28fa95c4065b"
@@ -3372,8 +3438,8 @@
         "topic": "",
         "payload": "{\"state\": \"OFF\"}",
         "payloadType": "json",
-        "x": 1280,
-        "y": 2200,
+        "x": 1780,
+        "y": 2140,
         "wires": [
             [
                 "d3bc28fa95c4065b"
@@ -3393,8 +3459,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 440,
-        "y": 3100,
+        "x": 480,
+        "y": 3320,
         "wires": [
             [
                 "2d55dea777408eee"
@@ -3423,8 +3489,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 200,
-        "y": 3100,
+        "x": 240,
+        "y": 3320,
         "wires": [
             [
                 "a27854311ccad1e5"
@@ -3444,8 +3510,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 940,
-        "y": 3600,
+        "x": 980,
+        "y": 3800,
         "wires": [
             [
                 "098e0fb7b999add0"
@@ -3465,8 +3531,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 430,
-        "y": 2220,
+        "x": 450,
+        "y": 2360,
         "wires": []
     },
     {
@@ -3482,8 +3548,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 610,
-        "y": 3480,
+        "x": 650,
+        "y": 3680,
         "wires": [
             [
                 "655caca86ec029a9",
@@ -3500,8 +3566,8 @@
         "links": [
             "49263ca4933dbd63"
         ],
-        "x": 245,
-        "y": 3060,
+        "x": 285,
+        "y": 3280,
         "wires": [
             [
                 "a27854311ccad1e5",
@@ -3522,8 +3588,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 650,
-        "y": 3540,
+        "x": 690,
+        "y": 3740,
         "wires": [
             [
                 "655caca86ec029a9"
@@ -3550,8 +3616,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 300,
-        "y": 3640,
+        "x": 340,
+        "y": 3840,
         "wires": [
             [
                 "19582343872ba25b",
@@ -3586,8 +3652,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 650,
-        "y": 3600,
+        "x": 690,
+        "y": 3800,
         "wires": [
             [
                 "655caca86ec029a9"
@@ -3607,8 +3673,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 650,
-        "y": 3660,
+        "x": 690,
+        "y": 3860,
         "wires": [
             [
                 "655caca86ec029a9"
@@ -3628,8 +3694,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 740,
-        "y": 3720,
+        "x": 780,
+        "y": 3920,
         "wires": [
             [
                 "655caca86ec029a9"
@@ -3649,8 +3715,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 650,
-        "y": 3780,
+        "x": 690,
+        "y": 3980,
         "wires": [
             [
                 "655caca86ec029a9"
@@ -3664,8 +3730,8 @@
         "g": "891263f2623b3ee2",
         "name": "P&ID symbol display, color and PV",
         "info": "This section pulls the coil status and holdReg PV every second and update int the SVG figure.\nMake sure the object or text ID in SVG file matches the tag name. ",
-        "x": 180,
-        "y": 3020,
+        "x": 220,
+        "y": 3240,
         "wires": []
     },
     {
@@ -3677,8 +3743,8 @@
         "links": [
             "e40c571c4e7e87b2"
         ],
-        "x": 75,
-        "y": 3560,
+        "x": 115,
+        "y": 3760,
         "wires": [
             [
                 "0f4aaf118b0e298c"
@@ -3698,8 +3764,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 180,
-        "y": 3560,
+        "x": 220,
+        "y": 3760,
         "wires": [
             [
                 "0fcfdb07a1eabfea"
@@ -3710,6 +3776,7 @@
         "id": "42e37092c2672e48",
         "type": "function",
         "z": "0e1f3206f48adf14",
+        "g": "b2387cf1c1f9066f",
         "name": "Single holdReg write",
         "func": "// Retrieve the input tag and setpoint\nlet { tag, setpoint } = msg.payload;\n\n// Retrieve the modHoldReg mapping from the flow context\nlet modHoldReg = flow.get(\"modHoldReg\") || [];\n\n// Find the corresponding Modbus entry\nlet modbusEntry = modHoldReg.find(entry => entry[\"Tag Name\"] === tag);\n\nif (!modbusEntry) {\n    node.error(`Tag ${tag} not found in modHoldReg`, msg);\n    return null;\n}\n\n// Get Modbus start address and data type\nlet address = modbusEntry[\"MODBUS Start Address\"];\nlet dataType = modbusEntry[\"Data Type\"];\n\n// Convert setpoint value to Modbus register format\nlet buffer = Buffer.alloc(4);\n\nif (dataType === \"F32\") {\n    buffer.writeFloatBE(setpoint, 0);  // Convert float to buffer (big-endian)\n} else if (dataType === \"S32\") {\n    buffer.writeInt32BE(setpoint, 0);  // Convert integer to buffer\n} else {\n    node.error(`Unsupported data type: ${dataType} for tag ${tag}`, msg);\n    return null;\n}\n\n// Split buffer into two 16-bit registers (Modbus uses 16-bit words)\nlet registerValues = [\n    buffer.readUInt16BE(2),  // High 16 bits\n    buffer.readUInt16BE(0)   // Low 16 bits\n];\n\n// Construct Modbus Flex Write message with quantity\nmsg.payload = {\n    value: registerValues,\n    fc: 16,  // Function Code 16 (Write Multiple Registers)\n    address: address - 400001,  // Convert absolute to zero-based address\n    quantity: 2,  // Writing two 16-bit registers (32-bit value)\n    unitid: 1  // Change if necessary based on your PLC setup\n};\n\nreturn msg;",
         "outputs": 1,
@@ -3718,8 +3785,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 820,
-        "y": 4440,
+        "x": 880,
+        "y": 4680,
         "wires": [
             [
                 "299053fa01342bc8"
@@ -3730,6 +3797,7 @@
         "id": "2425e4aac2f29b35",
         "type": "function",
         "z": "0e1f3206f48adf14",
+        "g": "b2387cf1c1f9066f",
         "name": "SP_tag_compile",
         "func": "// Define the tags available for setting\nlet availableTags = [\n    \"PMP200_Setpoint\",\n    \"HTR201_SetPoint\",\n    \"HTRCell_SetPoint\",\n    \"Current_Setpoint\",\n    \"Voltage_Setpoint\"\n];\n\n// Format the dropdown options as required by ui_dropdown\nmsg.options = availableTags;\n\nreturn msg;\n",
         "outputs": 1,
@@ -3738,8 +3806,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 260,
-        "y": 4500,
+        "x": 320,
+        "y": 4760,
         "wires": [
             [
                 "8ee848ca2c5eacca"
@@ -3750,6 +3818,7 @@
         "id": "f78b0d87bd180969",
         "type": "function",
         "z": "0e1f3206f48adf14",
+        "g": "b2387cf1c1f9066f",
         "name": "setPoint selected",
         "func": "flow.set(\"tagSelectedforSetChange\", msg.payload)\nreturn msg;",
         "outputs": 1,
@@ -3758,8 +3827,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 630,
-        "y": 4500,
+        "x": 670,
+        "y": 4760,
         "wires": [
             []
         ]
@@ -3777,8 +3846,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 420,
-        "y": 3180,
+        "x": 460,
+        "y": 3400,
         "wires": [
             [
                 "2d55dea777408eee"
@@ -3807,8 +3876,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 200,
-        "y": 3180,
+        "x": 240,
+        "y": 3400,
         "wires": [
             [
                 "b4e3f4053a915245"
@@ -3839,8 +3908,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 450,
-        "y": 3140,
+        "x": 490,
+        "y": 3360,
         "wires": [
             [
                 "2d55dea777408eee"
@@ -3869,8 +3938,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 200,
-        "y": 3140,
+        "x": 240,
+        "y": 3360,
         "wires": [
             [
                 "7f85d90e4955acfa"
@@ -3898,6 +3967,7 @@
         "id": "fcaa640b2f7de25a",
         "type": "inject",
         "z": "0e1f3206f48adf14",
+        "g": "b2387cf1c1f9066f",
         "name": "",
         "props": [
             {
@@ -3915,8 +3985,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 100,
-        "y": 4500,
+        "x": 160,
+        "y": 4760,
         "wires": [
             [
                 "2425e4aac2f29b35"
@@ -3927,6 +3997,7 @@
         "id": "40cf32dbbea3cb5b",
         "type": "function",
         "z": "0e1f3206f48adf14",
+        "g": "b2387cf1c1f9066f",
         "name": "Retreive tagSelected and SP",
         "func": "msg.payload = {\n    tag: flow.get(\"tagSelectedforSetChange\"),  // Tag from dropdown\n    setpoint: flow.get(\"tagSelectedforSetChange_SP\")          // Value from numeric input\n};\nreturn msg;\n",
         "outputs": 1,
@@ -3935,8 +4006,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 560,
-        "y": 4440,
+        "x": 620,
+        "y": 4680,
         "wires": [
             [
                 "42e37092c2672e48"
@@ -3947,6 +4018,7 @@
         "id": "0f5641a1acf5eeda",
         "type": "inject",
         "z": "0e1f3206f48adf14",
+        "g": "b2387cf1c1f9066f",
         "name": "",
         "props": [
             {
@@ -3964,8 +4036,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 220,
-        "y": 4600,
+        "x": 300,
+        "y": 4840,
         "wires": [
             [
                 "ebc99a25bec0f07d"
@@ -3976,6 +4048,7 @@
         "id": "a41148cd8fa6b452",
         "type": "function",
         "z": "0e1f3206f48adf14",
+        "g": "b2387cf1c1f9066f",
         "name": "Store setPoint SP",
         "func": "flow.set(\"tagSelectedforSetChange_SP\", msg.payload)\nreturn msg;",
         "outputs": 1,
@@ -3984,8 +4057,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 590,
-        "y": 4600,
+        "x": 670,
+        "y": 4840,
         "wires": [
             []
         ]
@@ -4013,8 +4086,8 @@
         "z": "0e1f3206f48adf14",
         "name": "Change switch text and spacing",
         "info": "",
-        "x": 150,
-        "y": 3280,
+        "x": 210,
+        "y": 3520,
         "wires": []
     },
     {
@@ -4024,8 +4097,8 @@
         "g": "adbe011cfa336e78",
         "name": "Enable SV switch buttons",
         "info": "",
-        "x": 310,
-        "y": 3680,
+        "x": 350,
+        "y": 3880,
         "wires": []
     },
     {
@@ -4035,8 +4108,8 @@
         "g": "adbe011cfa336e78",
         "name": "Switch goggle for manual and SV control",
         "info": "",
-        "x": 200,
-        "y": 3480,
+        "x": 240,
+        "y": 3680,
         "wires": []
     },
     {
@@ -4052,8 +4125,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 770,
-        "y": 3840,
+        "x": 810,
+        "y": 4040,
         "wires": [
             [
                 "655caca86ec029a9"
@@ -4073,8 +4146,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 730,
-        "y": 3960,
+        "x": 770,
+        "y": 4160,
         "wires": [
             [
                 "655caca86ec029a9"
@@ -4094,8 +4167,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 730,
-        "y": 4020,
+        "x": 770,
+        "y": 4220,
         "wires": [
             [
                 "655caca86ec029a9"
@@ -4115,8 +4188,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 770,
-        "y": 3900,
+        "x": 810,
+        "y": 4100,
         "wires": [
             [
                 "655caca86ec029a9"
@@ -4127,12 +4200,13 @@
         "id": "e9289b689f0b5e3e",
         "type": "link in",
         "z": "0e1f3206f48adf14",
+        "g": "b2387cf1c1f9066f",
         "name": "link in 10",
         "links": [
             "e40c571c4e7e87b2"
         ],
-        "x": 85,
-        "y": 4440,
+        "x": 145,
+        "y": 4680,
         "wires": [
             [
                 "2425e4aac2f29b35"
@@ -4277,8 +4351,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 740,
-        "y": 4080,
+        "x": 780,
+        "y": 4280,
         "wires": [
             [
                 "655caca86ec029a9"
@@ -4298,8 +4372,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 740,
-        "y": 4140,
+        "x": 780,
+        "y": 4340,
         "wires": [
             [
                 "655caca86ec029a9"
@@ -4409,8 +4483,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 740,
-        "y": 4200,
+        "x": 780,
+        "y": 4400,
         "wires": [
             [
                 "655caca86ec029a9"
@@ -4430,8 +4504,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 740,
-        "y": 4260,
+        "x": 780,
+        "y": 4460,
         "wires": [
             [
                 "655caca86ec029a9"
@@ -4451,8 +4525,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 480,
-        "y": 2420,
+        "x": 500,
+        "y": 2560,
         "wires": []
     },
     {
@@ -4468,8 +4542,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 670,
-        "y": 2380,
+        "x": 690,
+        "y": 2520,
         "wires": []
     },
     {
@@ -4556,6 +4630,7 @@
         "id": "heartbeat_request",
         "type": "function",
         "z": "0e1f3206f48adf14",
+        "g": "3c0806d8c07e2d4a",
         "name": "Read Heartbeat Register",
         "func": "msg.payload = {\n    unitid: 1,\n    fc: 1,\n    address: 0,\n    quantity: 1\n};\nreturn msg;",
         "outputs": 1,
@@ -4564,8 +4639,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 370,
-        "y": 4800,
+        "x": 330,
+        "y": 5120,
         "wires": [
             [
                 "heartbeat_modbus"
@@ -4576,6 +4651,7 @@
         "id": "heartbeat_success",
         "type": "function",
         "z": "0e1f3206f48adf14",
+        "g": "3c0806d8c07e2d4a",
         "name": "Store Heartbeat Timestamp",
         "func": "flow.set(\"lastHeartbeat\", Date.now());\nreturn msg;",
         "outputs": 1,
@@ -4584,8 +4660,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 880,
-        "y": 4800,
+        "x": 840,
+        "y": 5120,
         "wires": [
             []
         ]
@@ -4594,6 +4670,7 @@
         "id": "heartbeat_check",
         "type": "function",
         "z": "0e1f3206f48adf14",
+        "g": "3c0806d8c07e2d4a",
         "name": "Check Last Heartbeat",
         "func": "const now = Date.now();\nconst last = flow.get(\"lastHeartbeat\") || 0;\n\nif ((now - last) > 5000) {\n    flow.set(\"stopTest\", true);\n    //node.warn(\"PLC UNRESPONSIVE — Aborting test.\");\n    return { payload: \"PLC unresponsive — Test aborted\" };\n} else {\n    return null;\n}\n",
         "outputs": 1,
@@ -4602,8 +4679,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 540,
-        "y": 4860,
+        "x": 500,
+        "y": 5180,
         "wires": [
             [
                 "heartbeat_alert"
@@ -4614,6 +4691,7 @@
         "id": "heartbeat_alert",
         "type": "debug",
         "z": "0e1f3206f48adf14",
+        "g": "3c0806d8c07e2d4a",
         "name": "PLC Watchdog Alert",
         "active": false,
         "tosidebar": true,
@@ -4623,20 +4701,21 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 780,
-        "y": 4860,
+        "x": 740,
+        "y": 5180,
         "wires": []
     },
     {
         "id": "56a3e6090f3f3f13",
         "type": "link in",
         "z": "0e1f3206f48adf14",
+        "g": "3c0806d8c07e2d4a",
         "name": "HeartBeat_Check",
         "links": [
             "49263ca4933dbd63"
         ],
-        "x": 165,
-        "y": 4740,
+        "x": 105,
+        "y": 5120,
         "wires": [
             [
                 "heartbeat_request",
@@ -4648,6 +4727,7 @@
         "id": "dd03e86f89549f23",
         "type": "delay",
         "z": "0e1f3206f48adf14",
+        "g": "3c0806d8c07e2d4a",
         "name": "",
         "pauseType": "delay",
         "timeout": "2",
@@ -4661,8 +4741,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 320,
-        "y": 4860,
+        "x": 280,
+        "y": 5180,
         "wires": [
             [
                 "heartbeat_check",
@@ -4685,6 +4765,7 @@
         "id": "32c96a4e68fc9d38",
         "type": "debug",
         "z": "0e1f3206f48adf14",
+        "g": "3c0806d8c07e2d4a",
         "name": "debug 14",
         "active": false,
         "tosidebar": true,
@@ -4693,14 +4774,15 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 780,
-        "y": 5000,
+        "x": 760,
+        "y": 5340,
         "wires": []
     },
     {
         "id": "98d9105a0fe9c4f2",
         "type": "function",
         "z": "0e1f3206f48adf14",
+        "g": "3c0806d8c07e2d4a",
         "name": "modbus_heartbeat generator",
         "func": "msg.payload = {\n    tag: \"modbus_heartbeat\",  // assign value to modbus_heartbeat in PLC\n    setpoint: Math.random()          // random value\n};\nreturn msg;\n",
         "outputs": 1,
@@ -4709,8 +4791,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 220,
-        "y": 4980,
+        "x": 300,
+        "y": 5280,
         "wires": [
             [
                 "9d7c0453e92f3eb0"
@@ -4721,6 +4803,7 @@
         "id": "9d7c0453e92f3eb0",
         "type": "function",
         "z": "0e1f3206f48adf14",
+        "g": "3c0806d8c07e2d4a",
         "name": "Single holdReg write",
         "func": "// Retrieve the input tag and setpoint\nlet { tag, setpoint } = msg.payload;\n\n// Retrieve the modHoldReg mapping from the flow context\nlet modHoldReg = flow.get(\"modHoldReg\") || [];\n\n// Find the corresponding Modbus entry\nlet modbusEntry = modHoldReg.find(entry => entry[\"Tag Name\"] === tag);\n\nif (!modbusEntry) {\n    node.error(`Tag ${tag} not found in modHoldReg`, msg);\n    return null;\n}\n\n// Get Modbus start address and data type\nlet address = modbusEntry[\"MODBUS Start Address\"];\nlet dataType = modbusEntry[\"Data Type\"];\n\n// Convert setpoint value to Modbus register format\nlet buffer = Buffer.alloc(4);\n\nif (dataType === \"F32\") {\n    buffer.writeFloatBE(setpoint, 0);  // Convert float to buffer (big-endian)\n} else if (dataType === \"S32\") {\n    buffer.writeInt32BE(setpoint, 0);  // Convert integer to buffer\n} else {\n    node.error(`Unsupported data type: ${dataType} for tag ${tag}`, msg);\n    return null;\n}\n\n// Split buffer into two 16-bit registers (Modbus uses 16-bit words)\nlet registerValues = [\n    buffer.readUInt16BE(2),  // High 16 bits\n    buffer.readUInt16BE(0)   // Low 16 bits\n];\n\n// Construct Modbus Flex Write message with quantity\nmsg.payload = {\n    value: registerValues,\n    fc: 16,  // Function Code 16 (Write Multiple Registers)\n    address: address - 400001,  // Convert absolute to zero-based address\n    quantity: 2,  // Writing two 16-bit registers (32-bit value)\n    unitid: 1  // Change if necessary based on your PLC setup\n};\n\nreturn msg;",
         "outputs": 1,
@@ -4729,8 +4812,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 480,
-        "y": 4980,
+        "x": 540,
+        "y": 5280,
         "wires": [
             [
                 "1891ff190c2b30dc",
@@ -4751,8 +4834,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 810,
-        "y": 3480,
+        "x": 850,
+        "y": 3680,
         "wires": []
     },
     {
@@ -4806,8 +4889,8 @@
         "retentionPolicyV18Flux": "",
         "org": "Test Lab",
         "bucket": "AEM1",
-        "x": 950,
-        "y": 1820,
+        "x": 970,
+        "y": 1860,
         "wires": []
     },
     {
@@ -4825,8 +4908,8 @@
         "retentionPolicyV18Flux": "",
         "org": "my-org",
         "bucket": "my-bucket",
-        "x": 940,
-        "y": 1860,
+        "x": 960,
+        "y": 1900,
         "wires": []
     },
     {
@@ -4976,8 +5059,8 @@
         "keepMsgProperties": false,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 410,
-        "y": 2780,
+        "x": 450,
+        "y": 2980,
         "wires": [
             [
                 "check-alarms"
@@ -5045,6 +5128,7 @@
         "id": "heartbeat_modbus",
         "type": "modbus-flex-getter",
         "z": "0e1f3206f48adf14",
+        "g": "3c0806d8c07e2d4a",
         "name": "PLC Heartbeat Poll",
         "showStatusActivities": true,
         "showErrors": true,
@@ -5058,8 +5142,8 @@
         "keepMsgProperties": false,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 610,
-        "y": 4800,
+        "x": 570,
+        "y": 5120,
         "wires": [
             [
                 "heartbeat_success"
@@ -5104,8 +5188,8 @@
         "keepMsgProperties": false,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 750,
-        "y": 2320,
+        "x": 770,
+        "y": 2460,
         "wires": [
             [],
             []
@@ -5146,8 +5230,8 @@
         "keepMsgProperties": false,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 1150,
-        "y": 3600,
+        "x": 1190,
+        "y": 3800,
         "wires": [
             [],
             []
@@ -5157,6 +5241,7 @@
         "id": "299053fa01342bc8",
         "type": "modbus-flex-write",
         "z": "0e1f3206f48adf14",
+        "g": "b2387cf1c1f9066f",
         "name": "",
         "showStatusActivities": false,
         "showErrors": false,
@@ -5166,8 +5251,8 @@
         "keepMsgProperties": false,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 1050,
-        "y": 4440,
+        "x": 1110,
+        "y": 4680,
         "wires": [
             [],
             []
@@ -5177,6 +5262,7 @@
         "id": "1891ff190c2b30dc",
         "type": "modbus-flex-write",
         "z": "0e1f3206f48adf14",
+        "g": "3c0806d8c07e2d4a",
         "name": "modbus_heartbeat write",
         "showStatusActivities": false,
         "showErrors": false,
@@ -5187,7 +5273,7 @@
         "delayOnStart": false,
         "startDelayTime": "",
         "x": 790,
-        "y": 4920,
+        "y": 5240,
         "wires": [
             [],
             []
@@ -5225,8 +5311,8 @@
         "dblClickZoomPercentage": 150,
         "cssString": "div.ui-svg svg{\n    color: var(--nr-dashboard-widgetColor);\n    fill: currentColor !important;\n}\ndiv.ui-svg path {\n    fill: inherit;\n}",
         "name": "",
-        "x": 680,
-        "y": 3120,
+        "x": 720,
+        "y": 3340,
         "wires": [
             []
         ]
@@ -5311,8 +5397,8 @@
         "payloadType": "str",
         "topic": "file_picker",
         "topicType": "str",
-        "x": 110,
-        "y": 2560,
+        "x": 130,
+        "y": 2740,
         "wires": [
             [
                 "968c5c6feb1e2ed1"
@@ -5340,8 +5426,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 450,
-        "y": 2840,
+        "x": 490,
+        "y": 3040,
         "wires": [
             [
                 "f48aa9a9cf3d509d"
@@ -5369,8 +5455,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 150,
-        "y": 2420,
+        "x": 170,
+        "y": 2560,
         "wires": [
             [
                 "45113a7508b326f3"
@@ -5381,6 +5467,7 @@
         "id": "bd7d6e9091f594cc",
         "type": "ui_button",
         "z": "0e1f3206f48adf14",
+        "g": "b2387cf1c1f9066f",
         "name": "",
         "group": "2d8055515cc5bf53",
         "order": 24,
@@ -5397,8 +5484,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 370,
-        "y": 4440,
+        "x": 430,
+        "y": 4680,
         "wires": [
             [
                 "40cf32dbbea3cb5b"
@@ -5443,6 +5530,7 @@
         "id": "8ee848ca2c5eacca",
         "type": "ui_dropdown",
         "z": "0e1f3206f48adf14",
+        "g": "b2387cf1c1f9066f",
         "name": "",
         "label": "Select tag",
         "tooltip": "",
@@ -5464,8 +5552,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 420,
-        "y": 4500,
+        "x": 480,
+        "y": 4760,
         "wires": [
             [
                 "f78b0d87bd180969"
@@ -5499,8 +5587,8 @@
         "offcolor": "",
         "animate": false,
         "className": ".nr-dashboard-theme .nr-dashboard-text .label {         font-size: 25px;  }",
-        "x": 530,
-        "y": 3540,
+        "x": 570,
+        "y": 3740,
         "wires": [
             [
                 "0c65acb1241053b1"
@@ -5534,8 +5622,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 130,
-        "y": 3640,
+        "x": 170,
+        "y": 3840,
         "wires": [
             [
                 "ad409912680a26fc",
@@ -5570,8 +5658,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 530,
-        "y": 3600,
+        "x": 570,
+        "y": 3800,
         "wires": [
             [
                 "155ec724df87d928"
@@ -5605,8 +5693,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 530,
-        "y": 3660,
+        "x": 570,
+        "y": 3860,
         "wires": [
             [
                 "b626fbf36323dfa9"
@@ -5640,8 +5728,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 560,
-        "y": 3720,
+        "x": 600,
+        "y": 3920,
         "wires": [
             [
                 "e3e51d5261f83d18"
@@ -5675,8 +5763,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 530,
-        "y": 3780,
+        "x": 570,
+        "y": 3980,
         "wires": [
             [
                 "656a076b5d7b8bb7"
@@ -5710,8 +5798,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 570,
-        "y": 3840,
+        "x": 610,
+        "y": 4040,
         "wires": [
             [
                 "50a2e69e7921ace9"
@@ -5745,8 +5833,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 550,
-        "y": 3960,
+        "x": 590,
+        "y": 4160,
         "wires": [
             [
                 "70cf2f311c7d7f5b"
@@ -5780,8 +5868,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 550,
-        "y": 4020,
+        "x": 590,
+        "y": 4220,
         "wires": [
             [
                 "1b90b1a3bb0e23f6"
@@ -5815,8 +5903,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 570,
-        "y": 3900,
+        "x": 610,
+        "y": 4100,
         "wires": [
             [
                 "9a0d4b79df7f94ae"
@@ -5850,8 +5938,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 550,
-        "y": 4080,
+        "x": 590,
+        "y": 4280,
         "wires": [
             [
                 "7389a894f1605cf3"
@@ -5885,8 +5973,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 550,
-        "y": 4140,
+        "x": 590,
+        "y": 4340,
         "wires": [
             [
                 "f5308650b7caeb57"
@@ -5920,8 +6008,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 550,
-        "y": 4200,
+        "x": 590,
+        "y": 4400,
         "wires": [
             [
                 "25678c82a19b1e2d"
@@ -5955,8 +6043,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 550,
-        "y": 4260,
+        "x": 590,
+        "y": 4460,
         "wires": [
             [
                 "2ab23c7acd8dd360"
@@ -5967,8 +6055,9 @@
         "id": "ebc99a25bec0f07d",
         "type": "ui_text_input",
         "z": "0e1f3206f48adf14",
+        "g": "b2387cf1c1f9066f",
         "name": "",
-        "label": "Setpoint input",
+        "label": "Tag SP input",
         "tooltip": "",
         "group": "2d8055515cc5bf53",
         "order": 23,
@@ -5981,8 +6070,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 380,
-        "y": 4600,
+        "x": 450,
+        "y": 4840,
         "wires": [
             [
                 "a41148cd8fa6b452"
@@ -6051,8 +6140,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 690,
-        "y": 2560,
+        "x": 710,
+        "y": 2740,
         "wires": []
     },
     {
@@ -6159,8 +6248,8 @@
         "resendOnRefresh": true,
         "templateScope": "global",
         "className": "",
-        "x": 110,
-        "y": 3320,
+        "x": 170,
+        "y": 3560,
         "wires": [
             []
         ]
@@ -6255,8 +6344,8 @@
         ],
         "outputs": 0,
         "cts": false,
-        "x": 810,
-        "y": 2780,
+        "x": 850,
+        "y": 2980,
         "wires": []
     },
     {
@@ -6272,8 +6361,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 390,
-        "y": 1940,
+        "x": 410,
+        "y": 1980,
         "wires": [
             [
                 "95d53dd5427fb178",
@@ -6322,8 +6411,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 200,
-        "y": 2080,
+        "x": 220,
+        "y": 2120,
         "wires": [
             [
                 "fdd2080b0ef3c2a6",
@@ -6344,8 +6433,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 430,
-        "y": 2080,
+        "x": 450,
+        "y": 2120,
         "wires": [
             []
         ]
@@ -6373,8 +6462,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 690,
-        "y": 1800,
+        "x": 710,
+        "y": 1840,
         "wires": [
             [
                 "3ca569c54e5ebb61"
@@ -6400,8 +6489,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 260,
-        "y": 1820,
+        "x": 280,
+        "y": 1860,
         "wires": [
             [
                 "2ff1bd7c6ae39338"
@@ -6434,8 +6523,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 370,
-        "y": 1860,
+        "x": 390,
+        "y": 1900,
         "wires": [
             [
                 "8bc7b7d40bdb88bf"
@@ -6612,8 +6701,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 140,
-        "y": 1860,
+        "x": 160,
+        "y": 1900,
         "wires": [
             [
                 "3ae3b1dd7f0614df"
@@ -6642,8 +6731,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 140,
-        "y": 1920,
+        "x": 160,
+        "y": 1960,
         "wires": [
             [
                 "a1bf5e81cfcf58e3"
@@ -6663,8 +6752,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 960,
-        "y": 1780,
+        "x": 980,
+        "y": 1820,
         "wires": [
             []
         ]
@@ -6691,8 +6780,8 @@
         "topic": "",
         "payload": "rotateCSV",
         "payloadType": "str",
-        "x": 660,
-        "y": 2080,
+        "x": 680,
+        "y": 2120,
         "wires": [
             [
                 "95d53dd5427fb178"
@@ -6712,8 +6801,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 760,
-        "y": 2020,
+        "x": 780,
+        "y": 2060,
         "wires": [
             [
                 "b75393e78ee555ee"
@@ -6732,8 +6821,8 @@
         "createDir": true,
         "overwriteFile": "false",
         "encoding": "none",
-        "x": 960,
-        "y": 2020,
+        "x": 980,
+        "y": 2060,
         "wires": [
             []
         ]
@@ -6802,8 +6891,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 380,
-        "y": 2000,
+        "x": 400,
+        "y": 2040,
         "wires": [
             [
                 "95d53dd5427fb178"
@@ -6828,8 +6917,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 600,
-        "y": 1940,
+        "x": 620,
+        "y": 1980,
         "wires": [
             [
                 "3f9120833317f5fd"
@@ -6842,15 +6931,15 @@
         "z": "0e1f3206f48adf14",
         "g": "06c6cdf71851940d",
         "name": "debug 4",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 400,
-        "y": 2120,
+        "x": 420,
+        "y": 2160,
         "wires": []
     },
     {
@@ -6859,7 +6948,7 @@
         "z": "0e1f3206f48adf14",
         "g": "06c6cdf71851940d",
         "name": "debug 11",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -6867,8 +6956,127 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 890,
-        "y": 1900,
+        "x": 910,
+        "y": 1940,
         "wires": []
+    },
+    {
+        "id": "babd223a9d940a0a",
+        "type": "comment",
+        "z": "0e1f3206f48adf14",
+        "g": "3c0806d8c07e2d4a",
+        "name": "Modbus Communication Check",
+        "info": "",
+        "x": 210,
+        "y": 5060,
+        "wires": []
+    },
+    {
+        "id": "38e0892783d5c8ca",
+        "type": "comment",
+        "z": "0e1f3206f48adf14",
+        "g": "b2387cf1c1f9066f",
+        "name": "Tag SP change",
+        "info": "",
+        "x": 160,
+        "y": 4620,
+        "wires": []
+    },
+    {
+        "id": "fe5b2008e835142c",
+        "type": "ui_text_input",
+        "z": "0e1f3206f48adf14",
+        "name": "testID Input",
+        "label": "Test ID",
+        "tooltip": "",
+        "group": "78c63c00e1f5b7aa",
+        "order": 15,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 510,
+        "y": 5520,
+        "wires": [
+            [
+                "d574e9d2ae32d3ae",
+                "b3017782a7ed1b07"
+            ]
+        ]
+    },
+    {
+        "id": "d574e9d2ae32d3ae",
+        "type": "debug",
+        "z": "0e1f3206f48adf14",
+        "name": "debug 26",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 5460,
+        "wires": []
+    },
+    {
+        "id": "b3017782a7ed1b07",
+        "type": "function",
+        "z": "0e1f3206f48adf14",
+        "name": "Set testID",
+        "func": "flow.set(\"testID\", msg.payload);\nnode.status({ fill: \"green\", shape: \"dot\", text: \"Test ID set: \" + msg.payload });\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 5520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aff089f10d47c071",
+        "type": "function",
+        "z": "0e1f3206f48adf14",
+        "name": "Disable/Enable",
+        "func": "let systemRunning = flow.get(\"System_Running\") || false;\nmsg.enabled = systemRunning ? true : false;\ndelete msg.payload;\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 5520,
+        "wires": [
+            [
+                "fe5b2008e835142c"
+            ]
+        ]
+    },
+    {
+        "id": "3c13fa52a4957e3a",
+        "type": "link in",
+        "z": "0e1f3206f48adf14",
+        "name": "Enable/disable testID input",
+        "links": [
+            "49263ca4933dbd63"
+        ],
+        "x": 155,
+        "y": 5480,
+        "wires": [
+            [
+                "aff089f10d47c071"
+            ]
+        ]
     }
 ]
