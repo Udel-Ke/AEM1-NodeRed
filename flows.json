@@ -44,12 +44,13 @@
             "4f125d9708a25241",
             "b75393e78ee555ee",
             "d67cd350e95814e5",
-            "295be76956eeb3d1"
+            "295be76956eeb3d1",
+            "b849ee60fc7851a3"
         ],
         "x": 54,
         "y": 1779,
         "w": 1052,
-        "h": 422
+        "h": 442
     },
     {
         "id": "5258e746159f915c",
@@ -207,12 +208,14 @@
             "23e13ab57ea9677a",
             "9241aded0efea985",
             "1b952520d5aaf90b",
-            "c262f6046510507d"
+            "c262f6046510507d",
+            "d917117175b94745",
+            "e4ba86696d3fd1bf"
         ],
         "x": 1134,
         "y": 439,
         "w": 712,
-        "h": 262
+        "h": 282
     },
     {
         "id": "8523ba6f048159f6",
@@ -267,12 +270,13 @@
             "0c5a4cdd7c4ca1a6",
             "6d4f39ef0f600810",
             "5377e56725ca39c9",
-            "018fc1c07d0b477c"
+            "018fc1c07d0b477c",
+            "b1d6242f17150944"
         ],
         "x": 34,
         "y": 779,
         "w": 1932,
-        "h": 482
+        "h": 522
     },
     {
         "id": "783a604ad685b5f5",
@@ -334,12 +338,16 @@
             "7510c110eb4d4481",
             "3d33c8da5bb204cf",
             "c6152156af323fc9",
-            "a2917e2f62739f51"
+            "a2917e2f62739f51",
+            "23e7d95574434001",
+            "d54e4de142a995c6",
+            "246f2e5ba8d0961c",
+            "6b0bf9d334def047"
         ],
         "x": 54,
         "y": 2279,
         "w": 832,
-        "h": 322
+        "h": 382
     },
     {
         "id": "525f6434f47c15f1",
@@ -358,12 +366,13 @@
             "731b3aa4b9eea197",
             "ad1436e2f7b892fd",
             "87476d790eb1dfab",
-            "4ae111cdbb1031f3"
+            "4ae111cdbb1031f3",
+            "137325ab94a685e0"
         ],
-        "x": 1134,
-        "y": -1,
+        "x": 1254,
+        "y": 19,
         "w": 352,
-        "h": 162
+        "h": 202
     },
     {
         "id": "e1b6d5ba8d3de0b8",
@@ -383,12 +392,12 @@
             "c025225aa660bf27",
             "7359636993bb200e",
             "c955b39b856d6b12",
-            "23e7d95574434001",
-            "d54e4de142a995c6",
-            "246f2e5ba8d0961c",
             "41b6500c6f27fc29",
             "984a3513e1ec75f2",
-            "5b9437060b5fa2a4"
+            "5b9437060b5fa2a4",
+            "2517cf943d440480",
+            "b3e5ca75ee471501",
+            "1ffb3eb4eb6a6a53"
         ],
         "x": 474,
         "y": 19,
@@ -477,7 +486,6 @@
             "e7832801775cf2e5",
             "45f325d04956ac88",
             "e814f9e77d873579",
-            "1aaf65863aa3d8e1",
             "07889394d1d1d567"
         ],
         "x": 54,
@@ -927,7 +935,7 @@
     {
         "id": "542918f4c374e490",
         "type": "ui-base",
-        "name": "My Dashboard",
+        "name": "My Dashboard_xyz",
         "path": "/dashboard",
         "appIcon": "",
         "includeClientData": true,
@@ -966,7 +974,7 @@
     {
         "id": "36c65bd960cf7dbe",
         "type": "ui-page",
-        "name": "AEM1",
+        "name": "AEM1 v2",
         "ui": "542918f4c374e490",
         "path": "/page1",
         "icon": "home",
@@ -996,8 +1004,8 @@
         ],
         "order": 1,
         "className": "",
-        "visible": "true",
-        "disabled": "false"
+        "visible": true,
+        "disabled": false
     },
     {
         "id": "4afe546e24b27211",
@@ -1006,7 +1014,7 @@
         "page": "36c65bd960cf7dbe",
         "width": 6,
         "height": 1,
-        "order": 2,
+        "order": 3,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -1020,7 +1028,7 @@
         "page": "36c65bd960cf7dbe",
         "width": "3",
         "height": 1,
-        "order": 1,
+        "order": 2,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -1034,31 +1042,12 @@
         "page": "36c65bd960cf7dbe",
         "width": "8",
         "height": 1,
-        "order": -1,
+        "order": 1,
         "showTitle": true,
         "className": "",
         "visible": "true",
         "disabled": "false",
         "groupType": "default"
-    },
-    {
-        "id": "5d5bd3083de98cd3",
-        "type": "ui_tab",
-        "name": "Test PID",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "d7e25fd044afbc41",
-        "type": "ui_group",
-        "name": "Default",
-        "tab": "5d5bd3083de98cd3",
-        "order": 1,
-        "disp": true,
-        "width": "15",
-        "collapse": false,
-        "className": ""
     },
     {
         "id": "531cd27466139d99",
@@ -1091,7 +1080,7 @@
                 "cols": "12"
             }
         ],
-        "order": -1,
+        "order": 2,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -1103,7 +1092,7 @@
         "page": "531cd27466139d99",
         "width": 6,
         "height": 1,
-        "order": -1,
+        "order": 1,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -1128,8 +1117,8 @@
         "topic": "",
         "payload": "iso",
         "payloadType": "date",
-        "x": 600,
-        "y": 120,
+        "x": 760,
+        "y": 60,
         "wires": [
             [
                 "7359636993bb200e"
@@ -1529,8 +1518,8 @@
             "a28627b538e4350e",
             "601c184cc8cd4fe2"
         ],
-        "x": 1445,
-        "y": 100,
+        "x": 1565,
+        "y": 120,
         "wires": []
     },
     {
@@ -1555,8 +1544,8 @@
         "topic": "",
         "payload": "Stopped",
         "payloadType": "str",
-        "x": 1260,
-        "y": 80,
+        "x": 1380,
+        "y": 100,
         "wires": [
             [
                 "ad1436e2f7b892fd"
@@ -1631,7 +1620,8 @@
         "wires": [
             [
                 "24805c900167c968",
-                "fb1edbf186530db5"
+                "fb1edbf186530db5",
+                "b1d6242f17150944"
             ]
         ]
     },
@@ -2762,73 +2752,8 @@
         "g": "525f6434f47c15f1",
         "name": "Test stop",
         "info": "",
-        "x": 1220,
-        "y": 40,
-        "wires": []
-    },
-    {
-        "id": "3c8fedb5d9abddb4",
-        "type": "function",
-        "z": "0e1f3206f48adf14",
-        "name": "function 3",
-        "func": "msg.payload = flow.get(\"test_sequence_path\");\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1380,
-        "y": 220,
-        "wires": [
-            [
-                "32a7a6b5d8a09004"
-            ]
-        ]
-    },
-    {
-        "id": "e3bbab3dd63b01c3",
-        "type": "inject",
-        "z": "0e1f3206f48adf14",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1240,
-        "y": 220,
-        "wires": [
-            [
-                "3c8fedb5d9abddb4"
-            ]
-        ]
-    },
-    {
-        "id": "32a7a6b5d8a09004",
-        "type": "debug",
-        "z": "0e1f3206f48adf14",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1540,
-        "y": 220,
+        "x": 1340,
+        "y": 60,
         "wires": []
     },
     {
@@ -3460,48 +3385,6 @@
         "x": 240,
         "y": 2320,
         "wires": []
-    },
-    {
-        "id": "23e7d95574434001",
-        "type": "function",
-        "z": "0e1f3206f48adf14",
-        "g": "e1b6d5ba8d3de0b8",
-        "name": "Reset",
-        "func": "// First, send Reset = true\nvar msg1 = { payload: { \"tag\": \"Reset\", \"setpoint\": true } };\n\n// Create a second message to set it back to false after 1 second\nsetTimeout(() => {\n    var msg2 = { payload: { \"tag\": \"Reset\", \"setpoint\": false } };\n    node.send(msg2);\n}, 50);\n\n// Send the first message immediately\nreturn msg1;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 550,
-        "y": 200,
-        "wires": [
-            [
-                "d54e4de142a995c6"
-            ]
-        ]
-    },
-    {
-        "id": "d54e4de142a995c6",
-        "type": "function",
-        "z": "0e1f3206f48adf14",
-        "g": "e1b6d5ba8d3de0b8",
-        "name": "Single coil write",
-        "func": "// Retrieve the coil tag and setpoint from msg.payload\nlet { tag, setpoint } = msg.payload;\n\n// Retrieve Modbus coil address mapping from flow context\nlet modCoil = flow.get(\"modCoil\") || [];\n\n// Find the Modbus address for the given tag\nlet coilData = modCoil.find(entry => entry[\"Tag Name\"] === tag);\n\nif (!coilData) {\n    node.error(`Unknown coil tag: ${tag}`, msg);\n    return null;\n}\n\n// Convert Modbus address to 0-based integer\nlet address = parseInt(coilData[\"MODBUS Start Address\"], 10) - 1;\n\n// Construct Modbus write message\nmsg.payload = {\n    'unitId': 1,      // PLC Modbus Unit ID\n    'fc': 5,         // Function Code: Write Single Coil\n    'address': address, // Modbus coil address\n    'value': setpoint ? 1 : 0, // Convert boolean to 1 or 0\n    'quantity': 1\n};\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 700,
-        "y": 200,
-        "wires": [
-            [
-                "246f2e5ba8d0961c"
-            ]
-        ]
     },
     {
         "id": "41b6500c6f27fc29",
@@ -4618,7 +4501,9 @@
         "wires": [
             [
                 "65208708e4372bc8",
-                "a5039fb22db64485"
+                "a5039fb22db64485",
+                "d917117175b94745",
+                "e4ba86696d3fd1bf"
             ]
         ]
     },
@@ -5376,27 +5261,6 @@
         ]
     },
     {
-        "id": "246f2e5ba8d0961c",
-        "type": "modbus-flex-write",
-        "z": "0e1f3206f48adf14",
-        "g": "e1b6d5ba8d3de0b8",
-        "name": "",
-        "showStatusActivities": false,
-        "showErrors": false,
-        "showWarnings": true,
-        "server": "f905b5f3395bcec1",
-        "emptyMsgOnFail": false,
-        "keepMsgProperties": false,
-        "delayOnStart": false,
-        "startDelayTime": "",
-        "x": 890,
-        "y": 200,
-        "wires": [
-            [],
-            []
-        ]
-    },
-    {
         "id": "098e0fb7b999add0",
         "type": "modbus-flex-write",
         "z": "0e1f3206f48adf14",
@@ -5522,8 +5386,8 @@
         "y": 160,
         "wires": [
             [
-                "23e7d95574434001",
-                "41b6500c6f27fc29"
+                "41b6500c6f27fc29",
+                "2517cf943d440480"
             ]
         ]
     },
@@ -5547,9 +5411,9 @@
         "payload": "Stopped",
         "payloadType": "str",
         "topic": "control",
-        "topicType": "msg",
-        "x": 1250,
-        "y": 120,
+        "topicType": "str",
+        "x": 1370,
+        "y": 140,
         "wires": [
             [
                 "ad1436e2f7b892fd"
@@ -5639,7 +5503,8 @@
         "y": 2560,
         "wires": [
             [
-                "45113a7508b326f3"
+                "45113a7508b326f3",
+                "23e7d95574434001"
             ]
         ]
     },
@@ -7118,7 +6983,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 420,
+        "x": 460,
         "y": 2160,
         "wires": []
     },
@@ -7267,7 +7132,7 @@
         "group": "4afe546e24b27211",
         "name": "Start",
         "label": "START",
-        "order": 3,
+        "order": 2,
         "width": "1",
         "height": "1",
         "emulateClick": false,
@@ -7277,12 +7142,12 @@
         "className": "",
         "icon": "play",
         "iconPosition": "left",
-        "payload": "",
+        "payload": "Running",
         "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "buttonColor": "",
-        "textColor": "",
+        "topic": "control",
+        "topicType": "str",
+        "buttonColor": "green",
+        "textColor": "white",
         "iconColor": "",
         "enableClick": true,
         "enablePointerdown": false,
@@ -7291,44 +7156,13 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 770,
-        "y": 60,
+        "x": 590,
+        "y": 120,
         "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b849ee60fc7851a3",
-        "type": "ui-dropdown",
-        "z": "0e1f3206f48adf14",
-        "group": "4afe546e24b27211",
-        "name": "Data logging frequency",
-        "label": "Data log frequency",
-        "tooltip": "",
-        "order": 2,
-        "width": "2",
-        "height": "1",
-        "passthru": false,
-        "multiple": false,
-        "chips": false,
-        "clearable": false,
-        "options": [
-            {
-                "label": "1 s",
-                "value": "1",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "typeIsComboBox": true,
-        "msgTrigger": "onChange",
-        "x": 890,
-        "y": 360,
-        "wires": [
-            []
+            [
+                "41b6500c6f27fc29",
+                "2517cf943d440480"
+            ]
         ]
     },
     {
@@ -7490,7 +7324,7 @@
         "page": "",
         "ui": "",
         "name": "change color_worked code",
-        "order": 2,
+        "order": 3,
         "width": "3",
         "height": "3",
         "head": "",
@@ -7738,7 +7572,7 @@
         "name": "",
         "group": "2004d5a11cd15969",
         "label": "",
-        "order": 3,
+        "order": 1,
         "width": 0,
         "height": 0,
         "options": [
@@ -7892,7 +7726,7 @@
         "group": "2004d5a11cd15969",
         "name": "PS Run",
         "label": "PS Run",
-        "order": 4,
+        "order": 2,
         "width": "",
         "height": "",
         "emulateClick": false,
@@ -7931,7 +7765,7 @@
         "group": "2004d5a11cd15969",
         "name": "PS Stop",
         "label": "PS Stop",
-        "order": 5,
+        "order": 3,
         "width": "",
         "height": "",
         "emulateClick": false,
@@ -8009,7 +7843,7 @@
         "page": "",
         "ui": "",
         "name": "test PID_change color_worked",
-        "order": 1,
+        "order": 2,
         "width": "3",
         "height": "3",
         "head": "",
@@ -8084,27 +7918,9 @@
         "y": 3220,
         "wires": [
             [
-                "1aaf65863aa3d8e1",
                 "e7832801775cf2e5"
             ]
         ]
-    },
-    {
-        "id": "1aaf65863aa3d8e1",
-        "type": "debug",
-        "z": "0e1f3206f48adf14",
-        "g": "891263f2623b3ee2",
-        "name": "debug 41",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 780,
-        "y": 3220,
-        "wires": []
     },
     {
         "id": "07889394d1d1d567",
@@ -8135,5 +7951,335 @@
                 "e814f9e77d873579"
             ]
         ]
+    },
+    {
+        "id": "b849ee60fc7851a3",
+        "type": "ui-dropdown",
+        "z": "0e1f3206f48adf14",
+        "g": "06c6cdf71851940d",
+        "group": "4afe546e24b27211",
+        "name": "Data logging frequency",
+        "label": "Data log frequency",
+        "tooltip": "",
+        "order": 1,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "multiple": false,
+        "chips": false,
+        "clearable": false,
+        "options": [
+            {
+                "label": "1 s",
+                "value": 1,
+                "type": "num"
+            },
+            {
+                "label": "5 s",
+                "value": 5,
+                "type": "num"
+            },
+            {
+                "label": "10 s",
+                "value": 10,
+                "type": "num"
+            },
+            {
+                "label": "60 s",
+                "value": 60,
+                "type": "num"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "typeIsComboBox": true,
+        "msgTrigger": "onChange",
+        "x": 210,
+        "y": 2180,
+        "wires": [
+            [
+                "d67cd350e95814e5",
+                "fdd2080b0ef3c2a6"
+            ]
+        ]
+    },
+    {
+        "id": "137325ab94a685e0",
+        "type": "ui-button",
+        "z": "0e1f3206f48adf14",
+        "g": "525f6434f47c15f1",
+        "group": "4afe546e24b27211",
+        "name": "Abort",
+        "label": "ABORT",
+        "order": 2,
+        "width": "1",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "stop",
+        "iconPosition": "left",
+        "payload": "Stopped",
+        "payloadType": "str",
+        "topic": "control",
+        "topicType": "str",
+        "buttonColor": "#FF3B30",
+        "textColor": "white",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1370,
+        "y": 180,
+        "wires": [
+            [
+                "ad1436e2f7b892fd"
+            ]
+        ]
+    },
+    {
+        "id": "23e7d95574434001",
+        "type": "function",
+        "z": "0e1f3206f48adf14",
+        "g": "28d6aa434baf0184",
+        "name": "Reset",
+        "func": "// First, send Reset = true\nvar msg1 = { payload: { \"tag\": \"Reset\", \"setpoint\": true } };\n\n// Create a second message to set it back to false after 1 second\nsetTimeout(() => {\n    var msg2 = { payload: { \"tag\": \"Reset\", \"setpoint\": false } };\n    node.send(msg2);\n}, 50);\n\n// Send the first message immediately\nreturn msg1;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 2620,
+        "wires": [
+            [
+                "d54e4de142a995c6"
+            ]
+        ]
+    },
+    {
+        "id": "d54e4de142a995c6",
+        "type": "function",
+        "z": "0e1f3206f48adf14",
+        "g": "28d6aa434baf0184",
+        "name": "Single coil write",
+        "func": "// Retrieve the coil tag and setpoint from msg.payload\nlet { tag, setpoint } = msg.payload;\n\n// Retrieve Modbus coil address mapping from flow context\nlet modCoil = flow.get(\"modCoil\") || [];\n\n// Find the Modbus address for the given tag\nlet coilData = modCoil.find(entry => entry[\"Tag Name\"] === tag);\n\nif (!coilData) {\n    node.error(`Unknown coil tag: ${tag}`, msg);\n    return null;\n}\n\n// Convert Modbus address to 0-based integer\nlet address = parseInt(coilData[\"MODBUS Start Address\"], 10) - 1;\n\n// Construct Modbus write message\nmsg.payload = {\n    'unitId': 1,      // PLC Modbus Unit ID\n    'fc': 5,         // Function Code: Write Single Coil\n    'address': address, // Modbus coil address\n    'value': setpoint ? 1 : 0, // Convert boolean to 1 or 0\n    'quantity': 1\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 2620,
+        "wires": [
+            [
+                "246f2e5ba8d0961c"
+            ]
+        ]
+    },
+    {
+        "id": "246f2e5ba8d0961c",
+        "type": "modbus-flex-write",
+        "z": "0e1f3206f48adf14",
+        "g": "28d6aa434baf0184",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "server": "f905b5f3395bcec1",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 610,
+        "y": 2620,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "2517cf943d440480",
+        "type": "function",
+        "z": "0e1f3206f48adf14",
+        "g": "e1b6d5ba8d3de0b8",
+        "name": "Reset",
+        "func": "// First, send Reset = true\nvar msg1 = { payload: { \"tag\": \"Reset\", \"setpoint\": true } };\n\n// Create a second message to set it back to false after 1 second\nsetTimeout(() => {\n    var msg2 = { payload: { \"tag\": \"Reset\", \"setpoint\": false } };\n    node.send(msg2);\n}, 50);\n\n// Send the first message immediately\nreturn msg1;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 200,
+        "wires": [
+            [
+                "b3e5ca75ee471501"
+            ]
+        ]
+    },
+    {
+        "id": "b3e5ca75ee471501",
+        "type": "function",
+        "z": "0e1f3206f48adf14",
+        "g": "e1b6d5ba8d3de0b8",
+        "name": "Single coil write",
+        "func": "// Retrieve the coil tag and setpoint from msg.payload\nlet { tag, setpoint } = msg.payload;\n\n// Retrieve Modbus coil address mapping from flow context\nlet modCoil = flow.get(\"modCoil\") || [];\n\n// Find the Modbus address for the given tag\nlet coilData = modCoil.find(entry => entry[\"Tag Name\"] === tag);\n\nif (!coilData) {\n    node.error(`Unknown coil tag: ${tag}`, msg);\n    return null;\n}\n\n// Convert Modbus address to 0-based integer\nlet address = parseInt(coilData[\"MODBUS Start Address\"], 10) - 1;\n\n// Construct Modbus write message\nmsg.payload = {\n    'unitId': 1,      // PLC Modbus Unit ID\n    'fc': 5,         // Function Code: Write Single Coil\n    'address': address, // Modbus coil address\n    'value': setpoint ? 1 : 0, // Convert boolean to 1 or 0\n    'quantity': 1\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 200,
+        "wires": [
+            [
+                "1ffb3eb4eb6a6a53"
+            ]
+        ]
+    },
+    {
+        "id": "1ffb3eb4eb6a6a53",
+        "type": "modbus-flex-write",
+        "z": "0e1f3206f48adf14",
+        "g": "e1b6d5ba8d3de0b8",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "server": "f905b5f3395bcec1",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 1030,
+        "y": 200,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "6b0bf9d334def047",
+        "type": "ui-button",
+        "z": "0e1f3206f48adf14",
+        "g": "28d6aa434baf0184",
+        "group": "4afe546e24b27211",
+        "name": "Reset",
+        "label": "RESET",
+        "order": 2,
+        "width": "1",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "refresh",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "#FF9500",
+        "textColor": "white",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 130,
+        "y": 2600,
+        "wires": [
+            [
+                "45113a7508b326f3"
+            ]
+        ]
+    },
+    {
+        "id": "b1d6242f17150944",
+        "type": "ui-text",
+        "z": "0e1f3206f48adf14",
+        "g": "8523ba6f048159f6",
+        "group": "4afe546e24b27211",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "Test status",
+        "label": "Test Staus:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 850,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "d917117175b94745",
+        "type": "ui-template",
+        "z": "0e1f3206f48adf14",
+        "g": "35a088b350aa3972",
+        "group": "4afe546e24b27211",
+        "page": "",
+        "ui": "",
+        "name": "Status indicator",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<!-- LED Indicator -->\n<div id=\"led-indicator\" style=\"\n    width: 10px;\n    height: 10px;\n    border-radius: 50%;\n    background-color: red;  /* Default: Red (Off) */\n    margin: auto;\n    box-shadow: 0 0 5px rgba(0,0,0,0.5);\n\"></div>\n\n<script>\n    (function(scope) {\n        scope.$watch('msg.payload', function(value) {\n            var led = document.getElementById(\"led-indicator\");\n\n            if (value !== \"Finished\" && value !== \"Test not started\") {\n                led.style.backgroundColor = \"green\"; // Green when running\n            } else {\n                led.style.backgroundColor = \"red\";   // Red when stopped\n            }\n        });\n    })(scope);\n</script>\n",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1740,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e4ba86696d3fd1bf",
+        "type": "ui-text",
+        "z": "0e1f3206f48adf14",
+        "g": "35a088b350aa3972",
+        "group": "4afe546e24b27211",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "Status",
+        "label": "Status",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 1710,
+        "y": 540,
+        "wires": []
     }
 ]

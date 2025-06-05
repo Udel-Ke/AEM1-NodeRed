@@ -44,12 +44,13 @@
             "4f125d9708a25241",
             "b75393e78ee555ee",
             "d67cd350e95814e5",
-            "295be76956eeb3d1"
+            "295be76956eeb3d1",
+            "b849ee60fc7851a3"
         ],
         "x": 54,
         "y": 1779,
         "w": 1052,
-        "h": 422
+        "h": 442
     },
     {
         "id": "5258e746159f915c",
@@ -207,12 +208,14 @@
             "23e13ab57ea9677a",
             "9241aded0efea985",
             "1b952520d5aaf90b",
-            "c262f6046510507d"
+            "c262f6046510507d",
+            "d917117175b94745",
+            "e4ba86696d3fd1bf"
         ],
         "x": 1134,
         "y": 439,
         "w": 712,
-        "h": 262
+        "h": 282
     },
     {
         "id": "8523ba6f048159f6",
@@ -267,12 +270,13 @@
             "0c5a4cdd7c4ca1a6",
             "6d4f39ef0f600810",
             "5377e56725ca39c9",
-            "018fc1c07d0b477c"
+            "018fc1c07d0b477c",
+            "b1d6242f17150944"
         ],
         "x": 34,
         "y": 779,
         "w": 1932,
-        "h": 482
+        "h": 522
     },
     {
         "id": "783a604ad685b5f5",
@@ -334,12 +338,16 @@
             "7510c110eb4d4481",
             "3d33c8da5bb204cf",
             "c6152156af323fc9",
-            "a2917e2f62739f51"
+            "a2917e2f62739f51",
+            "23e7d95574434001",
+            "d54e4de142a995c6",
+            "246f2e5ba8d0961c",
+            "6b0bf9d334def047"
         ],
         "x": 54,
         "y": 2279,
         "w": 832,
-        "h": 322
+        "h": 382
     },
     {
         "id": "525f6434f47c15f1",
@@ -358,12 +366,13 @@
             "731b3aa4b9eea197",
             "ad1436e2f7b892fd",
             "87476d790eb1dfab",
-            "4ae111cdbb1031f3"
+            "4ae111cdbb1031f3",
+            "137325ab94a685e0"
         ],
-        "x": 1134,
-        "y": -1,
+        "x": 1254,
+        "y": 19,
         "w": 352,
-        "h": 162
+        "h": 202
     },
     {
         "id": "e1b6d5ba8d3de0b8",
@@ -383,12 +392,12 @@
             "c025225aa660bf27",
             "7359636993bb200e",
             "c955b39b856d6b12",
-            "23e7d95574434001",
-            "d54e4de142a995c6",
-            "246f2e5ba8d0961c",
             "41b6500c6f27fc29",
             "984a3513e1ec75f2",
-            "5b9437060b5fa2a4"
+            "5b9437060b5fa2a4",
+            "2517cf943d440480",
+            "b3e5ca75ee471501",
+            "1ffb3eb4eb6a6a53"
         ],
         "x": 474,
         "y": 19,
@@ -477,7 +486,6 @@
             "e7832801775cf2e5",
             "45f325d04956ac88",
             "e814f9e77d873579",
-            "1aaf65863aa3d8e1",
             "07889394d1d1d567"
         ],
         "x": 54,
@@ -927,7 +935,7 @@
     {
         "id": "542918f4c374e490",
         "type": "ui-base",
-        "name": "My Dashboard",
+        "name": "My Dashboard_xyz",
         "path": "/dashboard",
         "appIcon": "",
         "includeClientData": true,
@@ -966,7 +974,7 @@
     {
         "id": "36c65bd960cf7dbe",
         "type": "ui-page",
-        "name": "AEM1",
+        "name": "AEM1 v2",
         "ui": "542918f4c374e490",
         "path": "/page1",
         "icon": "home",
@@ -996,8 +1004,8 @@
         ],
         "order": 1,
         "className": "",
-        "visible": "true",
-        "disabled": "false"
+        "visible": true,
+        "disabled": false
     },
     {
         "id": "4afe546e24b27211",
@@ -1006,7 +1014,7 @@
         "page": "36c65bd960cf7dbe",
         "width": 6,
         "height": 1,
-        "order": 2,
+        "order": 3,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -1020,7 +1028,7 @@
         "page": "36c65bd960cf7dbe",
         "width": "3",
         "height": 1,
-        "order": 1,
+        "order": 2,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -1034,7 +1042,7 @@
         "page": "36c65bd960cf7dbe",
         "width": "8",
         "height": 1,
-        "order": -1,
+        "order": 1,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -1042,23 +1050,54 @@
         "groupType": "default"
     },
     {
-        "id": "5d5bd3083de98cd3",
-        "type": "ui_tab",
-        "name": "Test PID",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
+        "id": "531cd27466139d99",
+        "type": "ui-page",
+        "name": "PS Manual Test",
+        "ui": "542918f4c374e490",
+        "path": "/page2",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "51332e42f70be886",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 2,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
     },
     {
-        "id": "d7e25fd044afbc41",
-        "type": "ui_group",
-        "name": "Default",
-        "tab": "5d5bd3083de98cd3",
+        "id": "2004d5a11cd15969",
+        "type": "ui-group",
+        "name": "Group Name",
+        "page": "531cd27466139d99",
+        "width": 6,
+        "height": 1,
         "order": 1,
-        "disp": true,
-        "width": "15",
-        "collapse": false,
-        "className": ""
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
     },
     {
         "id": "401a02e5f0a36a3a",
@@ -1078,8 +1117,8 @@
         "topic": "",
         "payload": "iso",
         "payloadType": "date",
-        "x": 600,
-        "y": 120,
+        "x": 760,
+        "y": 60,
         "wires": [
             [
                 "7359636993bb200e"
@@ -1479,8 +1518,8 @@
             "a28627b538e4350e",
             "601c184cc8cd4fe2"
         ],
-        "x": 1445,
-        "y": 100,
+        "x": 1565,
+        "y": 120,
         "wires": []
     },
     {
@@ -1505,8 +1544,8 @@
         "topic": "",
         "payload": "Stopped",
         "payloadType": "str",
-        "x": 1260,
-        "y": 80,
+        "x": 1380,
+        "y": 100,
         "wires": [
             [
                 "ad1436e2f7b892fd"
@@ -1581,7 +1620,8 @@
         "wires": [
             [
                 "24805c900167c968",
-                "fb1edbf186530db5"
+                "fb1edbf186530db5",
+                "b1d6242f17150944"
             ]
         ]
     },
@@ -2712,73 +2752,8 @@
         "g": "525f6434f47c15f1",
         "name": "Test stop",
         "info": "",
-        "x": 1220,
-        "y": 40,
-        "wires": []
-    },
-    {
-        "id": "3c8fedb5d9abddb4",
-        "type": "function",
-        "z": "0e1f3206f48adf14",
-        "name": "function 3",
-        "func": "msg.payload = flow.get(\"test_sequence_path\");\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1380,
-        "y": 220,
-        "wires": [
-            [
-                "32a7a6b5d8a09004"
-            ]
-        ]
-    },
-    {
-        "id": "e3bbab3dd63b01c3",
-        "type": "inject",
-        "z": "0e1f3206f48adf14",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1240,
-        "y": 220,
-        "wires": [
-            [
-                "3c8fedb5d9abddb4"
-            ]
-        ]
-    },
-    {
-        "id": "32a7a6b5d8a09004",
-        "type": "debug",
-        "z": "0e1f3206f48adf14",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1540,
-        "y": 220,
+        "x": 1340,
+        "y": 60,
         "wires": []
     },
     {
@@ -3410,48 +3385,6 @@
         "x": 240,
         "y": 2320,
         "wires": []
-    },
-    {
-        "id": "23e7d95574434001",
-        "type": "function",
-        "z": "0e1f3206f48adf14",
-        "g": "e1b6d5ba8d3de0b8",
-        "name": "Reset",
-        "func": "// First, send Reset = true\nvar msg1 = { payload: { \"tag\": \"Reset\", \"setpoint\": true } };\n\n// Create a second message to set it back to false after 1 second\nsetTimeout(() => {\n    var msg2 = { payload: { \"tag\": \"Reset\", \"setpoint\": false } };\n    node.send(msg2);\n}, 50);\n\n// Send the first message immediately\nreturn msg1;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 550,
-        "y": 200,
-        "wires": [
-            [
-                "d54e4de142a995c6"
-            ]
-        ]
-    },
-    {
-        "id": "d54e4de142a995c6",
-        "type": "function",
-        "z": "0e1f3206f48adf14",
-        "g": "e1b6d5ba8d3de0b8",
-        "name": "Single coil write",
-        "func": "// Retrieve the coil tag and setpoint from msg.payload\nlet { tag, setpoint } = msg.payload;\n\n// Retrieve Modbus coil address mapping from flow context\nlet modCoil = flow.get(\"modCoil\") || [];\n\n// Find the Modbus address for the given tag\nlet coilData = modCoil.find(entry => entry[\"Tag Name\"] === tag);\n\nif (!coilData) {\n    node.error(`Unknown coil tag: ${tag}`, msg);\n    return null;\n}\n\n// Convert Modbus address to 0-based integer\nlet address = parseInt(coilData[\"MODBUS Start Address\"], 10) - 1;\n\n// Construct Modbus write message\nmsg.payload = {\n    'unitId': 1,      // PLC Modbus Unit ID\n    'fc': 5,         // Function Code: Write Single Coil\n    'address': address, // Modbus coil address\n    'value': setpoint ? 1 : 0, // Convert boolean to 1 or 0\n    'quantity': 1\n};\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 700,
-        "y": 200,
-        "wires": [
-            [
-                "246f2e5ba8d0961c"
-            ]
-        ]
     },
     {
         "id": "41b6500c6f27fc29",
@@ -4568,7 +4501,9 @@
         "wires": [
             [
                 "65208708e4372bc8",
-                "a5039fb22db64485"
+                "a5039fb22db64485",
+                "d917117175b94745",
+                "e4ba86696d3fd1bf"
             ]
         ]
     },
@@ -5326,27 +5261,6 @@
         ]
     },
     {
-        "id": "246f2e5ba8d0961c",
-        "type": "modbus-flex-write",
-        "z": "0e1f3206f48adf14",
-        "g": "e1b6d5ba8d3de0b8",
-        "name": "",
-        "showStatusActivities": false,
-        "showErrors": false,
-        "showWarnings": true,
-        "server": "f905b5f3395bcec1",
-        "emptyMsgOnFail": false,
-        "keepMsgProperties": false,
-        "delayOnStart": false,
-        "startDelayTime": "",
-        "x": 890,
-        "y": 200,
-        "wires": [
-            [],
-            []
-        ]
-    },
-    {
         "id": "098e0fb7b999add0",
         "type": "modbus-flex-write",
         "z": "0e1f3206f48adf14",
@@ -5472,8 +5386,8 @@
         "y": 160,
         "wires": [
             [
-                "23e7d95574434001",
-                "41b6500c6f27fc29"
+                "41b6500c6f27fc29",
+                "2517cf943d440480"
             ]
         ]
     },
@@ -5497,9 +5411,9 @@
         "payload": "Stopped",
         "payloadType": "str",
         "topic": "control",
-        "topicType": "msg",
-        "x": 1250,
-        "y": 120,
+        "topicType": "str",
+        "x": 1370,
+        "y": 140,
         "wires": [
             [
                 "ad1436e2f7b892fd"
@@ -5589,7 +5503,8 @@
         "y": 2560,
         "wires": [
             [
-                "45113a7508b326f3"
+                "45113a7508b326f3",
+                "23e7d95574434001"
             ]
         ]
     },
@@ -7068,7 +6983,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 420,
+        "x": 460,
         "y": 2160,
         "wires": []
     },
@@ -7217,7 +7132,7 @@
         "group": "4afe546e24b27211",
         "name": "Start",
         "label": "START",
-        "order": 3,
+        "order": 2,
         "width": "1",
         "height": "1",
         "emulateClick": false,
@@ -7227,12 +7142,12 @@
         "className": "",
         "icon": "play",
         "iconPosition": "left",
-        "payload": "",
+        "payload": "Running",
         "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "buttonColor": "",
-        "textColor": "",
+        "topic": "control",
+        "topicType": "str",
+        "buttonColor": "green",
+        "textColor": "white",
         "iconColor": "",
         "enableClick": true,
         "enablePointerdown": false,
@@ -7241,107 +7156,14 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 770,
-        "y": 60,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b849ee60fc7851a3",
-        "type": "ui-dropdown",
-        "z": "0e1f3206f48adf14",
-        "group": "4afe546e24b27211",
-        "name": "Data logging frequency",
-        "label": "Data log frequency",
-        "tooltip": "",
-        "order": 2,
-        "width": "2",
-        "height": "1",
-        "passthru": false,
-        "multiple": false,
-        "chips": false,
-        "clearable": false,
-        "options": [
-            {
-                "label": "1 s",
-                "value": "1",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "typeIsComboBox": true,
-        "msgTrigger": "onChange",
-        "x": 890,
-        "y": 360,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "0ac2b43c57cbcc67",
-        "type": "ui-template",
-        "z": "0e1f3206f48adf14",
-        "group": "4afe546e24b27211",
-        "page": "",
-        "ui": "",
-        "name": "",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "head": "",
-        "format": "<template>\n    <div>\n        <h2>Counter</h2>\n        <!-- Conditional Styling using Attribute Binding (\":\") -->\n        <!-- and rendering content inside <tags></tags> with {{ }} -->\n        <p :style=\"{'color' : (count > 5 ? 'red' : 'green' )}\">Current Count: {{ count }}</p>\n        <!-- Computed Rendering using Vue Computed Variables -->\n        <p class=\"my-class\">Formatted Count: {{ formattedCount }}</p>\n        <!-- Conditional Rendering with \"v-if\" -->\n        <b v-if=\"count > 5\">Too many!</b>\n        <v-btn @click=\"increase()\">Increment</v-btn>\n    </div>\n</template>\n\n<script>\n    export default {\n        data() {\n            // define variables available component-wide\n            // (in <template> and component functions)\n            return {\n                count: 0\n            }\n        },\n        watch: {\n            // watch for any changes of \"count\"\n            count: function () {\n                if (this.count % 5 === 0) {\n                    this.send({payload: 'Multiple of 5'})\n                }\n            }\n        },\n        computed: {\n            // automatically compute this variable\n            // whenever VueJS deems appropriate\n            formattedCount: function () {\n                return this.count + ' Apples'\n            }\n        },\n        methods: {\n            // expose a method to our <template> and Vue Application\n            increase: function () {\n                this.count++\n            }\n        },\n        mounted() {\n            // code here when the component is first loaded\n        },\n        unmounted() {\n            // code here when the component is removed from the Dashboard\n            // i.e. when the user navigates away from the page\n        }\n    }\n</script>\n<style>\n    /* define any styles here - supports raw CSS */\n    .my-class {\n        color: red;\n    }\n</style>",
-        "storeOutMessages": true,
-        "passthru": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 920,
-        "y": 3540,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "0ee73763c17c47e3",
-        "type": "function",
-        "z": "0e1f3206f48adf14",
-        "name": "Update symbol color",
-        "func": "// Retrieve the latest modbus coil statuses\nlet modbusCoilStatus = flow.get(\"modbusCoilStatus\") || {};\n\n// Define the coil-to-selector mapping and colors\nconst coilMapping = {\n    \"SV210.SV_Open\": { selectors: [\"SV210_1\", \"SV210_2\", \"SV210_3\"], activeColor: \"rgba(198, 243, 198, 1.0)\", inactiveColor: \"rgba(230, 230, 230, 1.0)\" },\n    \"SV310.SV_Open\": { selectors: [\"SV310_1\", \"SV310_2\", \"SV310_3\"], activeColor: \"rgba(198, 243, 198, 1.0)\", inactiveColor: \"rgba(230, 230, 230, 1.0)\" },\n};\n\n// Create an array for updates\nlet updates = [];\n\nfor (let coilTag in coilMapping) {\n    // Read the current state\n    let isActive = modbusCoilStatus[coilTag] === true;  \n\n    // Determine color based on state\n    let color = isActive ? coilMapping[coilTag].activeColor : coilMapping[coilTag].inactiveColor;\n\n    // Format selectors with #\n    let selectors = coilMapping[coilTag].selectors.map(s => `#${s}`).join(\", \");\n\n    // Add to updates\n    updates.push({\n        \"command\": \"set_style\",\n        \"selector\": selectors, \n        \"attributeName\": \"fill\",\n        \"attributeValue\": color\n    });\n}\n\n// Send updates\nmsg.payload = updates;\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1040,
-        "y": 3220,
+        "x": 590,
+        "y": 120,
         "wires": [
             [
-                "3f9bba63b1fa7f86",
-                "f3a857460f490566",
-                "e7832801775cf2e5"
+                "41b6500c6f27fc29",
+                "2517cf943d440480"
             ]
         ]
-    },
-    {
-        "id": "3f9bba63b1fa7f86",
-        "type": "debug",
-        "z": "0e1f3206f48adf14",
-        "name": "debug 27",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1040,
-        "y": 3400,
-        "wires": []
     },
     {
         "id": "9f1f17c606bd95e2",
@@ -7412,6 +7234,7 @@
         "id": "6677c69320aea00c",
         "type": "inject",
         "z": "0e1f3206f48adf14",
+        "d": true,
         "name": "",
         "props": [
             {
@@ -7429,77 +7252,11 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 990,
-        "y": 3120,
+        "x": 1770,
+        "y": 3000,
         "wires": [
             [
-                "eed4b94620ddd3f0",
-                "70275ccc9bf7632a"
-            ]
-        ]
-    },
-    {
-        "id": "cab7f63407601258",
-        "type": "function",
-        "z": "0e1f3206f48adf14",
-        "name": "function 2",
-        "func": "let modbusCoilStatus = flow.get(\"modbusCoilStatus\");\nmsg.payload = modbusCoilStatus[\"SV210.SV_Open\"];\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1300,
-        "y": 3340,
-        "wires": [
-            [
-                "79dc38cae5b414ac"
-            ]
-        ]
-    },
-    {
-        "id": "79dc38cae5b414ac",
-        "type": "debug",
-        "z": "0e1f3206f48adf14",
-        "name": "debug 30",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1500,
-        "y": 3380,
-        "wires": []
-    },
-    {
-        "id": "c7d1703f7496d8fc",
-        "type": "inject",
-        "z": "0e1f3206f48adf14",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1150,
-        "y": 3340,
-        "wires": [
-            [
-                "cab7f63407601258"
+                "eed4b94620ddd3f0"
             ]
         ]
     },
@@ -7522,8 +7279,8 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 1160,
-        "y": 3160,
+        "x": 1900,
+        "y": 3040,
         "wires": [
             []
         ]
@@ -7532,6 +7289,7 @@
         "id": "123bdf8542f19f46",
         "type": "inject",
         "z": "0e1f3206f48adf14",
+        "d": true,
         "name": "",
         "props": [
             {
@@ -7549,29 +7307,13 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 1010,
-        "y": 3180,
+        "x": 1770,
+        "y": 3040,
         "wires": [
             [
                 "eed4b94620ddd3f0"
             ]
         ]
-    },
-    {
-        "id": "70275ccc9bf7632a",
-        "type": "debug",
-        "z": "0e1f3206f48adf14",
-        "name": "debug 31",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1160,
-        "y": 3080,
-        "wires": []
     },
     {
         "id": "4732c5c0882d98df",
@@ -7581,8 +7323,8 @@
         "group": "27b4d8d85025283e",
         "page": "",
         "ui": "",
-        "name": "test PID_worked code",
-        "order": 2,
+        "name": "change color_worked code",
+        "order": 3,
         "width": "3",
         "height": "3",
         "head": "",
@@ -7592,155 +7334,8 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 1420,
-        "y": 3220,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "bdd39126b060eecc",
-        "type": "ui-template",
-        "z": "0e1f3206f48adf14",
-        "group": "27b4d8d85025283e",
-        "page": "",
-        "ui": "",
-        "name": "learn",
-        "order": 6,
-        "width": 0,
-        "height": 0,
-        "head": "",
-        "format": "<template>\n        <div>\n            <p :class=\"msg.payload\">Hello World</p>\n        </div>\n</template>\n",
-        "storeOutMessages": true,
-        "passthru": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 950,
-        "y": 3480,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "cc26b2b2412a87be",
-        "type": "inject",
-        "z": "0e1f3206f48adf14",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "I love you",
-        "payloadType": "str",
-        "x": 800,
-        "y": 3480,
-        "wires": [
-            [
-                "bdd39126b060eecc"
-            ]
-        ]
-    },
-    {
-        "id": "216983740d7ca749",
-        "type": "inject",
-        "z": "0e1f3206f48adf14",
-        "name": "true",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1190,
-        "y": 3460,
-        "wires": [
-            [
-                "6f0de17590f6ea5d"
-            ]
-        ]
-    },
-    {
-        "id": "750367c7395cdade",
-        "type": "inject",
-        "z": "0e1f3206f48adf14",
-        "name": "false",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1190,
-        "y": 3520,
-        "wires": [
-            [
-                "eafa891f6f7520de"
-            ]
-        ]
-    },
-    {
-        "id": "6f0de17590f6ea5d",
-        "type": "function",
-        "z": "0e1f3206f48adf14",
-        "name": "function 5",
-        "func": "flow.set(\"dummy\",true);\nreturn null;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1340,
-        "y": 3460,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "eafa891f6f7520de",
-        "type": "function",
-        "z": "0e1f3206f48adf14",
-        "name": "function 6",
-        "func": "flow.set(\"dummy\",false);\nreturn null;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1320,
-        "y": 3520,
+        "x": 1920,
+        "y": 3160,
         "wires": [
             []
         ]
@@ -7831,7 +7426,7 @@
         "id": "82c8359fa16c35cf",
         "type": "function",
         "z": "0e1f3206f48adf14",
-        "name": "Manual PS test",
+        "name": "Manual PS test with Sequence",
         "func": "msg.payload =     \n    [{ \"Test_step\": 1, \"Duration\": 10, \"Current_Setpoint\": 5, \"Voltage_Setpoint\": 1.9 }, \n    { \"Test_step\": 2, \"Duration\": 120, \"Current_Setpoint\": 10, \"Voltage_Setpoint\": 1.9 }, \n    { \"Test_step\": 3, \"Duration\": 300, \"Current_Setpoint\": 100, \"Voltage_Setpoint\": 6 }, \n    { \"Test_step\": 4, \"Duration\": 6, \"Current_Setpoint\": 0, \"Voltage_Setpoint\": 0 }];\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
@@ -7839,7 +7434,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2080,
+        "x": 2370,
         "y": 1320,
         "wires": [
             [
@@ -7869,7 +7464,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1860,
+        "x": 2140,
         "y": 1320,
         "wires": [
             [
@@ -7889,8 +7484,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2280,
-        "y": 1220,
+        "x": 2400,
+        "y": 1240,
         "wires": []
     },
     {
@@ -7905,8 +7500,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2110,
-        "y": 1440,
+        "x": 2650,
+        "y": 1300,
         "wires": [
             [
                 "381165a5f2cb9703",
@@ -7931,8 +7526,8 @@
         "keepMsgProperties": false,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 2350,
-        "y": 1380,
+        "x": 2870,
+        "y": 1300,
         "wires": [
             [],
             []
@@ -7950,8 +7545,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2380,
-        "y": 1460,
+        "x": 2860,
+        "y": 1360,
         "wires": []
     },
     {
@@ -7966,8 +7561,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2360,
-        "y": 1300,
+        "x": 2840,
+        "y": 1260,
         "wires": []
     },
     {
@@ -7975,9 +7570,9 @@
         "type": "ui-form",
         "z": "0e1f3206f48adf14",
         "name": "",
-        "group": "27b4d8d85025283e",
+        "group": "2004d5a11cd15969",
         "label": "",
-        "order": 3,
+        "order": 1,
         "width": 0,
         "height": 0,
         "options": [
@@ -8018,8 +7613,8 @@
         "className": "",
         "passthru": false,
         "dropdownOptions": [],
-        "x": 2150,
-        "y": 1140,
+        "x": 2210,
+        "y": 1220,
         "wires": [
             [
                 "c6149cae441d7eb4",
@@ -8039,8 +7634,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2340,
-        "y": 1120,
+        "x": 2360,
+        "y": 1180,
         "wires": []
     },
     {
@@ -8055,7 +7650,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2470,
+        "x": 2550,
         "y": 1020,
         "wires": [
             [
@@ -8075,7 +7670,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2660,
+        "x": 2740,
         "y": 1020,
         "wires": [
             [
@@ -8096,7 +7691,7 @@
         "keepMsgProperties": false,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 2810,
+        "x": 2930,
         "y": 1020,
         "wires": [
             [],
@@ -8115,8 +7710,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2530,
-        "y": 1140,
+        "x": 2650,
+        "y": 1180,
         "wires": [
             [
                 "f7f9a8e0751ff2a1",
@@ -8128,10 +7723,10 @@
         "id": "e355019336ef3e38",
         "type": "ui-button",
         "z": "0e1f3206f48adf14",
-        "group": "27b4d8d85025283e",
+        "group": "2004d5a11cd15969",
         "name": "PS Run",
         "label": "PS Run",
-        "order": 4,
+        "order": 2,
         "width": "",
         "height": "",
         "emulateClick": false,
@@ -8155,8 +7750,8 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 2160,
-        "y": 1000,
+        "x": 2220,
+        "y": 1020,
         "wires": [
             [
                 "573e8369778f1b6f"
@@ -8167,12 +7762,12 @@
         "id": "c58c447ae5e94ec8",
         "type": "ui-button",
         "z": "0e1f3206f48adf14",
-        "group": "27b4d8d85025283e",
+        "group": "2004d5a11cd15969",
         "name": "PS Stop",
         "label": "PS Stop",
-        "order": 5,
-        "width": null,
-        "height": null,
+        "order": 3,
+        "width": "",
+        "height": "",
         "emulateClick": false,
         "tooltip": "",
         "color": "",
@@ -8194,8 +7789,8 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 2100,
-        "y": 1060,
+        "x": 2200,
+        "y": 1140,
         "wires": [
             [
                 "87a16797a8edb3a8"
@@ -8214,7 +7809,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2720,
+        "x": 2920,
         "y": 1140,
         "wires": []
     },
@@ -8230,8 +7825,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2250,
-        "y": 1060,
+        "x": 2390,
+        "y": 1120,
         "wires": [
             [
                 "573e8369778f1b6f",
@@ -8247,8 +7842,8 @@
         "group": "27b4d8d85025283e",
         "page": "",
         "ui": "",
-        "name": "test PID",
-        "order": 1,
+        "name": "test PID_change color_worked",
+        "order": 2,
         "width": "3",
         "height": "3",
         "head": "",
@@ -8258,39 +7853,10 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 1440,
-        "y": 3080,
+        "x": 1930,
+        "y": 3100,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "335b3185bf27efc4",
-        "type": "inject",
-        "z": "0e1f3206f48adf14",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 840,
-        "y": 3160,
-        "wires": [
-            [
-                "0ee73763c17c47e3"
-            ]
         ]
     },
     {
@@ -8352,27 +7918,9 @@
         "y": 3220,
         "wires": [
             [
-                "1aaf65863aa3d8e1",
                 "e7832801775cf2e5"
             ]
         ]
-    },
-    {
-        "id": "1aaf65863aa3d8e1",
-        "type": "debug",
-        "z": "0e1f3206f48adf14",
-        "g": "891263f2623b3ee2",
-        "name": "debug 41",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 780,
-        "y": 3220,
-        "wires": []
     },
     {
         "id": "07889394d1d1d567",
@@ -8405,40 +7953,333 @@
         ]
     },
     {
-        "id": "9fa6b3d0b211cf6a",
-        "type": "ui_svg_graphics",
+        "id": "b849ee60fc7851a3",
+        "type": "ui-dropdown",
         "z": "0e1f3206f48adf14",
-        "group": "d7e25fd044afbc41",
+        "g": "06c6cdf71851940d",
+        "group": "4afe546e24b27211",
+        "name": "Data logging frequency",
+        "label": "Data log frequency",
+        "tooltip": "",
         "order": 1,
-        "width": "0",
-        "height": "0",
-        "svgString": "<svg xmlns:inkscape=\"http://www.inkscape.org/namespaces/inkscape\" xmlns:sodipodi=\"http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns=\"http://www.w3.org/2000/svg\" width=\"925px\" height=\"540px\" viewBox=\"57.80157470703125 27.534570693969727 327.2620544433594 191.06048583984375\" version=\"1.1\" id=\"svg1\" inkscape:version=\"1.4 (86a8ad7, 2024-10-11)\" sodipodi:docname=\"PID_drawing_realText.svg\" preserveAspectRatio=\"xMidYMid meet\"><rect id=\"svgEditorBackground\" x=\"0\" y=\"0\" width=\"507.9999694824219\" height=\"285.75\" style=\"fill:none;stroke:none\"/>\n  <sodipodi:namedview id=\"namedview1\" pagecolor=\"#ffffff\" bordercolor=\"#999999\" borderopacity=\"1\" inkscape:showpageshadow=\"2\" inkscape:pageopacity=\"0\" inkscape:pagecheckerboard=\"0\" inkscape:deskcolor=\"#d1d1d1\" inkscape:document-units=\"mm\" inkscape:zoom=\"1.8025477\" inkscape:cx=\"1101.4965\" inkscape:cy=\"454.63429\" inkscape:window-width=\"1920\" inkscape:window-height=\"1001\" inkscape:window-x=\"3449\" inkscape:window-y=\"-7\" inkscape:window-maximized=\"1\" inkscape:current-layer=\"layer1\" showgrid=\"false\"/>\n  <defs id=\"defs1\">\n    <marker style=\"overflow:visible\" id=\"marker45\" refX=\"0\" refY=\"0\" orient=\"auto-start-reverse\" inkscape:stockid=\"Concave triangle arrow\" markerWidth=\"0.5\" markerHeight=\"0.5\" viewBox=\"0 0 1 1\" inkscape:isstock=\"true\" inkscape:collect=\"always\" preserveAspectRatio=\"xMidYMid\">\n      <path transform=\"scale(0.7)\" d=\"M -2,-4 9,0 -2,4 c 2,-2.33 2,-5.66 0,-8 z\" style=\"fill:context-stroke;fill-rule:evenodd;stroke:none\" id=\"path45\"/>\n    </marker>\n    <marker style=\"overflow:visible\" id=\"marker44\" refX=\"0\" refY=\"0\" orient=\"auto-start-reverse\" inkscape:stockid=\"Concave triangle arrow\" markerWidth=\"0.5\" markerHeight=\"0.5\" viewBox=\"0 0 1 1\" inkscape:isstock=\"true\" inkscape:collect=\"always\" preserveAspectRatio=\"xMidYMid\">\n      <path transform=\"scale(0.7)\" d=\"M -2,-4 9,0 -2,4 c 2,-2.33 2,-5.66 0,-8 z\" style=\"fill:context-stroke;fill-rule:evenodd;stroke:none\" id=\"path44\"/>\n    </marker>\n    <marker style=\"overflow:visible\" id=\"marker43\" refX=\"0\" refY=\"0\" orient=\"auto-start-reverse\" inkscape:stockid=\"Concave triangle arrow\" markerWidth=\"0.5\" markerHeight=\"0.5\" viewBox=\"0 0 1 1\" inkscape:isstock=\"true\" inkscape:collect=\"always\" preserveAspectRatio=\"xMidYMid\">\n      <path transform=\"scale(0.7)\" d=\"M -2,-4 9,0 -2,4 c 2,-2.33 2,-5.66 0,-8 z\" style=\"fill:context-stroke;fill-rule:evenodd;stroke:none\" id=\"path43\"/>\n    </marker>\n    <marker style=\"overflow:visible\" id=\"marker42\" refX=\"0\" refY=\"0\" orient=\"auto-start-reverse\" inkscape:stockid=\"Concave triangle arrow\" markerWidth=\"0.5\" markerHeight=\"0.5\" viewBox=\"0 0 1 1\" inkscape:isstock=\"true\" inkscape:collect=\"always\" preserveAspectRatio=\"xMidYMid\">\n      <path transform=\"scale(0.7)\" d=\"M -2,-4 9,0 -2,4 c 2,-2.33 2,-5.66 0,-8 z\" style=\"fill:context-stroke;fill-rule:evenodd;stroke:none\" id=\"path42\"/>\n    </marker>\n    <marker style=\"overflow:visible\" id=\"ConcaveTriangle\" refX=\"0\" refY=\"0\" orient=\"auto-start-reverse\" inkscape:stockid=\"Concave triangle arrow\" markerWidth=\"0.5\" markerHeight=\"0.5\" viewBox=\"0 0 1 1\" inkscape:isstock=\"true\" inkscape:collect=\"always\" preserveAspectRatio=\"xMidYMid\">\n      <path transform=\"scale(0.7)\" d=\"M -2,-4 9,0 -2,4 c 2,-2.33 2,-5.66 0,-8 z\" style=\"fill:context-stroke;fill-rule:evenodd;stroke:none\" id=\"path41\"/>\n    </marker>\n    <marker style=\"overflow:visible\" id=\"DartArrow\" refX=\"0\" refY=\"0\" orient=\"auto-start-reverse\" inkscape:stockid=\"Dart arrow\" markerWidth=\"0.5\" markerHeight=\"0.5\" viewBox=\"0 0 1 1\" inkscape:isstock=\"true\" inkscape:collect=\"always\" preserveAspectRatio=\"xMidYMid\">\n      <path style=\"fill:context-stroke;fill-rule:evenodd;stroke:none\" d=\"M 0,0 5,-5 -12.5,0 5,5 Z\" transform=\"scale(-0.5)\" id=\"path40\"/>\n    </marker>\n    <pattern inkscape:collect=\"always\" xlink:href=\"#Strips1_1\" preserveAspectRatio=\"xMidYMid\" id=\"pattern17\" patternTransform=\"matrix(0.25490928,0.17103592,-0.14717195,0.29624288,-76.115336,-82.492364)\" x=\"0\" y=\"0\"/>\n    <pattern inkscape:collect=\"always\" patternUnits=\"userSpaceOnUse\" width=\"2\" height=\"10\" patternTransform=\"translate(0,0) scale(2,2)\" preserveAspectRatio=\"xMidYMid\" id=\"Strips1_1\" style=\"fill:#000000\" inkscape:stockid=\"Stripes 01 (1:1)\" inkscape:isstock=\"true\" inkscape:label=\"Stripes 01 (1:1)\">\n      <rect style=\"stroke:none\" x=\"0\" y=\"-0.5\" width=\"1\" height=\"11\" id=\"rect134\"/>\n    </pattern>\n    <marker style=\"overflow:visible\" id=\"marker44-9\" refX=\"0\" refY=\"0\" orient=\"auto-start-reverse\" inkscape:stockid=\"Concave triangle arrow\" markerWidth=\"0.5\" markerHeight=\"0.5\" viewBox=\"0 0 1 1\" inkscape:isstock=\"true\" inkscape:collect=\"always\" preserveAspectRatio=\"xMidYMid\">\n      <path transform=\"scale(0.7)\" d=\"M -2,-4 9,0 -2,4 c 2,-2.33 2,-5.66 0,-8 z\" style=\"fill:context-stroke;fill-rule:evenodd;stroke:none\" id=\"path44-4\"/>\n    </marker>\n  </defs>\n  <g inkscape:label=\"Layer 1\" inkscape:groupmode=\"layer\" id=\"layer1\">\n    <path style=\"fill:#000000;stroke-width:0.264583\" d=\"M 297.08194,163.60179 V 99.814807\" id=\"path2\"/>\n    <rect style=\"fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.775595;stroke-dasharray:none;stroke-opacity:1\" id=\"rect4\" width=\"33.735306\" height=\"52.410202\" x=\"112.88165\" y=\"81.572609\" ry=\"6.6265779\"/>\n    <path id=\"LT201\" style=\"fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" d=\"m 146.29544,118.93521 h -33.09226 v 8.2869 c 0,3.62612 2.89889,6.54587 6.5001,6.54587 h 20.09207 c 3.6012,0 6.50009,-2.91975 6.50009,-6.54587 z\"/>\n    <path id=\"LT202\" style=\"fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" d=\"M 146.29502,97.910872 H 113.2036 v 21.238518 h 33.09142 z\"/>\n    <path id=\"LT203\" style=\"fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" d=\"m 119.70328,81.785892 c -3.60121,0 -6.5001,2.91895 -6.5001,6.54508 v 9.68699 h 33.09226 v -9.68699 c 0,-3.62613 -2.89889,-6.54508 -6.50009,-6.54508 z\" inkscape:label=\"#LT203\"/>\n    <rect style=\"fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:0.28933;stroke-dasharray:none;stroke-opacity:1\" id=\"PMP200_2\" width=\"12.371079\" height=\"7.0946174\" x=\"155.78075\" y=\"147.8779\"/>\n    <circle style=\"fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:0.309003;stroke-dasharray:none;stroke-opacity:1\" id=\"PMP200_1\" cx=\"155.55208\" cy=\"154.46744\" r=\"6.5797076\"/>\n    <path style=\"fill:#008037;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" d=\"m 154.24709,124.86408 h 27.35044\" id=\"path30\"/>\n    <path style=\"fill:#008037;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" d=\"m 153.60029,110.17245 h 28.27444\" id=\"path31\"/>\n    <path style=\"fill:#008037;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" d=\"m 153.78509,125.78807 h 28.08964\" id=\"path32\"/>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0927px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"88.451965\" y=\"101.49514\" id=\"text41\"><tspan sodipodi:role=\"line\" id=\"tspan41\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"88.451965\" y=\"101.49514\">SV120</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0927px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"157.11792\" y=\"92.034447\" id=\"text41-7\"><tspan sodipodi:role=\"line\" id=\"tspan41-6\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"157.11792\" y=\"92.034447\">LT203</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0927px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"148.86781\" y=\"166.41386\" id=\"text41-13\"><tspan sodipodi:role=\"line\" id=\"tspan41-2\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"148.86781\" y=\"166.41386\">PMP200</tspan></text>\n    <path style=\"fill:#808080;fill-opacity:1;stroke:#000000;stroke-width:0.391066;stroke-dasharray:none;stroke-opacity:1\" d=\"m 96.143,153.79356 v -5.14574\" id=\"path5-1\"/>\n    <rect style=\"fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:0.354308;stroke-dasharray:none;stroke-opacity:1\" id=\"SV210_3\" width=\"6.3941364\" height=\"5.433466\" x=\"92.94593\" y=\"143.0372\" ry=\"0\"/>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0927px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"94.630341\" y=\"147.39536\" id=\"text41-1-9\"><tspan sodipodi:role=\"line\" id=\"tspan41-9-2\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"94.630341\" y=\"147.39536\">S</tspan></text>\n    <path sodipodi:type=\"star\" style=\"fill:#e6e6e6;stroke:#000000;stroke-width:1.68026;stroke-dasharray:none\" id=\"SV210_1\" inkscape:flatsided=\"true\" sodipodi:sides=\"3\" sodipodi:cx=\"41.686367\" sodipodi:cy=\"73.097923\" sodipodi:r1=\"34.592236\" sodipodi:r2=\"17.29612\" sodipodi:arg1=\"0.52440922\" sodipodi:arg2=\"1.5716068\" inkscape:rounded=\"0\" inkscape:randomized=\"0\" d=\"M 71.630094,90.418314 11.714605,90.369756 41.714402,38.505699 Z\" inkscape:transform-center-x=\"1.0279247\" inkscape:transform-center-y=\"0.0016678831\" transform=\"matrix(0,-0.11902885,0.11902885,0,91.67328,158.74407)\"/>\n    <path sodipodi:type=\"star\" style=\"fill:#e6e6e6;stroke:#000000;stroke-width:1.68026;stroke-dasharray:none\" id=\"SV210_2\" inkscape:flatsided=\"true\" sodipodi:sides=\"3\" sodipodi:cx=\"41.686367\" sodipodi:cy=\"73.097923\" sodipodi:r1=\"34.592236\" sodipodi:r2=\"17.29612\" sodipodi:arg1=\"0.52440922\" sodipodi:arg2=\"1.5716068\" inkscape:rounded=\"0\" inkscape:randomized=\"0\" d=\"M 71.630094,90.418314 11.714605,90.369756 41.714402,38.505699 Z\" inkscape:transform-center-x=\"-1.0279282\" inkscape:transform-center-y=\"-0.0016684426\" transform=\"matrix(0,0.11902885,-0.11902885,0,100.62865,148.81453)\"/>\n    <rect style=\"fill:#b3b3b3;stroke:#000000;stroke-width:0.155496;stroke-dasharray:none\" id=\"Cell_1\" width=\"6.6500001\" height=\"30.082857\" x=\"239.53181\" y=\"89.901398\"/>\n    <rect style=\"fill:#e6e6e6;stroke:#000000;stroke-width:0.136308;stroke-dasharray:none\" id=\"rect2\" width=\"3.9426398\" height=\"23.728094\" x=\"246.32745\" y=\"93.078781\"/>\n    <rect style=\"fill:#b3b3b3;stroke:#000000;stroke-width:0.155496;stroke-dasharray:none\" id=\"Cell_2\" width=\"6.6497378\" height=\"30.082857\" x=\"250.416\" y=\"89.901398\"/>\n    <text xml:space=\"preserve\" style=\"font-size:3.175px;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#b3b3b3;stroke:#000000;stroke-width:0.2;stroke-dasharray:none\" x=\"241.92961\" y=\"106.06137\" id=\"text2\"><tspan sodipodi:role=\"line\" id=\"tspan2\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#1a1a1a;stroke-width:0.2\" x=\"241.92961\" y=\"106.06137\">+</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:3.175px;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#b3b3b3;stroke:#000000;stroke-width:0.2;stroke-dasharray:none\" x=\"253.21144\" y=\"105.76526\" id=\"text2-1\"><tspan sodipodi:role=\"line\" id=\"tspan2-1\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#1a1a1a;stroke-width:0.2\" x=\"253.21144\" y=\"105.76526\">-</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0927px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"270.85858\" y=\"62.502247\" id=\"text41-6\"><tspan sodipodi:role=\"line\" id=\"tspan41-1\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"270.85858\" y=\"62.502247\">SV310</tspan></text>\n    <path style=\"fill:#808080;fill-opacity:1;stroke:#000000;stroke-width:0.391066;stroke-dasharray:none;stroke-opacity:1\" d=\"m 277.82003,52.982803 v -5.14574\" id=\"path5-1-4\"/>\n    <rect style=\"fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:0.354308;stroke-dasharray:none;stroke-opacity:1\" id=\"SV310_3\" width=\"6.3941364\" height=\"5.433466\" x=\"274.62296\" y=\"42.22644\" ry=\"0\"/>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0927px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"276.30737\" y=\"46.584595\" id=\"text41-1-9-3\"><tspan sodipodi:role=\"line\" id=\"tspan41-9-2-2\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"276.30737\" y=\"46.584595\">S</tspan></text>\n    <path sodipodi:type=\"star\" style=\"fill:#e6e6e6;stroke:#000000;stroke-width:1.68026;stroke-dasharray:none\" id=\"SV310_1\" inkscape:flatsided=\"true\" sodipodi:sides=\"3\" sodipodi:cx=\"41.686367\" sodipodi:cy=\"73.097923\" sodipodi:r1=\"34.592236\" sodipodi:r2=\"17.29612\" sodipodi:arg1=\"0.52440922\" sodipodi:arg2=\"1.5716068\" inkscape:rounded=\"0\" inkscape:randomized=\"0\" d=\"M 71.630094,90.418314 11.714605,90.369756 41.714402,38.505699 Z\" inkscape:transform-center-x=\"1.0279247\" inkscape:transform-center-y=\"0.0016678831\" transform=\"matrix(0,-0.11902885,0.11902885,0,273.35031,57.933313)\"/>\n    <path sodipodi:type=\"star\" style=\"fill:#e6e6e6;stroke:#000000;stroke-width:1.68026;stroke-dasharray:none\" id=\"SV310_2\" inkscape:flatsided=\"true\" sodipodi:sides=\"3\" sodipodi:cx=\"41.686367\" sodipodi:cy=\"73.097923\" sodipodi:r1=\"34.592236\" sodipodi:r2=\"17.29612\" sodipodi:arg1=\"0.52440922\" sodipodi:arg2=\"1.5716068\" inkscape:rounded=\"0\" inkscape:randomized=\"0\" d=\"M 71.630094,90.418314 11.714605,90.369756 41.714402,38.505699 Z\" inkscape:transform-center-x=\"-1.0279282\" inkscape:transform-center-y=\"-0.0016684426\" transform=\"matrix(0,0.11902885,-0.11902885,0,282.30568,48.003773)\"/>\n    <path style=\"fill:#1a1a1a;stroke:#000000;stroke-width:0.2;stroke-dasharray:none\" d=\"m 146.36992,90.443502 h 9.83446\" id=\"path3\"/>\n    <path style=\"fill:#1a1a1a;stroke:#000000;stroke-width:0.2;stroke-dasharray:none\" d=\"m 146.22313,105.70894 h 9.98125\" id=\"path4\"/>\n    <path style=\"fill:#1a1a1a;stroke:#000000;stroke-width:0.2;stroke-dasharray:none\" d=\"m 146.22313,122.88255 h 9.83446\" id=\"path5\"/>\n    <g id=\"g1\" transform=\"translate(122.64954,0.18601478)\">\n      <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0927px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"34.480518\" y=\"106.89229\" id=\"text41-2\"><tspan sodipodi:role=\"line\" id=\"tspan41-7\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"34.480518\" y=\"106.89229\">LT202</tspan></text>\n    </g>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0927px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"156.98701\" y=\"124.265\" id=\"text41-1\"><tspan sodipodi:role=\"line\" id=\"tspan41-23\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"156.98701\" y=\"124.265\">LT201</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0927px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"88.823891\" y=\"164.72838\" id=\"text41-3\"><tspan sodipodi:role=\"line\" id=\"tspan41-8\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"88.823891\" y=\"164.72838\">SV210</tspan></text>\n    <path style=\"fill:#808080;fill-opacity:1;stroke:#000000;stroke-width:0.391066;stroke-dasharray:none;stroke-opacity:1\" d=\"m 95.840281,91.128017 v -5.14574\" id=\"path5-1-7\"/>\n    <rect style=\"fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:0.354308;stroke-dasharray:none;stroke-opacity:1\" id=\"SV120_3\" width=\"6.3941364\" height=\"5.433466\" x=\"92.643219\" y=\"80.371658\" ry=\"0\"/>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0927px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"94.327637\" y=\"84.729805\" id=\"text41-1-9-2\"><tspan sodipodi:role=\"line\" id=\"tspan41-9-2-7\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"94.327637\" y=\"84.729805\">S</tspan></text>\n    <path sodipodi:type=\"star\" style=\"fill:#e6e6e6;stroke:#000000;stroke-width:1.68026;stroke-dasharray:none\" id=\"SV120_2\" inkscape:flatsided=\"true\" sodipodi:sides=\"3\" sodipodi:cx=\"41.686367\" sodipodi:cy=\"73.097923\" sodipodi:r1=\"34.592236\" sodipodi:r2=\"17.29612\" sodipodi:arg1=\"0.52440922\" sodipodi:arg2=\"1.5716068\" inkscape:rounded=\"0\" inkscape:randomized=\"0\" d=\"M 71.630094,90.418314 11.714605,90.369756 41.714402,38.505699 Z\" inkscape:transform-center-x=\"1.0279247\" inkscape:transform-center-y=\"0.0016678831\" transform=\"matrix(0,-0.11902885,0.11902885,0,91.370561,96.078537)\"/>\n    <path sodipodi:type=\"star\" style=\"fill:#e6e6e6;stroke:#000000;stroke-width:1.68026;stroke-dasharray:none\" id=\"SV120_1\" inkscape:flatsided=\"true\" sodipodi:sides=\"3\" sodipodi:cx=\"41.686367\" sodipodi:cy=\"73.097923\" sodipodi:r1=\"34.592236\" sodipodi:r2=\"17.29612\" sodipodi:arg1=\"0.52440922\" sodipodi:arg2=\"1.5716068\" inkscape:rounded=\"0\" inkscape:randomized=\"0\" d=\"M 71.630094,90.418314 11.714605,90.369756 41.714402,38.505699 Z\" inkscape:transform-center-x=\"-1.0279282\" inkscape:transform-center-y=\"-0.0016684426\" transform=\"matrix(0,0.11902885,-0.11902885,0,100.32593,86.148987)\"/>\n    <rect style=\"fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.775595;stroke-dasharray:none;stroke-opacity:1\" id=\"rect4-6\" width=\"33.735306\" height=\"52.410202\" x=\"291.26431\" y=\"79.172539\" ry=\"6.6265779\"/>\n    <path id=\"LT301\" style=\"fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" d=\"m 324.6781,116.53515 h -33.09226 v 8.2869 c 0,3.62612 2.89889,6.54587 6.5001,6.54587 h 20.09207 c 3.6012,0 6.50009,-2.91975 6.50009,-6.54587 z\"/>\n    <path id=\"LT302\" style=\"fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" d=\"m 324.67768,95.510814 h -33.09142 v 21.238516 h 33.09142 z\"/>\n    <path id=\"LT303\" style=\"fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" d=\"m 298.08594,79.385834 c -3.60121,0 -6.5001,2.91895 -6.5001,6.54508 v 9.68699 h 33.09226 v -9.68699 c 0,-3.62613 -2.89889,-6.54508 -6.50009,-6.54508 z\" inkscape:label=\"#LT203\"/>\n    <path style=\"fill:#008037;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" d=\"m 332.62975,122.46402 h 27.35044\" id=\"path30-8\"/>\n    <path style=\"fill:#008037;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" d=\"m 331.98295,107.77239 h 28.27444\" id=\"path31-6\"/>\n    <path style=\"fill:#008037;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" d=\"m 332.16775,123.38801 h 28.08964\" id=\"path32-0\"/>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0927px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"335.50058\" y=\"89.634377\" id=\"text41-7-2\"><tspan sodipodi:role=\"line\" id=\"tspan41-6-4\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"335.50058\" y=\"89.634377\">LT303</tspan></text>\n    <path style=\"fill:#1a1a1a;stroke:#000000;stroke-width:0.2;stroke-dasharray:none\" d=\"m 324.75258,88.043444 h 9.83446\" id=\"path3-8\"/>\n    <path style=\"fill:#1a1a1a;stroke:#000000;stroke-width:0.2;stroke-dasharray:none\" d=\"m 324.60579,103.30888 h 9.98125\" id=\"path4-6\"/>\n    <path style=\"fill:#1a1a1a;stroke:#000000;stroke-width:0.2;stroke-dasharray:none\" d=\"m 324.60579,120.48249 h 9.83446\" id=\"path5-5\"/>\n    <g id=\"g2\" transform=\"translate(301.0322,-2.2140469)\">\n      <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0927px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"34.480518\" y=\"106.89229\" id=\"text41-2-0\"><tspan sodipodi:role=\"line\" id=\"tspan41-7-9\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"34.480518\" y=\"106.89229\">LT302</tspan></text>\n    </g>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0927px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"335.36969\" y=\"121.86494\" id=\"text41-1-0\"><tspan sodipodi:role=\"line\" id=\"tspan41-23-0\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"335.36969\" y=\"121.86494\">LT301</tspan></text>\n    <circle style=\"fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:0.309003;stroke-dasharray:none;stroke-opacity:1\" id=\"HTR200\" cx=\"221.98189\" cy=\"150.87193\" r=\"6.5797076\"/>\n    <path style=\"fill:none;stroke:#000000;stroke-width:1.2;stroke-dasharray:none\" d=\"m 212.80889,151.13678 h 5.29335 l 2.3872,-4.7744 3.5289,7.99193 2.3872,-3.6327 h 5.50094\" id=\"path6\"/>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0927px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"212.71053\" y=\"162.2764\" id=\"text41-13-0\"><tspan sodipodi:role=\"line\" id=\"tspan41-2-6\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"212.71053\" y=\"162.2764\">HTR201</tspan></text>\n    <path style=\"fill:none;stroke:#406bbf;stroke-width:1.2;stroke-dasharray:none;stroke-opacity:1\" d=\"m 136.58927,133.68312 v 20.55067 l 12.20022,0\" id=\"path7\" sodipodi:nodetypes=\"ccc\"/>\n    <path style=\"fill:none;stroke:#406bbf;stroke-width:1.2;stroke-dasharray:none;stroke-opacity:1\" d=\"m 168.03387,151.12005 44.92095,0\" id=\"path8\" sodipodi:nodetypes=\"cc\"/>\n    <path style=\"fill:none;stroke:#406bbf;stroke-width:1.20599;stroke-dasharray:none;marker-end:url(#marker42);stroke-opacity:1\" d=\"m 228.56,150.70663 14.10247,-0.11009 v -26.79906\" id=\"path9\" sodipodi:nodetypes=\"ccc\"/>\n    <path style=\"fill:none;stroke:#406bbf;stroke-width:1.2;stroke-dasharray:none;stroke-opacity:1\" d=\"M 242.7607,89.794489 V 70.749397 H 137.976 l 0,10.641766\" id=\"path10\" sodipodi:nodetypes=\"cccc\"/>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0927px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"256.77304\" y=\"190.58794\" id=\"text41-61\"><tspan sodipodi:role=\"line\" id=\"tspan41-4\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1;fill-opacity:1\" x=\"256.77304\" y=\"190.58794\">SV320</tspan></text>\n    <path style=\"fill:#808080;fill-opacity:1;stroke:#000000;stroke-width:0.391066;stroke-dasharray:none;stroke-opacity:1\" d=\"m 264.04891,179.88506 v -5.14574\" id=\"path5-1-2\"/>\n    <rect style=\"fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:0.354308;stroke-dasharray:none;stroke-opacity:1\" id=\"SV320_3\" width=\"6.3941364\" height=\"5.433466\" x=\"260.85184\" y=\"169.12871\" ry=\"0\"/>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0927px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"262.53625\" y=\"173.48685\" id=\"text41-1-9-22\"><tspan sodipodi:role=\"line\" id=\"tspan41-9-2-1\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"262.53625\" y=\"173.48685\">S</tspan></text>\n    <path sodipodi:type=\"star\" style=\"fill:#e6e6e6;stroke:#000000;stroke-width:1.68026;stroke-dasharray:none\" id=\"SV320_1\" inkscape:flatsided=\"true\" sodipodi:sides=\"3\" sodipodi:cx=\"41.686367\" sodipodi:cy=\"73.097923\" sodipodi:r1=\"34.592236\" sodipodi:r2=\"17.29612\" sodipodi:arg1=\"0.52440922\" sodipodi:arg2=\"1.5716068\" inkscape:rounded=\"0\" inkscape:randomized=\"0\" d=\"M 71.630094,90.418314 11.714605,90.369756 41.714402,38.505699 Z\" inkscape:transform-center-x=\"1.0279247\" inkscape:transform-center-y=\"0.0016678831\" transform=\"matrix(0,-0.11902885,0.11902885,0,259.57919,184.83557)\"/>\n    <path sodipodi:type=\"star\" style=\"fill:#e6e6e6;stroke:#000000;stroke-width:1.68026;stroke-dasharray:none\" id=\"SV320_2\" inkscape:flatsided=\"true\" sodipodi:sides=\"3\" sodipodi:cx=\"41.686367\" sodipodi:cy=\"73.097923\" sodipodi:r1=\"34.592236\" sodipodi:r2=\"17.29612\" sodipodi:arg1=\"0.52440922\" sodipodi:arg2=\"1.5716068\" inkscape:rounded=\"0\" inkscape:randomized=\"0\" d=\"M 71.630094,90.418314 11.714605,90.369756 41.714402,38.505699 Z\" inkscape:transform-center-x=\"-1.0279282\" inkscape:transform-center-y=\"-0.0016684426\" transform=\"matrix(0,0.11902885,-0.11902885,0,268.53457,174.90603)\"/>\n    <rect style=\"fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:0.28933;stroke-dasharray:none;stroke-opacity:1\" id=\"PMP210_2\" width=\"12.371079\" height=\"7.0946174\" x=\"191.90289\" y=\"122.71127\"/>\n    <circle style=\"fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:0.309003;stroke-dasharray:none;stroke-opacity:1\" id=\"PMP220_1\" cx=\"191.67422\" cy=\"129.30081\" r=\"6.5797076\"/>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0927px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"183.97939\" y=\"140.14026\" id=\"text41-13-7\"><tspan sodipodi:role=\"line\" id=\"tspan41-2-9\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"183.97939\" y=\"140.14026\">PMP210</tspan></text>\n    <path style=\"fill:none;stroke:#406abf;stroke-width:1.2;stroke-opacity:1\" d=\"m 140.32576,133.68312 v 6.64264 h 34.25111 v -10.58671 h 10.37912\" id=\"path1\"/>\n    <rect style=\"fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:0.634624;stroke-dasharray:none\" id=\"rect1\" width=\"22.165438\" height=\"7.9170485\" x=\"204.368\" y=\"93.611443\" ry=\"3.5504117\" rx=\"2.3676498\"/>\n    <path style=\"fill:url(#pattern17);fill-opacity:1;stroke:none;stroke-width:0.610057;stroke-dasharray:none\" d=\"m 208.38451,93.962831 v 7.211759 h 14.35865 v -7.211759 z\" id=\"path11\"/>\n    <rect style=\"fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:0.420264;stroke-dasharray:none;stroke-opacity:1\" id=\"HEX210\" width=\"14.614301\" height=\"4.650341\" x=\"212.46649\" y=\"123.96944\"/>\n    <path style=\"fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-dasharray:none;stroke-opacity:1\" d=\"m 214.84355,122.50622 v 7.57676 l -2.49099,2.49099\" id=\"path17\"/>\n    <path style=\"fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-dasharray:none;stroke-opacity:1\" d=\"m 224.81672,122.50622 v 7.57676 l 2.49099,2.49099\" id=\"path17-2\"/>\n    <path style=\"fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-dasharray:none;stroke-opacity:1\" d=\"m 218.02777,130.63686 c -1.11921,-0.53209 0,-0.84401 0,-0.84401 l 1.35775,0.27523 z\" id=\"path18\"/>\n    <path style=\"fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-dasharray:none;stroke-opacity:1\" d=\"m 221.35399,130.66163 c 1.11921,-0.53209 0,-0.84401 0,-0.84401 l -1.35775,0.27523 z\" id=\"path18-1\"/>\n    <path style=\"fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.2;stroke-dasharray:none;stroke-opacity:1\" d=\"m 204.22779,126.09549 h 8.36663\" id=\"path19\"/>\n    <path style=\"fill:none;fill-opacity:1;stroke:#406bbf;stroke-width:1.2;stroke-dasharray:none;stroke-opacity:1\" d=\"m 226.92649,125.79302 h 5.43097 V 97.389091 l -5.8483,0\" id=\"path20\" sodipodi:nodetypes=\"cccc\"/>\n    <path style=\"fill:none;fill-opacity:1;stroke:#406bbf;stroke-width:1.2;stroke-dasharray:none;stroke-opacity:1\" d=\"m 204.57771,97.406895 -57.90589,0\" id=\"path21\" sodipodi:nodetypes=\"cc\"/>\n    <path style=\"fill:none;fill-opacity:1;stroke:#bf4040;stroke-width:1.2;stroke-dasharray:none;stroke-opacity:1\" d=\"M 253.90926,89.827492 V 74.385844 h 9.56854\" id=\"path22\"/>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0927px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"260.23669\" y=\"83.151291\" id=\"text41-61-2\"><tspan sodipodi:role=\"line\" id=\"tspan41-4-7\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"260.23669\" y=\"83.151291\">BPR302</tspan></text>\n    <path style=\"fill:#808080;fill-opacity:1;stroke:#000000;stroke-width:0.391066;stroke-dasharray:none;stroke-opacity:1\" d=\"m 269.30807,74.497529 v -5.14574\" id=\"path5-1-2-7\"/>\n    <path sodipodi:type=\"star\" style=\"fill:#e6e6e6;stroke:#000000;stroke-width:1.68026;stroke-dasharray:none\" id=\"BPR302_1\" inkscape:flatsided=\"true\" sodipodi:sides=\"3\" sodipodi:cx=\"41.686367\" sodipodi:cy=\"73.097923\" sodipodi:r1=\"34.592236\" sodipodi:r2=\"17.29612\" sodipodi:arg1=\"0.52440922\" sodipodi:arg2=\"1.5716068\" inkscape:rounded=\"0\" inkscape:randomized=\"0\" d=\"M 71.630094,90.418314 11.714605,90.369756 41.714402,38.505699 Z\" inkscape:transform-center-x=\"1.0279247\" inkscape:transform-center-y=\"0.0016678831\" transform=\"matrix(0,-0.11902885,0.11902885,0,264.83835,79.448039)\"/>\n    <path sodipodi:type=\"star\" style=\"fill:#e6e6e6;stroke:#000000;stroke-width:1.68026;stroke-dasharray:none\" id=\"BPR302_2\" inkscape:flatsided=\"true\" sodipodi:sides=\"3\" sodipodi:cx=\"41.686367\" sodipodi:cy=\"73.097923\" sodipodi:r1=\"34.592236\" sodipodi:r2=\"17.29612\" sodipodi:arg1=\"0.52440922\" sodipodi:arg2=\"1.5716068\" inkscape:rounded=\"0\" inkscape:randomized=\"0\" d=\"M 71.630094,90.418314 11.714605,90.369756 41.714402,38.505699 Z\" inkscape:transform-center-x=\"-1.0279282\" inkscape:transform-center-y=\"-0.0016684426\" transform=\"matrix(0,0.11902885,-0.11902885,0,273.79373,69.518499)\"/>\n    <path style=\"fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none;stroke-opacity:1\" id=\"path23\" sodipodi:type=\"arc\" sodipodi:cx=\"269.32678\" sodipodi:cy=\"-69.288177\" sodipodi:rx=\"2.0758247\" sodipodi:ry=\"2.0758247\" sodipodi:start=\"0\" sodipodi:end=\"3.1415927\" sodipodi:arc-type=\"slice\" d=\"m 271.40261,-69.288177 a 2.0758247,2.0758247 0 0 1 -1.03792,1.797716 2.0758247,2.0758247 0 0 1 -2.07582,0 2.0758247,2.0758247 0 0 1 -1.03791,-1.797716 h 2.07582 z\" transform=\"scale(1,-1)\"/>\n    <path style=\"fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none;stroke-opacity:1\" d=\"m 269.09054,74.256989 -4.77044,-5.10071 v -4.95393 h 5.06399 v 2.93567\" id=\"path24\"/>\n    <path style=\"fill:none;fill-opacity:1;stroke:#bf4040;stroke-width:1.2;stroke-dasharray:none;stroke-opacity:1\" d=\"m 253.88597,79.711673 v -26.77814 h 17.8521\" id=\"path26\"/>\n    <path style=\"fill:none;fill-opacity:1;stroke:#bf4040;stroke-width:1.2;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker45)\" d=\"M 316.4641,78.382113 V 35.227916\" id=\"path27\"/>\n    <path style=\"fill:none;fill-opacity:1;stroke:#bf4040;stroke-width:1.2;stroke-dasharray:none;stroke-opacity:1\" d=\"m 284.12853,52.622161 h 31.91581\" id=\"path28\" sodipodi:nodetypes=\"cc\"/>\n    <path style=\"fill:none;fill-opacity:1;stroke:#bf4040;stroke-width:1.2;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ConcaveTriangle)\" d=\"m 309.12495,131.77443 v 47.70708 l -35.03619,0.0734\" id=\"path29\" sodipodi:nodetypes=\"ccc\"/>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0927px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"210.5563\" y=\"137.36679\" id=\"text41-13-7-8\"><tspan sodipodi:role=\"line\" id=\"tspan41-2-9-6\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"210.5563\" y=\"137.36679\">HEX210</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0927px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"206.44814\" y=\"91.958069\" id=\"text41-13-7-8-6\"><tspan sodipodi:role=\"line\" id=\"tspan41-2-9-6-5\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"206.44814\" y=\"91.958069\">DMN210</tspan></text>\n    <path style=\"fill:none;fill-opacity:1;stroke:#406abf;stroke-width:1.2;stroke-dasharray:none;stroke-opacity:1\" d=\"M 257.60414,179.51559 H 130.93042 l 0,-45.64951\" id=\"path33\" sodipodi:nodetypes=\"ccc\"/>\n    <path style=\"fill:none;fill-opacity:1;stroke:#406abf;stroke-width:1.2;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker43)\" d=\"M 102.33817,153.66293 H 125.6393 V 138.14614\" id=\"path34\" sodipodi:nodetypes=\"ccc\"/>\n    <path style=\"fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.2;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker44)\" d=\"m 102.10464,90.505964 h 6.80259\" id=\"path35\" sodipodi:nodetypes=\"cc\"/>\n    <path style=\"fill:none;fill-opacity:1;stroke:#35a75a;stroke-width:1.2;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow)\" d=\"M 130.56938,81.268543 V 54.603268 h 30.8919\" id=\"path36\"/>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0927px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"120.8921\" y=\"94.683907\" id=\"text41-3-6\"><tspan sodipodi:role=\"line\" id=\"tspan41-8-1\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"120.8921\" y=\"94.683907\">SEP200</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0927px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"299.01617\" y=\"93.524315\" id=\"text41-3-6-4\"><tspan sodipodi:role=\"line\" id=\"tspan41-8-1-4\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"299.01617\" y=\"93.524315\">SEP300</tspan></text>\n    <circle style=\"fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-dasharray:none;stroke-opacity:1\" id=\"HCD220\" cx=\"140.21278\" cy=\"46.687172\" r=\"3.1137373\"/>\n    <path style=\"fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-dasharray:none;stroke-opacity:1\" d=\"m 140.21278,49.923588 v 4.255439\" id=\"path38\"/>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0927px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"132.28711\" y=\"42.429344\" id=\"text41-18\"><tspan sodipodi:role=\"line\" id=\"tspan41-49\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"132.28711\" y=\"42.429344\">HCD220</tspan></text>\n    <path style=\"fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-dasharray:none;stroke-opacity:1\" d=\"m 136.95254,46.654164 h 6.17558\" id=\"path46\"/>\n    <circle style=\"fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-dasharray:none;stroke-opacity:1\" id=\"PT302_1\" cx=\"253.87256\" cy=\"45.099213\" r=\"3.1137373\"/>\n    <path style=\"fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-dasharray:none;stroke-opacity:1\" d=\"m 253.87255,48.335628 v 4.255439\" id=\"path38-0\"/>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0927px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"246.98479\" y=\"41.048969\" id=\"text41-18-8\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-7\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"246.98479\" y=\"41.048969\">PT302</tspan></text>\n    <path style=\"fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-dasharray:none;stroke-opacity:1\" d=\"m 250.61231,45.066204 h 6.17558\" id=\"path46-7\"/>\n    <circle style=\"fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-dasharray:none;stroke-opacity:1\" id=\"TE201\" cx=\"250.65663\" cy=\"131.1696\" r=\"3.1137373\"/>\n    <path style=\"fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-dasharray:none;stroke-opacity:1\" d=\"m 247.39638,131.1696 h 6.17558\" id=\"path46-2\"/>\n    <path style=\"fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-dasharray:none;stroke-opacity:1\" d=\"M 247.38643,131.1696 H 242.9234\" id=\"path47\"/>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0927px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"255.10944\" y=\"132.95612\" id=\"text41-18-9\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"255.10944\" y=\"132.95612\">TE201</tspan></text>\n    <circle style=\"fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-dasharray:none;stroke-opacity:1\" id=\"PT201\" cx=\"250.90489\" cy=\"150.17039\" r=\"3.1137373\"/>\n    <path style=\"fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-dasharray:none;stroke-opacity:1\" d=\"m 247.64464,150.17039 h 6.17558\" id=\"path46-2-6\"/>\n    <path style=\"fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-dasharray:none;stroke-opacity:1\" d=\"m 247.63469,150.17039 h -4.46303\" id=\"path47-1\"/>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0927px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"255.35771\" y=\"151.95691\" id=\"text41-18-9-5\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-4\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"255.35771\" y=\"151.95691\">PT201</tspan></text>\n    <path style=\"fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.2;stroke-dasharray:none;stroke-opacity:1\" d=\"m 82.691174,90.756703 h 6.80259\" id=\"path35-2\" sodipodi:nodetypes=\"cc\"/>\n    <path style=\"fill:none;fill-opacity:1;stroke:#406abf;stroke-width:1.2;stroke-dasharray:none;stroke-opacity:1\" d=\"m 82.961834,153.78627 h 6.80259\" id=\"path35-2-5\" sodipodi:nodetypes=\"cc\"/>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0927px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"65.56723\" y=\"155.5878\" id=\"text41-20\"><tspan sodipodi:role=\"line\" id=\"tspan41-0\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"65.56723\" y=\"155.5878\">DI H<tspan style=\"font-size:65%;baseline-shift:sub\" id=\"tspan48\">2</tspan>O</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0927px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"76.515106\" y=\"92.236549\" id=\"text41-20-7\"><tspan sodipodi:role=\"line\" id=\"tspan41-0-1\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"76.515106\" y=\"92.236549\">N<tspan style=\"font-size:65%;baseline-shift:sub\" id=\"tspan47\">2</tspan></tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0927px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"166.74419\" y=\"56.188801\" id=\"text41-8\"><tspan sodipodi:role=\"line\" id=\"tspan41-26\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"166.74419\" y=\"56.188801\">O<tspan style=\"font-size:65%;baseline-shift:sub\" id=\"tspan49\">2</tspan> Discharge</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0927px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"318.12579\" y=\"41.224129\" id=\"text41-8-0\"><tspan sodipodi:role=\"line\" id=\"tspan41-26-1\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"318.12579\" y=\"41.224129\">H<tspan style=\"font-size:65%;baseline-shift:sub\" id=\"tspan49-2\">2</tspan> Discharge</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0927px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"335.05841\" y=\"77.509506\" id=\"text41-35\"><tspan sodipodi:role=\"line\" id=\"tspan41-12\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"335.05841\" y=\"77.509506\">SV130</tspan></text>\n    <path style=\"fill:#808080;fill-opacity:1;stroke:#000000;stroke-width:0.391066;stroke-dasharray:none;stroke-opacity:1\" d=\"m 342.33429,66.806643 v -5.14574\" id=\"path5-1-0\"/>\n    <rect style=\"fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:0.354308;stroke-dasharray:none;stroke-opacity:1\" id=\"SV130_3\" width=\"6.3941364\" height=\"5.433466\" x=\"339.13721\" y=\"56.050282\" ry=\"0\"/>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0927px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"340.82162\" y=\"60.408428\" id=\"text41-1-9-6\"><tspan sodipodi:role=\"line\" id=\"tspan41-9-2-4\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"340.82162\" y=\"60.408428\">S</tspan></text>\n    <path sodipodi:type=\"star\" style=\"fill:#e6e6e6;stroke:#000000;stroke-width:1.68026;stroke-dasharray:none\" id=\"SV130_1\" inkscape:flatsided=\"true\" sodipodi:sides=\"3\" sodipodi:cx=\"41.686367\" sodipodi:cy=\"73.097923\" sodipodi:r1=\"34.592236\" sodipodi:r2=\"17.29612\" sodipodi:arg1=\"0.52440922\" sodipodi:arg2=\"1.5716068\" inkscape:rounded=\"0\" inkscape:randomized=\"0\" d=\"M 71.630094,90.418314 11.714605,90.369756 41.714402,38.505699 Z\" inkscape:transform-center-x=\"1.0279247\" inkscape:transform-center-y=\"0.0016678831\" transform=\"matrix(0,-0.11902885,0.11902885,0,337.86456,71.757156)\"/>\n    <path sodipodi:type=\"star\" style=\"fill:#e6e6e6;stroke:#000000;stroke-width:1.68026;stroke-dasharray:none\" id=\"SV130_2\" inkscape:flatsided=\"true\" sodipodi:sides=\"3\" sodipodi:cx=\"41.686367\" sodipodi:cy=\"73.097923\" sodipodi:r1=\"34.592236\" sodipodi:r2=\"17.29612\" sodipodi:arg1=\"0.52440922\" sodipodi:arg2=\"1.5716068\" inkscape:rounded=\"0\" inkscape:randomized=\"0\" d=\"M 71.630094,90.418314 11.714605,90.369756 41.714402,38.505699 Z\" inkscape:transform-center-x=\"-1.0279282\" inkscape:transform-center-y=\"-0.0016684426\" transform=\"matrix(0,0.11902885,-0.11902885,0,346.81994,61.827613)\"/>\n    <path style=\"fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.2;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker44-9)\" d=\"m 320.36358,66.488982 15.75635,0\" id=\"path35-1\" sodipodi:nodetypes=\"cc\"/>\n    <path style=\"fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.2;stroke-dasharray:none;stroke-opacity:1\" d=\"m 348.52619,66.624291 h 6.80259\" id=\"path35-2-8\" sodipodi:nodetypes=\"cc\"/>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0927px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"356.14774\" y=\"68.177528\" id=\"text41-20-7-9\"><tspan sodipodi:role=\"line\" id=\"tspan41-0-1-8\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"356.14774\" y=\"68.177528\">N<tspan style=\"font-size:65%;baseline-shift:sub\" id=\"tspan47-4\">2</tspan></tspan></text>\n    <path style=\"fill:none;fill-opacity:1;stroke:#bf4040;stroke-width:1.2;stroke-dasharray:none;stroke-opacity:1\" d=\"m 275.51165,74.125406 h 26.42095 v 4.697056\" id=\"path51\"/>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055556px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"255.84178\" y=\"137.85464\" id=\"text41-18-9-8\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055556px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"255.84178\" y=\"137.85464\">PV:</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"265.1008\" y=\"137.85464\" id=\"TE201_PV\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-1\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;fill-opacity:1;stroke-width:0.1\" x=\"265.1008\" y=\"137.85464\">___</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055556px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"134.72339\" y=\"59.057102\" id=\"text41-18-9-8-86\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-50\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055556px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"134.72339\" y=\"59.057102\">PV:</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"143.98241\" y=\"59.057102\" id=\"HCD220_PV\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-1-0\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1;fill-opacity:1\" x=\"143.98241\" y=\"59.057102\">___</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"243.04144\" y=\"46.330055\" id=\"text41-18-9-8-86-8\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-50-9\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"243.04144\" y=\"46.330055\">PV:</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"242.85548\" y=\"51.260139\" id=\"PT302_PV\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-1-0-4\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1;fill-opacity:1\" x=\"242.85548\" y=\"51.260139\">___</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055556px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"255.83411\" y=\"156.4803\" id=\"text41-18-9-8-65\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-0\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055556px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"255.83411\" y=\"156.4803\">PV:</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"265.09311\" y=\"156.4803\" id=\"PT201_PV\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-1-8\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1;fill-opacity:1\" x=\"265.09311\" y=\"156.4803\">___</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055556px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"255.84178\" y=\"141.92778\" id=\"text41-18-9-8-6\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-14\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055556px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"255.84178\" y=\"141.92778\">SP:</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"265.1008\" y=\"141.91306\" id=\"HTR201_SetPoint\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-1-3\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1;fill-opacity:1\" x=\"265.1008\" y=\"141.91306\">___</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"215.89624\" y=\"167.8726\" id=\"text41-18-9-8-8\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-5\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"215.89624\" y=\"167.8726\">PV:</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"225.15526\" y=\"167.8726\" id=\"HTR201_PV\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-1-6\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1;fill-opacity:1\" x=\"225.15526\" y=\"167.8726\">___</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"215.89624\" y=\"171.94574\" id=\"text41-18-9-8-6-1\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-14-8\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"215.89624\" y=\"171.94574\">CV:</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"225.15526\" y=\"171.93102\" id=\"HTR201_CV\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-1-3-2\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1;fill-opacity:1\" x=\"225.15526\" y=\"171.93102\">___</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"145.09996\" y=\"170.72717\" id=\"text41-18-9-8-8-3\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-5-1\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"145.09996\" y=\"170.72717\">PV:</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"154.35898\" y=\"170.72717\" id=\"FT201_PV\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-1-6-3\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1;fill-opacity:1\" x=\"154.35898\" y=\"170.72717\">___</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"145.09996\" y=\"174.80031\" id=\"text41-18-9-8-6-1-3\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-14-8-4\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"145.09996\" y=\"174.80031\">CV:</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"154.35898\" y=\"174.78558\" id=\"PMP200_CV\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-1-3-2-1\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1;fill-opacity:1\" x=\"154.35898\" y=\"174.78558\">___</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"162.39384\" y=\"170.7419\" id=\"text41-18-9-8-8-3-2\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-5-1-7\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"162.39384\" y=\"170.7419\">SP:</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"171.65286\" y=\"170.72717\" id=\"PMP200_Setpoint\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-1-6-3-9\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1;fill-opacity:1\" x=\"171.65286\" y=\"170.72717\">___</tspan></text>\n    <circle style=\"fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:0.197872;stroke-dasharray:none;stroke-opacity:1\" id=\"HTR200-6\" cx=\"265.50583\" cy=\"100.69448\" r=\"4.2133541\"/>\n    <path style=\"fill:none;stroke:#000000;stroke-width:0.768427;stroke-dasharray:none\" d=\"m 257.07052,100.86408 h 5.95095 l 1.52866,-3.057319 2.25975,5.117679 1.52865,-2.32622 h 3.52256\" id=\"path6-1\" sodipodi:nodetypes=\"cccccc\"/>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0927px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"260.97198\" y=\"111.29164\" id=\"text41-13-0-8\"><tspan sodipodi:role=\"line\" id=\"tspan41-2-6-4\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"260.97198\" y=\"111.29164\">HTRCell</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"259.13818\" y=\"116.1917\" id=\"text41-18-9-8-8-9\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-5-6\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"259.13818\" y=\"116.1917\">PV:</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"268.39722\" y=\"116.1917\" id=\"TECell_PV\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-1-6-7\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;fill-opacity:1;stroke-width:0.1\" x=\"268.39722\" y=\"116.1917\">__</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"259.13818\" y=\"120.26484\" id=\"text41-18-9-8-6-1-8\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-14-8-8\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"259.13818\" y=\"120.26484\">CV:</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"268.39722\" y=\"120.25012\" id=\"HTRCell_CV\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-1-3-2-9\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;fill-opacity:1;stroke-width:0.1\" x=\"268.39722\" y=\"120.25012\">__</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"274.58926\" y=\"116.20643\" id=\"text41-18-9-8-8-3-2-8-5\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-5-1-7-4-4\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"274.58926\" y=\"116.20643\">SP:</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"283.8483\" y=\"116.1917\" id=\"HTRCell_SetPoint\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-1-6-3-9-7-0\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;fill-opacity:1;stroke-width:0.1\" x=\"283.8483\" y=\"116.1917\">__</tspan></text>\n    <circle style=\"fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-dasharray:none;stroke-opacity:1\" id=\"PT302_1-2\" cx=\"190.00726\" cy=\"158.99252\" r=\"3.1137373\"/>\n    <path style=\"fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-dasharray:none;stroke-opacity:1\" d=\"m 190.00725,151.59035 v 4.25544\" id=\"path38-0-6\"/>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0927px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"183.17139\" y=\"167.18964\" id=\"text41-18-8-0\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-7-1\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"183.17139\" y=\"167.18964\">CT201</tspan></text>\n    <path style=\"fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-dasharray:none;stroke-opacity:1\" d=\"m 186.74701,158.95952 h 6.17558\" id=\"path46-7-6\"/>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"184.72899\" y=\"172.88589\" id=\"text41-18-9-8-86-8-5\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-50-9-7\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"184.72899\" y=\"172.88589\">PV:</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"193.98802\" y=\"172.88589\" id=\"CT201_PV\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-1-0-4-4\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1;fill-opacity:1\" x=\"193.98802\" y=\"172.88589\">___</tspan></text>\n    <circle style=\"fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-dasharray:none;stroke-opacity:1\" id=\"PT302_1-1\" cx=\"188.37054\" cy=\"89.4786\" r=\"3.1137373\"/>\n    <path style=\"fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-dasharray:none;stroke-opacity:1\" d=\"m 188.37055,92.71502 v 4.255443\" id=\"path38-0-4\"/>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0927px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"181.48277\" y=\"85.42836\" id=\"text41-18-8-6\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-7-0\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"181.48277\" y=\"85.42836\">CT210</tspan></text>\n    <path style=\"fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-dasharray:none;stroke-opacity:1\" d=\"m 185.11031,89.445596 h 6.17558\" id=\"path46-7-7\"/>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"182.41763\" y=\"103.1644\" id=\"text41-18-9-8-86-8-1\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-50-9-77\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"182.41763\" y=\"103.1644\">PV:</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"191.67667\" y=\"103.1644\" id=\"CT210_PV\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-1-0-4-7\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1;fill-opacity:1\" x=\"191.67667\" y=\"103.1644\">___</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"73.522552\" y=\"198.75708\" id=\"Current_Setpoint_text\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-5-1-2\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"73.522552\" y=\"198.75708\">Current_Setpoint:</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"118.06753\" y=\"199.06845\" id=\"Current_Setpoint\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-1-6-3-5\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;fill-opacity:1;stroke-width:0.1\" x=\"118.06753\" y=\"199.06845\">___</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"73.522552\" y=\"207.47498\" id=\"text41-18-9-8-8-3-8-1\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-5-1-2-5\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"73.522552\" y=\"207.47498\">Voltage_Setpoint:</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"118.06753\" y=\"207.78635\" id=\"Voltage_Setpoint\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-1-6-3-5-7\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;fill-opacity:1;stroke-width:0.1\" x=\"118.06753\" y=\"207.78635\">___</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"145.70152\" y=\"199.19173\" id=\"text41-18-9-8-8-3-8-3\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-5-1-2-2\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"145.70152\" y=\"199.19173\">CellVoltage_PV:</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"185.84302\" y=\"199.5031\" id=\"CellVoltage_PV\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-1-6-3-5-6\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;fill-opacity:1;stroke-width:0.1\" x=\"185.84302\" y=\"199.5031\">___</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"145.70152\" y=\"207.90962\" id=\"text41-18-9-8-8-3-8-1-8\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-5-1-2-5-5\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"145.70152\" y=\"207.90962\">CellCurrent_PV:</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"185.84302\" y=\"208.22099\" id=\"CellCurrent_PV\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-1-6-3-5-7-6\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;fill-opacity:1;stroke-width:0.1\" x=\"185.84302\" y=\"208.22099\">___</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"208.18166\" y=\"203.54758\" id=\"text41-18-9-8-8-3-8-3-7\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-5-1-2-2-9\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"208.18166\" y=\"203.54758\">Cell1_Voltage:</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"244.53018\" y=\"203.85895\" id=\"Cell1_Voltage\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-1-6-3-5-6-4\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;fill-opacity:1;stroke-width:0.1\" x=\"244.53018\" y=\"203.85895\">___</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"259.5925\" y=\"203.54758\" id=\"text41-18-9-8-8-3-8-3-7-3\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-5-1-2-2-9-4\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"259.5925\" y=\"203.54758\">Cell2_Voltage:</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"295.94101\" y=\"203.85895\" id=\"Cell2_Voltage\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-1-6-3-5-6-4-1\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;fill-opacity:1;stroke-width:0.1\" x=\"295.94101\" y=\"203.85895\">___</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#11e8e8;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"310.74976\" y=\"203.54758\" id=\"text41-18-9-8-8-3-8-3-7-3-2\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-5-1-2-2-9-4-7\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;stroke-width:0.1\" x=\"310.74976\" y=\"203.54758\">Cell3_Voltage:</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1\" x=\"347.0983\" y=\"203.85895\" id=\"Cell3_Voltage\"><tspan sodipodi:role=\"line\" id=\"tspan41-49-8-2-1-6-3-5-6-4-1-9\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.264583px;fill:#000000;fill-opacity:1;stroke-width:0.1\" x=\"347.0983\" y=\"203.85895\">___</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:4.9389px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:none;stroke:#406abf;stroke-width:1.2\" x=\"283.73151\" y=\"137.82921\" id=\"text1\"><tspan sodipodi:role=\"line\" id=\"tspan1\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.9389px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1.2\" x=\"283.73151\" y=\"137.82921\"/></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.9389px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:none;stroke:#406abf;stroke-width:1.2\" x=\"289.2359\" y=\"144.58124\" id=\"text3\"><tspan sodipodi:role=\"line\" id=\"tspan3\" style=\"stroke-width:1.2\" x=\"289.2359\" y=\"144.58124\"/></text>\n    <text xml:space=\"preserve\" style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.9389px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:none;stroke:#000000;stroke-width:0.2;stroke-dasharray:none;stroke-opacity:1\" x=\"329.08743\" y=\"147.95724\" id=\"real_TE201\"><tspan sodipodi:role=\"line\" id=\"tspan4\" x=\"329.08743\" y=\"147.95724\" style=\"fill:#000000;fill-opacity:1;stroke:none\">Real TE201</tspan></text>\n  </g>\n</svg>",
-        "clickableShapes": [],
-        "javascriptHandlers": [],
-        "smilAnimations": [],
-        "bindings": [],
-        "showCoordinates": false,
-        "autoFormatAfterEdit": false,
-        "showBrowserErrors": false,
-        "showBrowserEvents": false,
-        "enableJsDebugging": false,
-        "sendMsgWhenLoaded": false,
-        "noClickWhenDblClick": false,
-        "outputField": "payload",
-        "editorUrl": "//drawsvg.org/drawsvg.html",
-        "directory": "",
-        "panning": "disabled",
-        "zooming": "disabled",
-        "panOnlyWhenZoomed": false,
-        "doubleClickZoomEnabled": false,
-        "mouseWheelZoomEnabled": false,
-        "dblClickZoomPercentage": 150,
-        "cssString": "div.ui-svg svg{\n    color: var(--nr-dashboard-widgetColor);\n    fill: currentColor !important;\n}\ndiv.ui-svg path {\n    fill: inherit;\n}",
-        "name": "ppiD",
-        "x": 1110,
-        "y": 2980,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "multiple": false,
+        "chips": false,
+        "clearable": false,
+        "options": [
+            {
+                "label": "1 s",
+                "value": 1,
+                "type": "num"
+            },
+            {
+                "label": "5 s",
+                "value": 5,
+                "type": "num"
+            },
+            {
+                "label": "10 s",
+                "value": 10,
+                "type": "num"
+            },
+            {
+                "label": "60 s",
+                "value": 60,
+                "type": "num"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "typeIsComboBox": true,
+        "msgTrigger": "onChange",
+        "x": 210,
+        "y": 2180,
+        "wires": [
+            [
+                "d67cd350e95814e5",
+                "fdd2080b0ef3c2a6"
+            ]
+        ]
+    },
+    {
+        "id": "137325ab94a685e0",
+        "type": "ui-button",
+        "z": "0e1f3206f48adf14",
+        "g": "525f6434f47c15f1",
+        "group": "4afe546e24b27211",
+        "name": "Abort",
+        "label": "ABORT",
+        "order": 2,
+        "width": "1",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "stop",
+        "iconPosition": "left",
+        "payload": "Stopped",
+        "payloadType": "str",
+        "topic": "control",
+        "topicType": "str",
+        "buttonColor": "#FF3B30",
+        "textColor": "white",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1370,
+        "y": 180,
+        "wires": [
+            [
+                "ad1436e2f7b892fd"
+            ]
+        ]
+    },
+    {
+        "id": "23e7d95574434001",
+        "type": "function",
+        "z": "0e1f3206f48adf14",
+        "g": "28d6aa434baf0184",
+        "name": "Reset",
+        "func": "// First, send Reset = true\nvar msg1 = { payload: { \"tag\": \"Reset\", \"setpoint\": true } };\n\n// Create a second message to set it back to false after 1 second\nsetTimeout(() => {\n    var msg2 = { payload: { \"tag\": \"Reset\", \"setpoint\": false } };\n    node.send(msg2);\n}, 50);\n\n// Send the first message immediately\nreturn msg1;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 2620,
+        "wires": [
+            [
+                "d54e4de142a995c6"
+            ]
+        ]
+    },
+    {
+        "id": "d54e4de142a995c6",
+        "type": "function",
+        "z": "0e1f3206f48adf14",
+        "g": "28d6aa434baf0184",
+        "name": "Single coil write",
+        "func": "// Retrieve the coil tag and setpoint from msg.payload\nlet { tag, setpoint } = msg.payload;\n\n// Retrieve Modbus coil address mapping from flow context\nlet modCoil = flow.get(\"modCoil\") || [];\n\n// Find the Modbus address for the given tag\nlet coilData = modCoil.find(entry => entry[\"Tag Name\"] === tag);\n\nif (!coilData) {\n    node.error(`Unknown coil tag: ${tag}`, msg);\n    return null;\n}\n\n// Convert Modbus address to 0-based integer\nlet address = parseInt(coilData[\"MODBUS Start Address\"], 10) - 1;\n\n// Construct Modbus write message\nmsg.payload = {\n    'unitId': 1,      // PLC Modbus Unit ID\n    'fc': 5,         // Function Code: Write Single Coil\n    'address': address, // Modbus coil address\n    'value': setpoint ? 1 : 0, // Convert boolean to 1 or 0\n    'quantity': 1\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 2620,
+        "wires": [
+            [
+                "246f2e5ba8d0961c"
+            ]
+        ]
+    },
+    {
+        "id": "246f2e5ba8d0961c",
+        "type": "modbus-flex-write",
+        "z": "0e1f3206f48adf14",
+        "g": "28d6aa434baf0184",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "server": "f905b5f3395bcec1",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 610,
+        "y": 2620,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "2517cf943d440480",
+        "type": "function",
+        "z": "0e1f3206f48adf14",
+        "g": "e1b6d5ba8d3de0b8",
+        "name": "Reset",
+        "func": "// First, send Reset = true\nvar msg1 = { payload: { \"tag\": \"Reset\", \"setpoint\": true } };\n\n// Create a second message to set it back to false after 1 second\nsetTimeout(() => {\n    var msg2 = { payload: { \"tag\": \"Reset\", \"setpoint\": false } };\n    node.send(msg2);\n}, 50);\n\n// Send the first message immediately\nreturn msg1;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 200,
+        "wires": [
+            [
+                "b3e5ca75ee471501"
+            ]
+        ]
+    },
+    {
+        "id": "b3e5ca75ee471501",
+        "type": "function",
+        "z": "0e1f3206f48adf14",
+        "g": "e1b6d5ba8d3de0b8",
+        "name": "Single coil write",
+        "func": "// Retrieve the coil tag and setpoint from msg.payload\nlet { tag, setpoint } = msg.payload;\n\n// Retrieve Modbus coil address mapping from flow context\nlet modCoil = flow.get(\"modCoil\") || [];\n\n// Find the Modbus address for the given tag\nlet coilData = modCoil.find(entry => entry[\"Tag Name\"] === tag);\n\nif (!coilData) {\n    node.error(`Unknown coil tag: ${tag}`, msg);\n    return null;\n}\n\n// Convert Modbus address to 0-based integer\nlet address = parseInt(coilData[\"MODBUS Start Address\"], 10) - 1;\n\n// Construct Modbus write message\nmsg.payload = {\n    'unitId': 1,      // PLC Modbus Unit ID\n    'fc': 5,         // Function Code: Write Single Coil\n    'address': address, // Modbus coil address\n    'value': setpoint ? 1 : 0, // Convert boolean to 1 or 0\n    'quantity': 1\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 200,
+        "wires": [
+            [
+                "1ffb3eb4eb6a6a53"
+            ]
+        ]
+    },
+    {
+        "id": "1ffb3eb4eb6a6a53",
+        "type": "modbus-flex-write",
+        "z": "0e1f3206f48adf14",
+        "g": "e1b6d5ba8d3de0b8",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "server": "f905b5f3395bcec1",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 1030,
+        "y": 200,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "6b0bf9d334def047",
+        "type": "ui-button",
+        "z": "0e1f3206f48adf14",
+        "g": "28d6aa434baf0184",
+        "group": "4afe546e24b27211",
+        "name": "Reset",
+        "label": "RESET",
+        "order": 2,
+        "width": "1",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "refresh",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "#FF9500",
+        "textColor": "white",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 130,
+        "y": 2600,
+        "wires": [
+            [
+                "45113a7508b326f3"
+            ]
+        ]
+    },
+    {
+        "id": "b1d6242f17150944",
+        "type": "ui-text",
+        "z": "0e1f3206f48adf14",
+        "g": "8523ba6f048159f6",
+        "group": "4afe546e24b27211",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "Test status",
+        "label": "Test Staus",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 850,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "d917117175b94745",
+        "type": "ui-template",
+        "z": "0e1f3206f48adf14",
+        "g": "35a088b350aa3972",
+        "group": "4afe546e24b27211",
+        "page": "",
+        "ui": "",
+        "name": "Status indicator",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<!-- LED Indicator -->\n<div id=\"led-indicator\" style=\"\n    width: 10px;\n    height: 10px;\n    border-radius: 50%;\n    background-color: red;  /* Default: Red (Off) */\n    margin: auto;\n    box-shadow: 0 0 5px rgba(0,0,0,0.5);\n\"></div>\n\n<script>\n    (function(scope) {\n        scope.$watch('msg.payload', function(value) {\n            var led = document.getElementById(\"led-indicator\");\n\n            if (value !== \"Finished\" && value !== \"Test not started\") {\n                led.style.backgroundColor = \"green\"; // Green when running\n            } else {\n                led.style.backgroundColor = \"red\";   // Red when stopped\n            }\n        });\n    })(scope);\n</script>\n",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1740,
+        "y": 680,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "e4ba86696d3fd1bf",
+        "type": "ui-text",
+        "z": "0e1f3206f48adf14",
+        "g": "35a088b350aa3972",
+        "group": "4afe546e24b27211",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "Status",
+        "label": "Status",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 1710,
+        "y": 540,
+        "wires": []
     }
 ]
