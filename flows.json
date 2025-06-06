@@ -565,7 +565,8 @@
             "2b3958255698811e",
             "8aab00cd65ccbebc",
             "32d6980f748e37a5",
-            "62577cb0cc8f9bc5"
+            "62577cb0cc8f9bc5",
+            "369bd798d053ad4e"
         ],
         "x": 54,
         "y": 4119,
@@ -4953,7 +4954,7 @@
         "keepMsgProperties": false,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 1190,
+        "x": 1210,
         "y": 4280,
         "wires": [
             [],
@@ -8961,6 +8962,17 @@
         "statusType": "auto",
         "x": 1240,
         "y": 4780,
+        "wires": []
+    },
+    {
+        "id": "369bd798d053ad4e",
+        "type": "comment",
+        "z": "0e1f3206f48adf14",
+        "g": "adbe011cfa336e78",
+        "name": "Warning window",
+        "info": "",
+        "x": 1000,
+        "y": 4700,
         "wires": []
     }
 ]
