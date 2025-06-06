@@ -1598,10 +1598,10 @@
         "type": "comment",
         "z": "0e1f3206f48adf14",
         "g": "e1b6d5ba8d3de0b8",
-        "name": "Test start",
+        "name": "Test start Hit",
         "info": "Read script and process set points. \n",
-        "x": 640,
-        "y": 100,
+        "x": 650,
+        "y": 80,
         "wires": []
     },
     {

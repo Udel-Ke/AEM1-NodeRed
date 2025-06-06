@@ -557,8 +557,7 @@
             "f821e642a405cd20",
             "25678c82a19b1e2d",
             "fc3e49778ffffccf",
-            "2ab23c7acd8dd360",
-            "f327edfbbb880a92"
+            "2ab23c7acd8dd360"
         ],
         "x": 54,
         "y": 4119,
@@ -1599,10 +1598,10 @@
         "type": "comment",
         "z": "0e1f3206f48adf14",
         "g": "e1b6d5ba8d3de0b8",
-        "name": "Test start",
+        "name": "Test start ",
         "info": "Read script and process set points. \n",
         "x": 640,
-        "y": 100,
+        "y": 80,
         "wires": []
     },
     {
@@ -3571,7 +3570,7 @@
         "z": "0e1f3206f48adf14",
         "g": "b2387cf1c1f9066f",
         "name": "Single holdReg write",
-        "func": "// Retrieve the input tag and setpoint\nlet { tag, setpoint } = msg.payload;\n\n// Retrieve the modHoldReg mapping from the flow context\nlet modHoldReg = flow.get(\"modHoldReg\") || [];\n\n// Find the corresponding Modbus entry\nlet modbusEntry = modHoldReg.find(entry => entry[\"Tag Name\"] === tag);\n\nif (!modbusEntry) {\n    node.error(`Tag ${tag} not found in modHoldReg`, msg);\n    return null;\n}\n\n// Get Modbus start address and data type\nlet address = modbusEntry[\"MODBUS Start Address\"];\nlet dataType = modbusEntry[\"Data Type\"];\n\n// Convert setpoint value to Modbus register format\nlet buffer = Buffer.alloc(4);\n\nif (dataType === \"F32\") {\n    buffer.writeFloatBE(setpoint, 0);  // Convert float to buffer (big-endian)\n} else if (dataType === \"S32\") {\n    buffer.writeInt32BE(setpoint, 0);  // Convert integer to buffer\n} else {\n    node.error(`Unsupported data type: ${dataType} for tag ${tag}`, msg);\n    return null;\n}\n\n// Split buffer into two 16-bit registers (Modbus uses 16-bit words)\nlet registerValues = [\n    buffer.readUInt16BE(2),  // High 16 bits\n    buffer.readUInt16BE(0)   // Low 16 bits\n];\n\n// Construct Modbus Flex Write message with quantity\nmsg.payload = {\n    value: registerValues,\n    fc: 16,  // Function Code 16 (Write Multiple Registers)\n    address: address - 400001,  // Convert absolute to zero-based address\n    quantity: 2,  // Writing two 16-bit registers (32-bit value)\n    unitid: 1  // Change if necessary based on your PLC setup\n};\n\nreturn msg;",
+        "func": "// Retrieve the input tag and setpoint\nlet { tag, setpoint } = msg.payload;\n\n// Retrieve the modHoldReg mapping from the flow context\nlet modHoldReg = flow.get(\"modHoldReg\") || [];\n\n// Find the corresponding Modbus entry\nlet modbusEntry = modHoldReg.find(entry => entry[\"Tag Name\"] === tag);\n\nif (!modbusEntry) {\n    //node.error(`Tag ${tag} not found in modHoldReg`, msg);\n    return null;\n}\n\n// Get Modbus start address and data type\nlet address = modbusEntry[\"MODBUS Start Address\"];\nlet dataType = modbusEntry[\"Data Type\"];\n\n// Convert setpoint value to Modbus register format\nlet buffer = Buffer.alloc(4);\n\nif (dataType === \"F32\") {\n    buffer.writeFloatBE(setpoint, 0);  // Convert float to buffer (big-endian)\n} else if (dataType === \"S32\") {\n    buffer.writeInt32BE(setpoint, 0);  // Convert integer to buffer\n} else {\n    node.error(`Unsupported data type: ${dataType} for tag ${tag}`, msg);\n    return null;\n}\n\n// Split buffer into two 16-bit registers (Modbus uses 16-bit words)\nlet registerValues = [\n    buffer.readUInt16BE(2),  // High 16 bits\n    buffer.readUInt16BE(0)   // Low 16 bits\n];\n\n// Construct Modbus Flex Write message with quantity\nmsg.payload = {\n    value: registerValues,\n    fc: 16,  // Function Code 16 (Write Multiple Registers)\n    address: address - 400001,  // Convert absolute to zero-based address\n    quantity: 2,  // Writing two 16-bit registers (32-bit value)\n    unitid: 1  // Change if necessary based on your PLC setup\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -8916,8 +8915,7 @@
         "y": 4760,
         "wires": [
             [
-                "7389a894f1605cf3",
-                "f327edfbbb880a92"
+                "7389a894f1605cf3"
             ]
         ]
     },
@@ -8930,23 +8928,6 @@
         "info": "",
         "x": 1000,
         "y": 4700,
-        "wires": []
-    },
-    {
-        "id": "f327edfbbb880a92",
-        "type": "debug",
-        "z": "0e1f3206f48adf14",
-        "g": "adbe011cfa336e78",
-        "name": "debug 20",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1040,
-        "y": 4800,
         "wires": []
     }
 ]
