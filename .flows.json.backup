@@ -4958,7 +4958,7 @@
         "keepMsgProperties": false,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 1190,
+        "x": 1210,
         "y": 4280,
         "wires": [
             [],
@@ -8968,12 +8968,17 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 1060,
+        "x": 800,
         "y": 4760,
         "wires": [
             [
+<<<<<<< HEAD
                 "62577cb0cc8f9bc5"
 >>>>>>> 0e9a0f42a3087d01f18b8c0b7cd9eed6d6d0cb92
+=======
+                "62577cb0cc8f9bc5",
+                "7389a894f1605cf3"
+>>>>>>> 82b3236dc694074de783e0d69441d4f2d4641e6c
             ]
         ]
     },
