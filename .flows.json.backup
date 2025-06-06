@@ -409,14 +409,12 @@
             "2517cf943d440480",
             "b3e5ca75ee471501",
             "1ffb3eb4eb6a6a53",
-            "8c73132f328aea58",
-            "4ecd9bbe3d98a0ae",
-            "872d027bb67079c1"
+            "8c73132f328aea58"
         ],
         "x": 554,
         "y": 39,
-        "w": 832,
-        "h": 242
+        "w": 912,
+        "h": 222
     },
     {
         "id": "1c1f20c3ada10fc1",
@@ -560,16 +558,11 @@
             "25678c82a19b1e2d",
             "fc3e49778ffffccf",
             "2ab23c7acd8dd360",
-            "ebedd42d3d73fc5c",
-            "5bf7034acf6e3d8c",
-            "2b3958255698811e",
-            "8aab00cd65ccbebc",
-            "32d6980f748e37a5",
-            "62577cb0cc8f9bc5"
+            "f327edfbbb880a92"
         ],
         "x": 54,
         "y": 4119,
-        "w": 1292,
+        "w": 1272,
         "h": 862
     },
     {
@@ -3235,13 +3228,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-<<<<<<< HEAD
-        "x": 1250,
-        "y": 180,
-=======
         "x": 1190,
         "y": 160,
->>>>>>> 0e9a0f42a3087d01f18b8c0b7cd9eed6d6d0cb92
         "wires": [
             [
                 "7359636993bb200e"
@@ -3249,8 +3237,8 @@
         ]
     },
     {
-<<<<<<< HEAD
-        "id": "984a3513e1ec75f2",
+        "id": "a27854311ccad1e5",
+        "type": "function",
         "z": "0e1f3206f48adf14",
         "g": "891263f2623b3ee2",
         "name": "Update symbol color",
@@ -5671,7 +5659,6 @@
         "y": 4760,
         "wires": [
             [
-                "32d6980f748e37a5",
                 "8aab00cd65ccbebc"
             ]
         ]
@@ -7629,8 +7616,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 930,
-        "y": 240,
+        "x": 1010,
+        "y": 220,
         "wires": [
             [
                 "b3e5ca75ee471501"
@@ -7650,8 +7637,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1080,
-        "y": 240,
+        "x": 1160,
+        "y": 220,
         "wires": [
             [
                 "1ffb3eb4eb6a6a53"
@@ -7672,8 +7659,8 @@
         "keepMsgProperties": false,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 1270,
-        "y": 240,
+        "x": 1350,
+        "y": 220,
         "wires": [
             [],
             []
@@ -8858,8 +8845,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 990,
-        "y": 180,
+        "x": 1010,
+        "y": 160,
         "wires": [
             [
                 "41b6500c6f27fc29"
@@ -8882,21 +8869,13 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-<<<<<<< HEAD
         "x": 800,
-        "y": 160,
-        "wires": [
-            [
-                "dc18064ad6bb5d57"
-=======
-        "x": 780,
         "y": 180,
         "wires": [
             [
                 "4ecd9bbe3d98a0ae",
                 "2517cf943d440480",
                 "872d027bb67079c1"
->>>>>>> 0e9a0f42a3087d01f18b8c0b7cd9eed6d6d0cb92
             ]
         ]
     },
@@ -8913,8 +8892,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 980,
-        "y": 140,
+        "x": 1000,
+        "y": 120,
         "wires": []
     },
     {
@@ -8927,41 +8906,6 @@
         "order": 16,
         "width": 0,
         "height": 0,
-<<<<<<< HEAD
-        "format": "<script>\n    (function(scope) {\n    scope.$watch('msg.payload', function(payload) {\n        if (payload === true) {\n            const confirmed = confirm(\"⚠️ WARNING:\\nOpen ANODE and CATHODE hand valves before proceeding.\\n\\nDo you want to start the test?\");\n            if (confirmed) {\n                scope.send({payload: true});\n            } else {\n                scope.send({payload: false});\n            }\n        }}\n    });\n    (scope);\n</script>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 1000,
-        "y": 4780,
-        "wires": [
-            [
-                "7c113f026e31f9a3",
-                "eb4b97f146607efd"
-            ]
-        ]
-    },
-    {
-        "id": "7c113f026e31f9a3",
-        "type": "function",
-        "z": "0e1f3206f48adf14",
-        "g": "adbe011cfa336e78",
-        "name": "Confirm HV open",
-        "func": "if (msg.payload === true) {\n    return { payload: true};\n} else{\n    return { payload: false };\n}\nreturn null;  // cancel or anything else does nothing\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1210,
-        "y": 4760,
-        "wires": [
-            [
-                "2da7849f109cc047"
-=======
         "format": "<script>\n    (function(scope) {\n    scope.$watch('msg.payload', function(payload) {\n        if (payload === true) {\n            const confirmed = confirm(\"⚠️ WARNING:\\nOpen ANODE and CATHODE hand valves before proceeding.\\n\\nDo you want to start the test?\");\n            if (confirmed) {\n                scope.send({payload: true});\n            } else {\n                scope.send({payload: false});\n            }\n        } else {\n            scope.send({payload: false});\n        }\n    });\n})(scope);\n</script>",
         "storeOutMessages": true,
         "fwdInMessages": false,
@@ -8972,17 +8916,24 @@
         "y": 4760,
         "wires": [
             [
-                "62577cb0cc8f9bc5",
-                "7389a894f1605cf3"
-=======
-                "62577cb0cc8f9bc5",
-                "7389a894f1605cf3"
->>>>>>> 82b3236dc694074de783e0d69441d4f2d4641e6c
+                "7389a894f1605cf3",
+                "f327edfbbb880a92"
             ]
         ]
     },
     {
-        "id": "32d6980f748e37a5",
+        "id": "369bd798d053ad4e",
+        "type": "comment",
+        "z": "0e1f3206f48adf14",
+        "g": "adbe011cfa336e78",
+        "name": "Warning window",
+        "info": "",
+        "x": 1000,
+        "y": 4700,
+        "wires": []
+    },
+    {
+        "id": "f327edfbbb880a92",
         "type": "debug",
         "z": "0e1f3206f48adf14",
         "g": "adbe011cfa336e78",
@@ -8994,25 +8945,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 990,
-        "y": 4820,
-        "wires": []
-    },
-    {
-        "id": "62577cb0cc8f9bc5",
-        "type": "debug",
-        "z": "0e1f3206f48adf14",
-        "g": "adbe011cfa336e78",
-        "name": "debug 29",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1240,
-        "y": 4780,
+        "x": 1040,
+        "y": 4800,
         "wires": []
     }
 ]

@@ -409,14 +409,12 @@
             "2517cf943d440480",
             "b3e5ca75ee471501",
             "1ffb3eb4eb6a6a53",
-            "8c73132f328aea58",
-            "4ecd9bbe3d98a0ae",
-            "872d027bb67079c1"
+            "8c73132f328aea58"
         ],
         "x": 554,
         "y": 39,
-        "w": 832,
-        "h": 242
+        "w": 912,
+        "h": 222
     },
     {
         "id": "1c1f20c3ada10fc1",
@@ -559,18 +557,11 @@
             "f821e642a405cd20",
             "25678c82a19b1e2d",
             "fc3e49778ffffccf",
-            "2ab23c7acd8dd360",
-            "ebedd42d3d73fc5c",
-            "5bf7034acf6e3d8c",
-            "2b3958255698811e",
-            "8aab00cd65ccbebc",
-            "32d6980f748e37a5",
-            "62577cb0cc8f9bc5",
-            "369bd798d053ad4e"
+            "2ab23c7acd8dd360"
         ],
         "x": 54,
         "y": 4119,
-        "w": 1292,
+        "w": 1272,
         "h": 862
     },
     {
@@ -1104,6 +1095,136 @@
         "className": "",
         "visible": "true",
         "disabled": "false"
+    },
+    {
+        "id": "3da0442fed5034a1",
+        "type": "ui_spacer",
+        "z": "0e1f3206f48adf14",
+        "name": "spacer",
+        "group": "2d8055515cc5bf53",
+        "order": 5,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "d6e21611327658a2",
+        "type": "ui_spacer",
+        "z": "0e1f3206f48adf14",
+        "name": "spacer",
+        "group": "2d8055515cc5bf53",
+        "order": 7,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "240da3aab4d221ce",
+        "type": "ui_spacer",
+        "z": "0e1f3206f48adf14",
+        "name": "spacer",
+        "group": "2d8055515cc5bf53",
+        "order": 11,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "ea357ff36bec97ac",
+        "type": "ui_spacer",
+        "z": "0e1f3206f48adf14",
+        "name": "spacer",
+        "group": "2d8055515cc5bf53",
+        "order": 13,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "40347b1ed62059c6",
+        "type": "ui_spacer",
+        "z": "0e1f3206f48adf14",
+        "name": "spacer",
+        "group": "2d8055515cc5bf53",
+        "order": 16,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "305a249a82118813",
+        "type": "ui_spacer",
+        "z": "0e1f3206f48adf14",
+        "name": "spacer",
+        "group": "2d8055515cc5bf53",
+        "order": 18,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "b3714dcb7ce96c8b",
+        "type": "ui_spacer",
+        "z": "0e1f3206f48adf14",
+        "name": "spacer",
+        "group": "2d8055515cc5bf53",
+        "order": 21,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "c66ede0cf1862607",
+        "type": "ui_spacer",
+        "z": "0e1f3206f48adf14",
+        "name": "spacer",
+        "group": "2d8055515cc5bf53",
+        "order": 23,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "344eeafe6c0a51d2",
+        "type": "ui_spacer",
+        "z": "0e1f3206f48adf14",
+        "name": "spacer",
+        "group": "2d8055515cc5bf53",
+        "order": 28,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "089ca021ddbcf9ef",
+        "type": "ui_spacer",
+        "z": "0e1f3206f48adf14",
+        "name": "spacer",
+        "group": "2d8055515cc5bf53",
+        "order": 30,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "0d07e459be98abf3",
+        "type": "ui_spacer",
+        "z": "0e1f3206f48adf14",
+        "name": "spacer",
+        "group": "78c63c00e1f5b7aa",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "8c592afd3c3d6794",
+        "type": "ui_spacer",
+        "z": "0e1f3206f48adf14",
+        "name": "spacer",
+        "group": "78c63c00e1f5b7aa",
+        "order": 6,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "f469e98aaba160c7",
+        "type": "ui_spacer",
+        "z": "0e1f3206f48adf14",
+        "name": "spacer",
+        "group": "78c63c00e1f5b7aa",
+        "order": 18,
+        "width": 4,
+        "height": 1
     },
     {
         "id": "401a02e5f0a36a3a",
@@ -3449,7 +3570,7 @@
         "z": "0e1f3206f48adf14",
         "g": "b2387cf1c1f9066f",
         "name": "Single holdReg write",
-        "func": "// Retrieve the input tag and setpoint\nlet { tag, setpoint } = msg.payload;\n\n// Retrieve the modHoldReg mapping from the flow context\nlet modHoldReg = flow.get(\"modHoldReg\") || [];\n\n// Find the corresponding Modbus entry\nlet modbusEntry = modHoldReg.find(entry => entry[\"Tag Name\"] === tag);\n\nif (!modbusEntry) {\n    node.error(`Tag ${tag} not found in modHoldReg`, msg);\n    return null;\n}\n\n// Get Modbus start address and data type\nlet address = modbusEntry[\"MODBUS Start Address\"];\nlet dataType = modbusEntry[\"Data Type\"];\n\n// Convert setpoint value to Modbus register format\nlet buffer = Buffer.alloc(4);\n\nif (dataType === \"F32\") {\n    buffer.writeFloatBE(setpoint, 0);  // Convert float to buffer (big-endian)\n} else if (dataType === \"S32\") {\n    buffer.writeInt32BE(setpoint, 0);  // Convert integer to buffer\n} else {\n    node.error(`Unsupported data type: ${dataType} for tag ${tag}`, msg);\n    return null;\n}\n\n// Split buffer into two 16-bit registers (Modbus uses 16-bit words)\nlet registerValues = [\n    buffer.readUInt16BE(2),  // High 16 bits\n    buffer.readUInt16BE(0)   // Low 16 bits\n];\n\n// Construct Modbus Flex Write message with quantity\nmsg.payload = {\n    value: registerValues,\n    fc: 16,  // Function Code 16 (Write Multiple Registers)\n    address: address - 400001,  // Convert absolute to zero-based address\n    quantity: 2,  // Writing two 16-bit registers (32-bit value)\n    unitid: 1  // Change if necessary based on your PLC setup\n};\n\nreturn msg;",
+        "func": "// Retrieve the input tag and setpoint\nlet { tag, setpoint } = msg.payload;\n\n// Retrieve the modHoldReg mapping from the flow context\nlet modHoldReg = flow.get(\"modHoldReg\") || [];\n\n// Find the corresponding Modbus entry\nlet modbusEntry = modHoldReg.find(entry => entry[\"Tag Name\"] === tag);\n\nif (!modbusEntry) {\n    //node.error(`Tag ${tag} not found in modHoldReg`, msg);\n    return null;\n}\n\n// Get Modbus start address and data type\nlet address = modbusEntry[\"MODBUS Start Address\"];\nlet dataType = modbusEntry[\"Data Type\"];\n\n// Convert setpoint value to Modbus register format\nlet buffer = Buffer.alloc(4);\n\nif (dataType === \"F32\") {\n    buffer.writeFloatBE(setpoint, 0);  // Convert float to buffer (big-endian)\n} else if (dataType === \"S32\") {\n    buffer.writeInt32BE(setpoint, 0);  // Convert integer to buffer\n} else {\n    node.error(`Unsupported data type: ${dataType} for tag ${tag}`, msg);\n    return null;\n}\n\n// Split buffer into two 16-bit registers (Modbus uses 16-bit words)\nlet registerValues = [\n    buffer.readUInt16BE(2),  // High 16 bits\n    buffer.readUInt16BE(0)   // Low 16 bits\n];\n\n// Construct Modbus Flex Write message with quantity\nmsg.payload = {\n    value: registerValues,\n    fc: 16,  // Function Code 16 (Write Multiple Registers)\n    address: address - 400001,  // Convert absolute to zero-based address\n    quantity: 2,  // Writing two 16-bit registers (32-bit value)\n    unitid: 1  // Change if necessary based on your PLC setup\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5537,7 +5658,6 @@
         "y": 4760,
         "wires": [
             [
-                "32d6980f748e37a5",
                 "8aab00cd65ccbebc"
             ]
         ]
@@ -7495,8 +7615,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 930,
-        "y": 240,
+        "x": 1010,
+        "y": 220,
         "wires": [
             [
                 "b3e5ca75ee471501"
@@ -7516,8 +7636,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1080,
-        "y": 240,
+        "x": 1160,
+        "y": 220,
         "wires": [
             [
                 "1ffb3eb4eb6a6a53"
@@ -7538,8 +7658,8 @@
         "keepMsgProperties": false,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 1270,
-        "y": 240,
+        "x": 1350,
+        "y": 220,
         "wires": [
             [],
             []
@@ -8712,279 +8832,6 @@
         ]
     },
     {
-        "id": "42d89f0d3b2305cf",
-        "type": "ui_template",
-        "z": "0e1f3206f48adf14",
-        "g": "e1b6d5ba8d3de0b8",
-        "group": "78c63c00e1f5b7aa",
-        "name": "Popup warning",
-        "order": 16,
-        "width": 0,
-        "height": 0,
-        "format": "<script>\n    (function(scope) {\n    scope.$watch('msg.payload', function(payload) {\n        if (payload === 'start_requested') {\n            const confirmed = confirm(\"⚠️ WARNING:\\nOpen ANODE and CATHODE hand valves before proceeding.\\n\\nDo you want to start the test?\");\n            if (confirmed) {\n                scope.send({payload: \"confirmed_start\"});\n            } else {\n                scope.send({payload: \"cancelled_start\"});\n            }\n        }\n    });\n})(scope);\n</script>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 800,
-        "y": 160,
-        "wires": [
-            [
-                "dc18064ad6bb5d57"
-            ]
-        ]
-    },
-    {
-        "id": "dc18064ad6bb5d57",
-        "type": "function",
-        "z": "0e1f3206f48adf14",
-        "g": "e1b6d5ba8d3de0b8",
-        "name": "Confirm HV open",
-        "func": "if (msg.payload === \"confirmed_start\") {\n    return { payload: \"Running\",\n            topic: \"control\"};\n}\nreturn null;  // cancel or anything else does nothing\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 990,
-        "y": 160,
-        "wires": [
-            [
-                "41b6500c6f27fc29",
-                "2517cf943d440480"
-            ]
-        ]
-    },
-    {
-        "id": "1ef3b08928dec915",
-        "type": "ui_template",
-        "z": "0e1f3206f48adf14",
-        "g": "adbe011cfa336e78",
-        "group": "2d8055515cc5bf53",
-        "name": "Popup warning",
-        "order": 16,
-        "width": 0,
-        "height": 0,
-        "format": "<script>\n    (function(scope) {\n    scope.$watch('msg.payload', function(payload) {\n        if (payload === true) {\n            const confirmed = confirm(\"⚠️ WARNING:\\nOpen ANODE and CATHODE hand valves before proceeding.\\n\\nDo you want to start the test?\");\n            if (confirmed) {\n                scope.send({payload: \"confirmed_start\"});\n            } else {\n                scope.send({payload: \"cancelled_start\"});\n            }\n        }\n    });\n})(scope);\n</script>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 1000,
-        "y": 4780,
-        "wires": [
-            [
-                "7c113f026e31f9a3",
-                "eb4b97f146607efd"
-            ]
-        ]
-    },
-    {
-        "id": "7c113f026e31f9a3",
-        "type": "function",
-        "z": "0e1f3206f48adf14",
-        "g": "adbe011cfa336e78",
-        "name": "Confirm HV open",
-        "func": "if (msg.payload === true) {\n    return { payload: true};\n} else{\n    return { payload: false };\n}\nreturn null;  // cancel or anything else does nothing\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1210,
-        "y": 4760,
-        "wires": [
-            [
-                "2da7849f109cc047"
-            ]
-        ]
-    },
-    {
-        "id": "2da7849f109cc047",
-        "type": "debug",
-        "z": "0e1f3206f48adf14",
-        "g": "adbe011cfa336e78",
-        "name": "debug 20",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1400,
-        "y": 4760,
-        "wires": []
-    },
-    {
-        "id": "eb4b97f146607efd",
-        "type": "debug",
-        "z": "0e1f3206f48adf14",
-        "g": "adbe011cfa336e78",
-        "name": "debug 42",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1200,
-        "y": 4860,
-        "wires": []
-    },
-    {
-        "id": "a7964e159338e401",
-        "type": "debug",
-        "z": "0e1f3206f48adf14",
-        "g": "adbe011cfa336e78",
-        "name": "debug 29",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1000,
-        "y": 4720,
-        "wires": []
-    },
-    {
-        "id": "3da0442fed5034a1",
-        "type": "ui_spacer",
-        "z": "0e1f3206f48adf14",
-        "name": "spacer",
-        "group": "2d8055515cc5bf53",
-        "order": 5,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "d6e21611327658a2",
-        "type": "ui_spacer",
-        "z": "0e1f3206f48adf14",
-        "name": "spacer",
-        "group": "2d8055515cc5bf53",
-        "order": 7,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "240da3aab4d221ce",
-        "type": "ui_spacer",
-        "z": "0e1f3206f48adf14",
-        "name": "spacer",
-        "group": "2d8055515cc5bf53",
-        "order": 11,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "ea357ff36bec97ac",
-        "type": "ui_spacer",
-        "z": "0e1f3206f48adf14",
-        "name": "spacer",
-        "group": "2d8055515cc5bf53",
-        "order": 13,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "40347b1ed62059c6",
-        "type": "ui_spacer",
-        "z": "0e1f3206f48adf14",
-        "name": "spacer",
-        "group": "2d8055515cc5bf53",
-        "order": 16,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "305a249a82118813",
-        "type": "ui_spacer",
-        "z": "0e1f3206f48adf14",
-        "name": "spacer",
-        "group": "2d8055515cc5bf53",
-        "order": 18,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "b3714dcb7ce96c8b",
-        "type": "ui_spacer",
-        "z": "0e1f3206f48adf14",
-        "name": "spacer",
-        "group": "2d8055515cc5bf53",
-        "order": 21,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "c66ede0cf1862607",
-        "type": "ui_spacer",
-        "z": "0e1f3206f48adf14",
-        "name": "spacer",
-        "group": "2d8055515cc5bf53",
-        "order": 23,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "344eeafe6c0a51d2",
-        "type": "ui_spacer",
-        "z": "0e1f3206f48adf14",
-        "name": "spacer",
-        "group": "2d8055515cc5bf53",
-        "order": 28,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "089ca021ddbcf9ef",
-        "type": "ui_spacer",
-        "z": "0e1f3206f48adf14",
-        "name": "spacer",
-        "group": "2d8055515cc5bf53",
-        "order": 30,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "0d07e459be98abf3",
-        "type": "ui_spacer",
-        "z": "0e1f3206f48adf14",
-        "name": "spacer",
-        "group": "78c63c00e1f5b7aa",
-        "order": 1,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "8c592afd3c3d6794",
-        "type": "ui_spacer",
-        "z": "0e1f3206f48adf14",
-        "name": "spacer",
-        "group": "78c63c00e1f5b7aa",
-        "order": 6,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "f469e98aaba160c7",
-        "type": "ui_spacer",
-        "z": "0e1f3206f48adf14",
-        "name": "spacer",
-        "group": "78c63c00e1f5b7aa",
-        "order": 18,
-        "width": 4,
-        "height": 1
-    },
-    {
         "id": "4ecd9bbe3d98a0ae",
         "type": "function",
         "z": "0e1f3206f48adf14",
@@ -8997,8 +8844,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 990,
-        "y": 180,
+        "x": 1010,
+        "y": 160,
         "wires": [
             [
                 "41b6500c6f27fc29"
@@ -9021,7 +8868,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 780,
+        "x": 800,
         "y": 180,
         "wires": [
             [
@@ -9044,8 +8891,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 980,
-        "y": 140,
+        "x": 1000,
+        "y": 120,
         "wires": []
     },
     {
@@ -9068,44 +8915,9 @@
         "y": 4760,
         "wires": [
             [
-                "62577cb0cc8f9bc5",
                 "7389a894f1605cf3"
             ]
         ]
-    },
-    {
-        "id": "32d6980f748e37a5",
-        "type": "debug",
-        "z": "0e1f3206f48adf14",
-        "g": "adbe011cfa336e78",
-        "name": "debug 20",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 990,
-        "y": 4820,
-        "wires": []
-    },
-    {
-        "id": "62577cb0cc8f9bc5",
-        "type": "debug",
-        "z": "0e1f3206f48adf14",
-        "g": "adbe011cfa336e78",
-        "name": "debug 29",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1240,
-        "y": 4780,
-        "wires": []
     },
     {
         "id": "369bd798d053ad4e",
