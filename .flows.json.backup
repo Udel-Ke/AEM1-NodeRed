@@ -381,7 +381,7 @@
             "4ae111cdbb1031f3",
             "137325ab94a685e0"
         ],
-        "x": 1374,
+        "x": 1614,
         "y": 59,
         "w": 372,
         "h": 202
@@ -409,12 +409,14 @@
             "5b9437060b5fa2a4",
             "2517cf943d440480",
             "b3e5ca75ee471501",
-            "1ffb3eb4eb6a6a53"
+            "1ffb3eb4eb6a6a53",
+            "42d89f0d3b2305cf",
+            "dc18064ad6bb5d57"
         ],
         "x": 554,
-        "y": 59,
-        "w": 692,
-        "h": 222
+        "y": 39,
+        "w": 992,
+        "h": 242
     },
     {
         "id": "1c1f20c3ada10fc1",
@@ -560,11 +562,16 @@
             "2ab23c7acd8dd360",
             "ebedd42d3d73fc5c",
             "5bf7034acf6e3d8c",
-            "2b3958255698811e"
+            "2b3958255698811e",
+            "1ef3b08928dec915",
+            "7c113f026e31f9a3",
+            "2da7849f109cc047",
+            "eb4b97f146607efd",
+            "a7964e159338e401"
         ],
         "x": 54,
         "y": 4119,
-        "w": 1252,
+        "w": 1452,
         "h": 862
     },
     {
@@ -1137,8 +1144,8 @@
         "topic": "",
         "payload": "iso",
         "payloadType": "date",
-        "x": 840,
-        "y": 100,
+        "x": 1160,
+        "y": 80,
         "wires": [
             [
                 "7359636993bb200e"
@@ -1465,8 +1472,8 @@
             "3a2e5ae01db4a464",
             "75e9b4cbb923d25a"
         ],
-        "x": 1105,
-        "y": 160,
+        "x": 1435,
+        "y": 120,
         "wires": []
     },
     {
@@ -1538,7 +1545,7 @@
             "a28627b538e4350e",
             "601c184cc8cd4fe2"
         ],
-        "x": 1685,
+        "x": 1925,
         "y": 160,
         "wires": []
     },
@@ -1564,7 +1571,7 @@
         "topic": "",
         "payload": "Stopped",
         "payloadType": "str",
-        "x": 1500,
+        "x": 1740,
         "y": 140,
         "wires": [
             [
@@ -1822,7 +1829,6 @@
         "mode": "link",
         "links": [
             "0d0fd00deab4a399",
-            "214a8a9f249e5677",
             "62c4e491e6bcbed7",
             "c7de23c01c2709f7",
             "1b952520d5aaf90b",
@@ -2727,7 +2733,7 @@
         "g": "525f6434f47c15f1",
         "name": "Test stop _ I changed topic to string.control",
         "info": "",
-        "x": 1560,
+        "x": 1800,
         "y": 100,
         "wires": []
     },
@@ -3121,8 +3127,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 850,
-        "y": 200,
+        "x": 1250,
+        "y": 180,
         "wires": [
             [
                 "7359636993bb200e",
@@ -3143,8 +3149,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1140,
-        "y": 200,
+        "x": 1440,
+        "y": 180,
         "wires": []
     },
     {
@@ -4041,8 +4047,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 780,
-        "y": 4760,
+        "x": 1260,
+        "y": 4680,
         "wires": [
             [
                 "655caca86ec029a9"
@@ -4961,7 +4967,7 @@
         "bgcolor": "white",
         "className": "",
         "icon": "play_arrow",
-        "payload": "Running",
+        "payload": "start_requested",
         "payloadType": "str",
         "topic": "control",
         "topicType": "str",
@@ -4969,8 +4975,7 @@
         "y": 200,
         "wires": [
             [
-                "41b6500c6f27fc29",
-                "2517cf943d440480"
+                "42d89f0d3b2305cf"
             ]
         ]
     },
@@ -4995,7 +5000,7 @@
         "payloadType": "str",
         "topic": "control",
         "topicType": "str",
-        "x": 1490,
+        "x": 1730,
         "y": 180,
         "wires": [
             [
@@ -5571,7 +5576,8 @@
         "y": 4760,
         "wires": [
             [
-                "7389a894f1605cf3"
+                "1ef3b08928dec915",
+                "a7964e159338e401"
             ]
         ]
     },
@@ -6615,7 +6621,7 @@
         "className": "",
         "icon": "play",
         "iconPosition": "left",
-        "payload": "Running",
+        "payload": "start_requested",
         "payloadType": "str",
         "topic": "control",
         "topicType": "str",
@@ -6629,12 +6635,11 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 670,
-        "y": 160,
+        "x": 630,
+        "y": 140,
         "wires": [
             [
-                "41b6500c6f27fc29",
-                "2517cf943d440480"
+                "42d89f0d3b2305cf"
             ]
         ]
     },
@@ -6842,8 +6847,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2370,
-        "y": 1320,
+        "x": 2810,
+        "y": 1420,
         "wires": [
             [
                 "94cd1eb55c29ee32",
@@ -6872,8 +6877,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 2140,
-        "y": 1320,
+        "x": 2580,
+        "y": 1420,
         "wires": [
             [
                 "82c8359fa16c35cf"
@@ -6892,8 +6897,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2400,
-        "y": 1240,
+        "x": 2840,
+        "y": 1340,
         "wires": []
     },
     {
@@ -6908,8 +6913,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2650,
-        "y": 1300,
+        "x": 3090,
+        "y": 1400,
         "wires": [
             [
                 "381165a5f2cb9703",
@@ -6934,8 +6939,8 @@
         "keepMsgProperties": false,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 2870,
-        "y": 1300,
+        "x": 3310,
+        "y": 1400,
         "wires": [
             [],
             []
@@ -6953,8 +6958,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2860,
-        "y": 1360,
+        "x": 3300,
+        "y": 1460,
         "wires": []
     },
     {
@@ -6969,8 +6974,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2840,
-        "y": 1260,
+        "x": 3280,
+        "y": 1360,
         "wires": []
     },
     {
@@ -7021,8 +7026,8 @@
         "className": "",
         "passthru": false,
         "dropdownOptions": [],
-        "x": 2210,
-        "y": 1220,
+        "x": 2650,
+        "y": 1320,
         "wires": [
             [
                 "c6149cae441d7eb4",
@@ -7042,8 +7047,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2360,
-        "y": 1180,
+        "x": 2800,
+        "y": 1280,
         "wires": []
     },
     {
@@ -7058,8 +7063,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2550,
-        "y": 1020,
+        "x": 2990,
+        "y": 1120,
         "wires": [
             [
                 "7a89c662328d8085"
@@ -7078,8 +7083,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2740,
-        "y": 1020,
+        "x": 3180,
+        "y": 1120,
         "wires": [
             [
                 "ff7de27601c9fcb2"
@@ -7099,8 +7104,8 @@
         "keepMsgProperties": false,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 2930,
-        "y": 1020,
+        "x": 3370,
+        "y": 1120,
         "wires": [
             [],
             []
@@ -7118,8 +7123,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2650,
-        "y": 1180,
+        "x": 3090,
+        "y": 1280,
         "wires": [
             [
                 "f7f9a8e0751ff2a1",
@@ -7158,8 +7163,8 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 2220,
-        "y": 1020,
+        "x": 2660,
+        "y": 1120,
         "wires": [
             [
                 "573e8369778f1b6f"
@@ -7197,8 +7202,8 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 2200,
-        "y": 1140,
+        "x": 2640,
+        "y": 1240,
         "wires": [
             [
                 "87a16797a8edb3a8"
@@ -7217,8 +7222,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2920,
-        "y": 1140,
+        "x": 3360,
+        "y": 1240,
         "wires": []
     },
     {
@@ -7233,8 +7238,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2390,
-        "y": 1120,
+        "x": 2830,
+        "y": 1220,
         "wires": [
             [
                 "573e8369778f1b6f",
@@ -7445,7 +7450,7 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 1490,
+        "x": 1730,
         "y": 220,
         "wires": [
             [
@@ -7529,7 +7534,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 770,
+        "x": 1090,
         "y": 240,
         "wires": [
             [
@@ -7550,7 +7555,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 920,
+        "x": 1240,
         "y": 240,
         "wires": [
             [
@@ -7572,7 +7577,7 @@
         "keepMsgProperties": false,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 1110,
+        "x": 1430,
         "y": 240,
         "wires": [
             [],
@@ -8088,8 +8093,8 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 2400,
-        "y": 840,
+        "x": 2840,
+        "y": 940,
         "wires": [
             []
         ]
@@ -8111,8 +8116,8 @@
         "topic": "",
         "payload": "[]",
         "payloadType": "json",
-        "x": 2210,
-        "y": 800,
+        "x": 2650,
+        "y": 900,
         "wires": [
             [
                 "eed78059233cb876"
@@ -8140,8 +8145,8 @@
         "topic": "Sample Data A",
         "payload": "[{\"propertyA\":10,\"propertyB\":2},{\"propertyA\":15,\"propertyB\":3},{\"propertyA\":25,\"propertyB\":5},{\"propertyA\":30,\"propertyB\":6},{\"propertyA\":40,\"propertyB\":8}]",
         "payloadType": "json",
-        "x": 2200,
-        "y": 840,
+        "x": 2640,
+        "y": 940,
         "wires": [
             [
                 "eed78059233cb876"
@@ -8169,8 +8174,8 @@
         "topic": "Sample Data B",
         "payload": "[{\"propertyA\":7,\"propertyB\":6},{\"propertyA\":15,\"propertyB\":2},{\"propertyA\":24,\"propertyB\":9},{\"propertyA\":32,\"propertyB\":4},{\"propertyA\":47,\"propertyB\":9}]",
         "payloadType": "json",
-        "x": 2200,
-        "y": 880,
+        "x": 2640,
+        "y": 980,
         "wires": [
             [
                 "eed78059233cb876"
@@ -8744,5 +8749,148 @@
                 "55778d34f90db1ff"
             ]
         ]
+    },
+    {
+        "id": "42d89f0d3b2305cf",
+        "type": "ui_template",
+        "z": "0e1f3206f48adf14",
+        "g": "e1b6d5ba8d3de0b8",
+        "group": "78c63c00e1f5b7aa",
+        "name": "Popup warning",
+        "order": 16,
+        "width": 0,
+        "height": 0,
+        "format": "<script>\n    (function(scope) {\n    scope.$watch('msg.payload', function(payload) {\n        if (payload === 'start_requested') {\n            const confirmed = confirm(\"⚠️ WARNING:\\nOpen ANODE and CATHODE hand valves before proceeding.\\n\\nDo you want to start the test?\");\n            if (confirmed) {\n                scope.send({payload: \"confirmed_start\"});\n            } else {\n                scope.send({payload: \"cancelled_start\"});\n            }\n        }\n    });\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 800,
+        "y": 160,
+        "wires": [
+            [
+                "dc18064ad6bb5d57"
+            ]
+        ]
+    },
+    {
+        "id": "dc18064ad6bb5d57",
+        "type": "function",
+        "z": "0e1f3206f48adf14",
+        "g": "e1b6d5ba8d3de0b8",
+        "name": "Confirm HV open",
+        "func": "if (msg.payload === \"confirmed_start\") {\n    return { payload: \"Running\",\n            topic: \"control\"};\n}\nreturn null;  // cancel or anything else does nothing\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 160,
+        "wires": [
+            [
+                "41b6500c6f27fc29",
+                "2517cf943d440480"
+            ]
+        ]
+    },
+    {
+        "id": "1ef3b08928dec915",
+        "type": "ui_template",
+        "z": "0e1f3206f48adf14",
+        "g": "adbe011cfa336e78",
+        "group": "2d8055515cc5bf53",
+        "name": "Popup warning",
+        "order": 16,
+        "width": 0,
+        "height": 0,
+        "format": "<script>\n    (function(scope) {\n    scope.$watch('msg.payload', function(payload) {\n        if (payload === true) {\n            const confirmed = confirm(\"⚠️ WARNING:\\nOpen ANODE and CATHODE hand valves before proceeding.\\n\\nDo you want to start the test?\");\n            if (confirmed) {\n                scope.send({payload: true});\n            } else {\n                scope.send({payload: false});\n            }\n        }}\n    });\n    (scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1000,
+        "y": 4780,
+        "wires": [
+            [
+                "7c113f026e31f9a3",
+                "eb4b97f146607efd"
+            ]
+        ]
+    },
+    {
+        "id": "7c113f026e31f9a3",
+        "type": "function",
+        "z": "0e1f3206f48adf14",
+        "g": "adbe011cfa336e78",
+        "name": "Confirm HV open",
+        "func": "if (msg.payload === true) {\n    return { payload: true};\n} else{\n    return { payload: false };\n}\nreturn null;  // cancel or anything else does nothing\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1210,
+        "y": 4760,
+        "wires": [
+            [
+                "2da7849f109cc047"
+            ]
+        ]
+    },
+    {
+        "id": "2da7849f109cc047",
+        "type": "debug",
+        "z": "0e1f3206f48adf14",
+        "g": "adbe011cfa336e78",
+        "name": "debug 20",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1400,
+        "y": 4760,
+        "wires": []
+    },
+    {
+        "id": "eb4b97f146607efd",
+        "type": "debug",
+        "z": "0e1f3206f48adf14",
+        "g": "adbe011cfa336e78",
+        "name": "debug 42",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1200,
+        "y": 4860,
+        "wires": []
+    },
+    {
+        "id": "a7964e159338e401",
+        "type": "debug",
+        "z": "0e1f3206f48adf14",
+        "g": "adbe011cfa336e78",
+        "name": "debug 29",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 4720,
+        "wires": []
     }
 ]
