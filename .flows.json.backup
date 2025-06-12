@@ -1290,11 +1290,12 @@
         "strings": true,
         "include_empty_strings": false,
         "include_null_values": false,
-        "x": 880,
-        "y": 2160,
+        "x": 760,
+        "y": 2300,
         "wires": [
             [
-                "f6e55c6746f2e0d0"
+                "f6e55c6746f2e0d0",
+                "1b3f23fa28e5b05a"
             ]
         ]
     },
@@ -6895,8 +6896,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 780,
-        "y": 2240,
+        "x": 760,
+        "y": 2160,
         "wires": []
     },
     {
@@ -6912,7 +6913,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1120,
+        "x": 940,
         "y": 2160,
         "wires": []
     },
