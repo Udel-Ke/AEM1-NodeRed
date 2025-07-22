@@ -545,10 +545,6 @@
             "4eca2ac825cebd82",
             "70cf2f311c7d7f5b",
             "5079ebea03413b2a",
-            "1b90b1a3bb0e23f6",
-            "0a9712d38fbf0dcc",
-            "9a0d4b79df7f94ae",
-            "49e5b3cec8bda10d",
             "589ce0fdddac0565",
             "50a2e69e7921ace9",
             "871dd2fd31ac1461",
@@ -557,12 +553,14 @@
             "f821e642a405cd20",
             "25678c82a19b1e2d",
             "fc3e49778ffffccf",
-            "2ab23c7acd8dd360"
+            "2ab23c7acd8dd360",
+            "c34891ab102b693c",
+            "c6f66897a719fc1a"
         ],
         "x": 54,
         "y": 4119,
         "w": 1272,
-        "h": 862
+        "h": 922
     },
     {
         "id": "3c0806d8c07e2d4a",
@@ -694,7 +692,7 @@
         "stateLogEnabled": false,
         "queueLogEnabled": false,
         "failureLogEnabled": true,
-        "tcpHost": "10.0.0.10",
+        "tcpHost": "10.0.0.90",
         "tcpPort": 502,
         "tcpType": "DEFAULT",
         "serialPort": "/dev/ttyUSB",
@@ -1097,106 +1095,6 @@
         "disabled": "false"
     },
     {
-        "id": "3da0442fed5034a1",
-        "type": "ui_spacer",
-        "z": "0e1f3206f48adf14",
-        "name": "spacer",
-        "group": "2d8055515cc5bf53",
-        "order": 5,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "d6e21611327658a2",
-        "type": "ui_spacer",
-        "z": "0e1f3206f48adf14",
-        "name": "spacer",
-        "group": "2d8055515cc5bf53",
-        "order": 7,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "240da3aab4d221ce",
-        "type": "ui_spacer",
-        "z": "0e1f3206f48adf14",
-        "name": "spacer",
-        "group": "2d8055515cc5bf53",
-        "order": 11,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "ea357ff36bec97ac",
-        "type": "ui_spacer",
-        "z": "0e1f3206f48adf14",
-        "name": "spacer",
-        "group": "2d8055515cc5bf53",
-        "order": 13,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "40347b1ed62059c6",
-        "type": "ui_spacer",
-        "z": "0e1f3206f48adf14",
-        "name": "spacer",
-        "group": "2d8055515cc5bf53",
-        "order": 16,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "305a249a82118813",
-        "type": "ui_spacer",
-        "z": "0e1f3206f48adf14",
-        "name": "spacer",
-        "group": "2d8055515cc5bf53",
-        "order": 18,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "b3714dcb7ce96c8b",
-        "type": "ui_spacer",
-        "z": "0e1f3206f48adf14",
-        "name": "spacer",
-        "group": "2d8055515cc5bf53",
-        "order": 21,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "c66ede0cf1862607",
-        "type": "ui_spacer",
-        "z": "0e1f3206f48adf14",
-        "name": "spacer",
-        "group": "2d8055515cc5bf53",
-        "order": 23,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "344eeafe6c0a51d2",
-        "type": "ui_spacer",
-        "z": "0e1f3206f48adf14",
-        "name": "spacer",
-        "group": "2d8055515cc5bf53",
-        "order": 28,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "089ca021ddbcf9ef",
-        "type": "ui_spacer",
-        "z": "0e1f3206f48adf14",
-        "name": "spacer",
-        "group": "2d8055515cc5bf53",
-        "order": 30,
-        "width": 2,
-        "height": 1
-    },
-    {
         "id": "0d07e459be98abf3",
         "type": "ui_spacer",
         "z": "0e1f3206f48adf14",
@@ -1223,6 +1121,36 @@
         "name": "spacer",
         "group": "78c63c00e1f5b7aa",
         "order": 18,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "fd2e7cab4f58c3e5",
+        "type": "ui_spacer",
+        "z": "0e1f3206f48adf14",
+        "name": "spacer",
+        "group": "2d8055515cc5bf53",
+        "order": 15,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "a14bda104a556178",
+        "type": "ui_spacer",
+        "z": "0e1f3206f48adf14",
+        "name": "spacer",
+        "group": "2d8055515cc5bf53",
+        "order": 19,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "a87d319239102d0d",
+        "type": "ui_spacer",
+        "z": "0e1f3206f48adf14",
+        "name": "spacer",
+        "group": "2d8055515cc5bf53",
+        "order": 24,
         "width": 4,
         "height": 1
     },
@@ -2023,7 +1951,7 @@
         "z": "0e1f3206f48adf14",
         "g": "06c6cdf71851940d",
         "name": "Get flow data",
-        "func": "// Clear previous timeout if it exists\nlet timeoutID = flow.get(\"logLoopTimeoutID\");\nif (timeoutID) {\n    clearTimeout(timeoutID);\n    flow.set(\"logLoopTimeoutID\", null);\n}\n\n// Retrieve logging interval in seconds\nlet interval = flow.get(\"logIntervalSec\") || 5; // Default to 5 seconds if not set\nlet measurement = flow.get(\"influxMeasurement\") || \"testID_miss\";\n\n// Check system status\nlet isRunning = flow.get(\"System_Running_test\") === true;\n\nif (isRunning) {\n    // Retrieve logging data\n    let logData = flow.get(\"logData\") || {};\n    let scriptStep = flow.get(\"scriptStep\") || 0;\n\n    // Merge log data with script step\n    let logDataWithStep = {\n        ...logData,\n        step: scriptStep\n    };\n\n    // Send data\n    node.send([{ \n        payload: logDataWithStep,\n        measurement: measurement }]);\n}\n\n// Schedule the next logging event\nlet newTimeout = setTimeout(() => {\n    node.send([{payload: \"triggerLog\"}]); // Feed this back into the same function\n}, interval * 1000);\n\n// Save timeout ID so we can cancel it later\nflow.set(\"logLoopTimeoutID\", newTimeout);\n\nreturn null;\n",
+        "func": "// Clear previous timeout if it exists\nlet timeoutID = flow.get(\"logLoopTimeoutID\");\nif (timeoutID) {\n    clearTimeout(timeoutID);\n    flow.set(\"logLoopTimeoutID\", null);\n}\n\n// Retrieve logging interval in seconds\nlet interval = flow.get(\"logIntervalSec\") || 5; // Default to 5 seconds if not set\nlet measurement = flow.get(\"influxMeasurement\") || \"testID_miss\";\n\n// Check system status\nlet isRunning = flow.get(\"System_Running\") === true;\n\nif (isRunning) {\n    // Retrieve logging data\n    let logData = flow.get(\"logData\") || {};\n    let scriptStep = flow.get(\"scriptStep\") || 0;\n\n    // Merge log data with script step\n    let logDataWithStep = {\n        ...logData,\n        step: scriptStep\n    };\n\n    // Send data\n    node.send([{ \n        payload: logDataWithStep,\n        measurement: measurement }]);\n}\n\n// Schedule the next logging event\nlet newTimeout = setTimeout(() => {\n    node.send([{payload: \"triggerLog\"}]); // Feed this back into the same function\n}, interval * 1000);\n\n// Save timeout ID so we can cancel it later\nflow.set(\"logLoopTimeoutID\", newTimeout);\n\nreturn null;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2061,7 +1989,7 @@
         "z": "0e1f3206f48adf14",
         "g": "06c6cdf71851940d",
         "name": "Data logging management",
-        "info": "",
+        "info": "System_Running_test is for testing\nCommented it out for release\nChange \"System_Running_test\" to \"System_Running\" in Get flowdata and Set currentLogfile for production",
         "x": 210,
         "y": 2620,
         "wires": []
@@ -2094,7 +2022,7 @@
         "z": "0e1f3206f48adf14",
         "g": "783a604ad685b5f5",
         "name": "Read CSV File",
-        "filename": "/app/files/PEM15kW_P540_Extended.csv",
+        "filename": "/app/files/AEM1_P550_Extended.csv",
         "filenameType": "str",
         "format": "utf8",
         "encoding": "utf8",
@@ -2404,7 +2332,7 @@
         "z": "0e1f3206f48adf14",
         "g": "06c6cdf71851940d",
         "name": "Stop logging",
-        "func": "msg.payload = \"Stop data logging\";\nflow.set(\"testStep\", \"Test Completed\");\nlet logLoopTimeoutID = flow.get(\"logLoopTimeoutID\");\nif (logLoopTimeoutID) {\n    clearTimeout(logLoopTimeoutID);\n    flow.set(\"logLoopTimeoutID\", null);  // Optional: clean up the reference\n}\n\nlet csvRotationTimeoutID = flow.get(\"csvRotationTimeoutID\");\nif (csvRotationTimeoutID) {\n    clearTimeout(csvRotationTimeoutID);\n    flow.set(\"csvRotationTimeoutID\", null);  // Optional: clean up the reference\n}\nflow.set(\"System_Running_test\", false);\nreturn msg;",
+        "func": "msg.payload = \"Stop data logging\";\nflow.set(\"testStep\", \"Test Completed\");\nlet logLoopTimeoutID = flow.get(\"logLoopTimeoutID\");\nif (logLoopTimeoutID) {\n    clearTimeout(logLoopTimeoutID);\n    flow.set(\"logLoopTimeoutID\", null);  // Optional: clean up the reference\n}\n\nlet csvRotationTimeoutID = flow.get(\"csvRotationTimeoutID\");\nif (csvRotationTimeoutID) {\n    clearTimeout(csvRotationTimeoutID);\n    flow.set(\"csvRotationTimeoutID\", null);  // Optional: clean up the reference\n}\n// flow.set(\"System_Running_test\", false);\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3059,7 +2987,7 @@
         "z": "0e1f3206f48adf14",
         "g": "a9e7fb168fe4a14b",
         "name": "Check Alarm Status",
-        "func": "// Retrieve stored active alarms\nlet previousActiveAlarms = flow.get(\"activeAlarms\") || {};\n\n// Retrieve the alarm definitions\nconst alarms = flow.get(\"alarms\") || {};\n\n// Retrieve the Modbus response (array of coil states)\nconst alarmStates = msg.payload;\n\n// Get current timestamp\nconst timestamp = new Date().toLocaleString();\n\n// Get alarm tag names in order\nconst alarmTags = Object.keys(alarms);\n\n// Create a new active alarms object\nlet newActiveAlarms = {};\n\n// Check for active alarms\nfor (let i = 0; i < alarmTags.length; i++) {\n    let tag = alarmTags[i];\n\n    if (alarmStates[i] === true) { // Alarm is active\n        if (!previousActiveAlarms[tag]) {\n            // Store the first occurrence with a timestamp\n            newActiveAlarms[tag] = {\n                tag: tag,\n                message: alarms[tag],\n                time: timestamp\n            };\n        } else {\n            // Keep the previous timestamp if it was already active\n            newActiveAlarms[tag] = previousActiveAlarms[tag];\n        }\n    }\n}\n\n// Compare old and new active alarms\nconst previousKeys = Object.keys(previousActiveAlarms).sort();\nconst newKeys = Object.keys(newActiveAlarms).sort();\nconst isUnchanged = JSON.stringify(previousKeys) === JSON.stringify(newKeys);\n\n// If no change, do not send a payload\nif (isUnchanged) {\n    return null;\n}\n\n// Save updated active alarms list in flow variable\nflow.set(\"activeAlarms\", newActiveAlarms);\n\n// Convert to array format for UI table\nmsg.payload = Object.values(newActiveAlarms);\n\nreturn msg;\n",
+        "func": "// Retrieve stored active alarms\nlet previousActiveAlarms = flow.get(\"activeAlarms\") || {};\n\n// Retrieve the alarm definitions\nconst alarms = flow.get(\"alarms\") || {};\n\n// Retrieve the Modbus response (array of coil states)\nconst alarmStates = msg.payload;\n\n// Get current timestamp\nconst timestamp = new Date().toLocaleString();\n\n// Get alarm tag names in order\nconst alarmTags = Object.keys(alarms);\n\n// Create a new active alarms object\nlet newActiveAlarms = {};\n\n// Check for active alarms\nfor (let i = 0; i < alarmTags.length; i++) {\n    let tag = alarmTags[i];\n\n    if (tag == \"Fume Hood OK\" || tag == \"EStop_Not_Tripped\" || tag == \"Air Monitor OK\"){\n        if (alarmStates[i] === false) { // Alarm is active\n            if (!previousActiveAlarms[tag]) {\n                // Store the first occurrence with a timestamp\n                newActiveAlarms[tag] = {\n                    tag: tag,\n                    message: alarms[tag],\n                    time: timestamp\n                };\n            } else {\n                // Keep the previous timestamp if it was already active\n                newActiveAlarms[tag] = previousActiveAlarms[tag];\n            }\n\n        }\n    }\n\n    else if (alarmStates[i] === true) { // Alarm is active\n        if (!previousActiveAlarms[tag]) {\n            // Store the first occurrence with a timestamp\n            newActiveAlarms[tag] = {\n                tag: tag,\n                message: alarms[tag],\n                time: timestamp\n            };\n        } else {\n            // Keep the previous timestamp if it was already active\n            newActiveAlarms[tag] = previousActiveAlarms[tag];\n        }\n    }\n}\n\n// Compare old and new active alarms\nconst previousKeys = Object.keys(previousActiveAlarms).sort();\nconst newKeys = Object.keys(newActiveAlarms).sort();\nconst isUnchanged = JSON.stringify(previousKeys) === JSON.stringify(newKeys);\n\n// If no change, do not send a payload\nif (isUnchanged) {\n    return null;\n}\n\n// Save updated active alarms list in flow variable\nflow.set(\"activeAlarms\", newActiveAlarms);\n\n// Convert to array format for UI table\nmsg.payload = Object.values(newActiveAlarms);\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -3418,9 +3346,7 @@
                 "7a554a0d03cd9a5b",
                 "39244fa04a4ce7d5",
                 "589ce0fdddac0565",
-                "49e5b3cec8bda10d",
                 "5079ebea03413b2a",
-                "0a9712d38fbf0dcc",
                 "bd7d6e9091f594cc",
                 "8ee848ca2c5eacca",
                 "ebc99a25bec0f07d",
@@ -3428,7 +3354,8 @@
                 "f821e642a405cd20",
                 "fc3e49778ffffccf",
                 "ebedd42d3d73fc5c",
-                "0e20b32b0c110503"
+                "0e20b32b0c110503",
+                "c34891ab102b693c"
             ]
         ]
     },
@@ -3896,7 +3823,7 @@
         "z": "0e1f3206f48adf14",
         "g": "adbe011cfa336e78",
         "name": "PS_HMI_Enable",
-        "func": "var msg = { payload: { \"tag\": \"PS_HMI_Enable\", \"setpoint\": msg.payload } };\nreturn msg;\n",
+        "func": "if (msg.payload === true) {\n    // When switch is turned ON, set HMI_Start to true for 0.2s\n    var msg1 = { payload: { \"tag\": \"PS_HMI_Enable\", \"setpoint\": true } };\n\n    setTimeout(() => {\n        var msg2 = { payload: { \"tag\": \"PS_HMI_Enable\", \"setpoint\": false } };\n        node.send(msg2);\n    }, 200);\n\n    return msg1;\n} else {\n    // When switch is turned OFF, set HMI_Stop to true for 0.2s\n    var msg3 = { payload: { \"tag\": \"PS_HMI_Disable\", \"setpoint\": true } };\n\n    setTimeout(() => {\n        var msg4 = { payload: { \"tag\": \"PS_HMI_Disable\", \"setpoint\": false } };\n        node.send(msg4);\n    }, 200);\n\n    return msg3;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3904,7 +3831,7 @@
         "finalize": "",
         "libs": [],
         "x": 810,
-        "y": 4520,
+        "y": 4580,
         "wires": [
             [
                 "655caca86ec029a9"
@@ -3917,7 +3844,7 @@
         "z": "0e1f3206f48adf14",
         "g": "adbe011cfa336e78",
         "name": "PS_HMI_On",
-        "func": "var msg = { payload: { \"tag\": \"PS_HMI_On\", \"setpoint\": msg.payload } };\nreturn msg;\n",
+        "func": "if (msg.payload === true) {\n    // When switch is turned ON, set HMI_Start to true for 0.2s\n    var msg1 = { payload: { \"tag\": \"PS_HMI_On\", \"setpoint\": true } };\n\n    setTimeout(() => {\n        var msg2 = { payload: { \"tag\": \"PS_HMI_On\", \"setpoint\": false } };\n        node.send(msg2);\n    }, 200);\n\n    return msg1;\n} else {\n    // When switch is turned OFF, set HMI_Stop to true for 0.2s\n    var msg3 = { payload: { \"tag\": \"PS_HMI_Off\", \"setpoint\": true } };\n\n    setTimeout(() => {\n        var msg4 = { payload: { \"tag\": \"PS_HMI_Off\", \"setpoint\": false } };\n        node.send(msg4);\n    }, 200);\n\n    return msg3;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3926,48 +3853,6 @@
         "libs": [],
         "x": 770,
         "y": 4640,
-        "wires": [
-            [
-                "655caca86ec029a9"
-            ]
-        ]
-    },
-    {
-        "id": "1b90b1a3bb0e23f6",
-        "type": "function",
-        "z": "0e1f3206f48adf14",
-        "g": "adbe011cfa336e78",
-        "name": "PS_HMI_Off",
-        "func": "var msg = { payload: { \"tag\": \"PS_HMI_Off\", \"setpoint\": msg.payload } };\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 770,
-        "y": 4700,
-        "wires": [
-            [
-                "655caca86ec029a9"
-            ]
-        ]
-    },
-    {
-        "id": "9a0d4b79df7f94ae",
-        "type": "function",
-        "z": "0e1f3206f48adf14",
-        "g": "adbe011cfa336e78",
-        "name": "PS_HMI_Disable",
-        "func": "var msg = { payload: { \"tag\": \"PS_HMI_Disable\", \"setpoint\": msg.payload } };\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 810,
-        "y": 4580,
         "wires": [
             [
                 "655caca86ec029a9"
@@ -4123,7 +4008,7 @@
         "z": "0e1f3206f48adf14",
         "g": "adbe011cfa336e78",
         "name": "PMP200 control",
-        "func": "if (msg.payload === true) {\n    // When switch is turned ON, set HMI_Start to true for 0.2s\n    var msg1 = { payload: { \"tag\": \"PMP200_MTR.HMI_Start\", \"setpoint\": true } };\n\n    setTimeout(() => {\n        var msg2 = { payload: { \"tag\": \"PMP200_MTR.HMI_Start\", \"setpoint\": false } };\n        node.send(msg2);\n    }, 200);\n\n    return msg1;\n} else {\n    // When switch is turned OFF, set HMI_Stop to true for 0.2s\n    var msg3 = { payload: { \"tag\": \"PMP200_MTR.HMI_Stop\", \"setpoint\": true } };\n\n    setTimeout(() => {\n        var msg4 = { payload: { \"tag\": \"PMP200_MTR.HMI_Stop\", \"setpoint\": false } };\n        node.send(msg4);\n    }, 200);\n\n    return msg3;\n}\n",
+        "func": "if (msg.payload === true) {\n    // When switch is turned ON, set HMI_Start to true for 0.2s\n    var msg1 = { payload: { \"tag\": \"PMP200_MTR.HMI_Start\", \"setpoint\": true } };\n\n    setTimeout(() => {\n        var msg2 = { payload: { \"tag\": \"PMP200_MTR.HMI_Start\", \"setpoint\": false } };\n        node.send(msg2);\n    }, 500);\n\n    return msg1;\n} else {\n    // When switch is turned OFF, set HMI_Stop to true for 0.2s\n    var msg3 = { payload: { \"tag\": \"PMP200_MTR.HMI_Stop\", \"setpoint\": true } };\n\n    setTimeout(() => {\n        var msg4 = { payload: { \"tag\": \"PMP200_MTR.HMI_Stop\", \"setpoint\": false } };\n        node.send(msg4);\n    }, 200);\n\n    return msg3;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4152,7 +4037,7 @@
         "finalize": "",
         "libs": [],
         "x": 780,
-        "y": 4820,
+        "y": 4880,
         "wires": [
             [
                 "655caca86ec029a9"
@@ -4265,7 +4150,7 @@
         "finalize": "",
         "libs": [],
         "x": 780,
-        "y": 4880,
+        "y": 4940,
         "wires": [
             [
                 "655caca86ec029a9"
@@ -4286,7 +4171,7 @@
         "finalize": "",
         "libs": [],
         "x": 780,
-        "y": 4940,
+        "y": 5000,
         "wires": [
             [
                 "655caca86ec029a9"
@@ -5187,7 +5072,7 @@
         "g": "b2387cf1c1f9066f",
         "name": "",
         "group": "2d8055515cc5bf53",
-        "order": 26,
+        "order": 22,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -5253,7 +5138,7 @@
         "tooltip": "",
         "place": "Select Tag",
         "group": "2d8055515cc5bf53",
-        "order": 25,
+        "order": 21,
         "width": 4,
         "height": 1,
         "passthru": true,
@@ -5286,7 +5171,7 @@
         "label": "SV120",
         "tooltip": "",
         "group": "2d8055515cc5bf53",
-        "order": 4,
+        "order": 3,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -5357,7 +5242,7 @@
         "label": "SV130",
         "tooltip": "",
         "group": "2d8055515cc5bf53",
-        "order": 3,
+        "order": 4,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -5392,7 +5277,7 @@
         "label": "SV210",
         "tooltip": "",
         "group": "2d8055515cc5bf53",
-        "order": 10,
+        "order": 7,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -5497,7 +5382,7 @@
         "label": "PS_HMI_Enable",
         "tooltip": "",
         "group": "2d8055515cc5bf53",
-        "order": 6,
+        "order": 5,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -5516,7 +5401,7 @@
         "animate": false,
         "className": "",
         "x": 610,
-        "y": 4520,
+        "y": 4580,
         "wires": [
             [
                 "50a2e69e7921ace9"
@@ -5532,7 +5417,7 @@
         "label": "PS_HMI_On",
         "tooltip": "",
         "group": "2d8055515cc5bf53",
-        "order": 12,
+        "order": 10,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -5559,76 +5444,6 @@
         ]
     },
     {
-        "id": "0a9712d38fbf0dcc",
-        "type": "ui_switch",
-        "z": "0e1f3206f48adf14",
-        "g": "adbe011cfa336e78",
-        "name": "",
-        "label": "PS_HMI_Off",
-        "tooltip": "",
-        "group": "2d8055515cc5bf53",
-        "order": 22,
-        "width": 2,
-        "height": 1,
-        "passthru": false,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 590,
-        "y": 4700,
-        "wires": [
-            [
-                "1b90b1a3bb0e23f6"
-            ]
-        ]
-    },
-    {
-        "id": "49e5b3cec8bda10d",
-        "type": "ui_switch",
-        "z": "0e1f3206f48adf14",
-        "g": "adbe011cfa336e78",
-        "name": "",
-        "label": "PS_HMI_Disable",
-        "tooltip": "",
-        "group": "2d8055515cc5bf53",
-        "order": 17,
-        "width": 2,
-        "height": 1,
-        "passthru": false,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 610,
-        "y": 4580,
-        "wires": [
-            [
-                "9a0d4b79df7f94ae"
-            ]
-        ]
-    },
-    {
         "id": "871dd2fd31ac1461",
         "type": "ui_switch",
         "z": "0e1f3206f48adf14",
@@ -5637,42 +5452,7 @@
         "label": "PMP200 Run",
         "tooltip": "",
         "group": "2d8055515cc5bf53",
-        "order": 14,
-        "width": 3,
-        "height": 1,
-        "passthru": false,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 590,
-        "y": 4760,
-        "wires": [
-            [
-                "8aab00cd65ccbebc"
-            ]
-        ]
-    },
-    {
-        "id": "f821e642a405cd20",
-        "type": "ui_switch",
-        "z": "0e1f3206f48adf14",
-        "g": "adbe011cfa336e78",
-        "name": "",
-        "label": "PMP210 Run",
-        "tooltip": "",
-        "group": "2d8055515cc5bf53",
-        "order": 15,
+        "order": 12,
         "width": 3,
         "height": 1,
         "passthru": false,
@@ -5694,20 +5474,20 @@
         "y": 4820,
         "wires": [
             [
-                "f5308650b7caeb57"
+                "8aab00cd65ccbebc"
             ]
         ]
     },
     {
-        "id": "fc3e49778ffffccf",
+        "id": "f821e642a405cd20",
         "type": "ui_switch",
         "z": "0e1f3206f48adf14",
         "g": "adbe011cfa336e78",
         "name": "",
-        "label": "HTR201 Run",
+        "label": "PMP210 Run",
         "tooltip": "",
         "group": "2d8055515cc5bf53",
-        "order": 19,
+        "order": 13,
         "width": 3,
         "height": 1,
         "passthru": false,
@@ -5729,20 +5509,20 @@
         "y": 4880,
         "wires": [
             [
-                "25678c82a19b1e2d"
+                "f5308650b7caeb57"
             ]
         ]
     },
     {
-        "id": "ebedd42d3d73fc5c",
+        "id": "fc3e49778ffffccf",
         "type": "ui_switch",
         "z": "0e1f3206f48adf14",
         "g": "adbe011cfa336e78",
         "name": "",
-        "label": "HTRCell Run",
+        "label": "HTR201 Run",
         "tooltip": "",
         "group": "2d8055515cc5bf53",
-        "order": 20,
+        "order": 17,
         "width": 3,
         "height": 1,
         "passthru": false,
@@ -5764,6 +5544,41 @@
         "y": 4940,
         "wires": [
             [
+                "25678c82a19b1e2d"
+            ]
+        ]
+    },
+    {
+        "id": "ebedd42d3d73fc5c",
+        "type": "ui_switch",
+        "z": "0e1f3206f48adf14",
+        "g": "adbe011cfa336e78",
+        "name": "",
+        "label": "HTRCell Run",
+        "tooltip": "",
+        "group": "2d8055515cc5bf53",
+        "order": 18,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 590,
+        "y": 5000,
+        "wires": [
+            [
                 "2ab23c7acd8dd360"
             ]
         ]
@@ -5777,7 +5592,7 @@
         "label": "Tag SP input",
         "tooltip": "",
         "group": "2d8055515cc5bf53",
-        "order": 24,
+        "order": 20,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -5958,7 +5773,7 @@
         "g": "e963842154a5297f",
         "group": "2d8055515cc5bf53",
         "name": "Change switch font",
-        "order": 29,
+        "order": 25,
         "width": 6,
         "height": 1,
         "format": "<style>\n/* Apply font style to all switch labels */\n.md-container label,\n.nr-dashboard-switch p {\n    font-family: \"Tahoma\", sans-serif !important;\n    font-size: 10px !important;\n    font-weight: normal !important;\n    color: black !important;\n}\n\n/* Target a specific switch label by its text */\nmd-switch:has(span:contains(\"Your Switch Label\")) {\n    font-family: \"Gill Sans\", sans-serif !important;\n    font-size: 20px !important;\n    color: red !important;\n}\n\n/* Reduce spacing between switch label and button */\n.nr-dashboard-switch {\n    display: flex !important;\n    align-items: center !important; /* Ensures vertical alignment */\n}\n\n.nr-dashboard-switch md-switch {\n    margin-left: -7px !important; /* Moves the switch closer to the text */\n}\n\n/* Optionally, target a specific switch label */\n.nr-dashboard-switch span {\n    margin-right: 0px !important;\n    padding-right: 0px !important;\n}\n</style>\n",
@@ -6073,7 +5888,7 @@
         "z": "0e1f3206f48adf14",
         "g": "06c6cdf71851940d",
         "name": "Set currentLogFile",
-        "func": "// Stop any previously scheduled timeout\nlet timeoutID = flow.get(\"csvRotationTimeoutID\");\nif (timeoutID) {\n    clearTimeout(timeoutID);\n    flow.set(\"csvRotationTimeoutID\", null);\n}\n\n// Check system status\nlet isRunning = flow.get(\"System_Running_test\") === true;\n\nif (isRunning) {\n    // Generate new timestamped file name\n    let timestamp = new Date().toLocaleString(\"sv-SE\").replace(\" \", \"_\").replace(/:/g, \"-\");\n    let filename = `/app/files/Data/${timestamp}.csv`;\n\n    flow.set(\"currentLogFile\", filename);\n\n    // Output the new filename\n    msg.payload = filename;\n    node.send([msg]);\n}\n\n// Schedule the next filename rotation in 1 hour\nlet newTimeout = setTimeout(() => {\n    node.send([{ payload: \"rotateCSV\" }]);  // Loop back via switch node\n}, 30000); // 1 hour in milliseconds\n\nflow.set(\"csvRotationTimeoutID\", newTimeout);\n\nreturn null;\n\n",
+        "func": "// Stop any previously scheduled timeout\nlet timeoutID = flow.get(\"csvRotationTimeoutID\");\nif (timeoutID) {\n    clearTimeout(timeoutID);\n    flow.set(\"csvRotationTimeoutID\", null);\n}\n\n// Check system status\nlet isRunning = flow.get(\"System_Running\") === true;\n\nif (isRunning) {\n    // Generate new timestamped file name\n    let timestamp = new Date().toLocaleString(\"sv-SE\").replace(\" \", \"_\").replace(/:/g, \"-\");\n    let filename = `/app/files/Data/${timestamp}.csv`;\n\n    flow.set(\"currentLogFile\", filename);\n\n    // Output the new filename\n    msg.payload = filename;\n    node.send([msg]);\n}\n\n// Schedule the next filename rotation in 1 hour\nlet newTimeout = setTimeout(() => {\n    node.send([{ payload: \"rotateCSV\" }]);  // Loop back via switch node\n}, 30000); // 1 hour in milliseconds\n\nflow.set(\"csvRotationTimeoutID\", newTimeout);\n\nreturn null;\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6201,7 +6016,7 @@
         "z": "0e1f3206f48adf14",
         "g": "06c6cdf71851940d",
         "name": "Trigger",
-        "func": "flow.set(\"influxMeasurement\",\"testID1\");\n\n// Output 1: triggers data logging\nlet logTrigger = { payload: \"triggerLog\" };\n\n// Output 2: triggers CSV file rotation\nlet rotateTrigger = { payload: \"rotateCSV\" };\n\nflow.set(\"System_Running_test\", true);\n\n// Send each to a different output\nreturn [logTrigger, rotateTrigger];",
+        "func": "flow.set(\"influxMeasurement\",\"testID1\");\n\n// Output 1: triggers data logging\nlet logTrigger = { payload: \"triggerLog\" };\n\n// Output 2: triggers CSV file rotation\nlet rotateTrigger = { payload: \"rotateCSV\" };\n\n// flow.set(\"System_Running_test\", true);\n\n// Send each to a different output\nreturn [logTrigger, rotateTrigger];",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -8368,7 +8183,7 @@
         "g": "b2387cf1c1f9066f",
         "name": "",
         "group": "2d8055515cc5bf53",
-        "order": 27,
+        "order": 23,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -8914,7 +8729,7 @@
         "templateScope": "local",
         "className": "",
         "x": 800,
-        "y": 4760,
+        "y": 4820,
         "wires": [
             [
                 "7389a894f1605cf3"
@@ -8929,7 +8744,7 @@
         "name": "Warning window",
         "info": "",
         "x": 1000,
-        "y": 4700,
+        "y": 4760,
         "wires": []
     },
     {
@@ -8947,5 +8762,61 @@
         "x": 3110,
         "y": 1040,
         "wires": []
+    },
+    {
+        "id": "c34891ab102b693c",
+        "type": "ui_switch",
+        "z": "0e1f3206f48adf14",
+        "g": "adbe011cfa336e78",
+        "name": "",
+        "label": "HEX210",
+        "tooltip": "",
+        "group": "2d8055515cc5bf53",
+        "order": 14,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 580,
+        "y": 4520,
+        "wires": [
+            [
+                "c6f66897a719fc1a"
+            ]
+        ]
+    },
+    {
+        "id": "c6f66897a719fc1a",
+        "type": "function",
+        "z": "0e1f3206f48adf14",
+        "g": "adbe011cfa336e78",
+        "name": "HEX210",
+        "func": "if (msg.payload === true) {\n    // When switch is turned ON, set HMI_Start to true for 0.2s\n    var msg1 = { payload: { \"tag\": \"HEX210_HMI_Run\", \"setpoint\": true } };\n\n    setTimeout(() => {\n        var msg2 = { payload: { \"tag\": \"HEX210_HMI_Run\", \"setpoint\": false } };\n        node.send(msg2);\n    }, 200);\n\n    return msg1;\n} else {\n    // When switch is turned OFF, set HMI_Stop to true for 0.2s\n    var msg3 = { payload: { \"tag\": \"HEX210_HMI_Stop\", \"setpoint\": true } };\n\n    setTimeout(() => {\n        var msg4 = { payload: { \"tag\": \"HEX210_HMI_Stop\", \"setpoint\": false } };\n        node.send(msg4);\n    }, 200);\n\n    return msg3;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 4520,
+        "wires": [
+            [
+                "655caca86ec029a9"
+            ]
+        ]
     }
 ]
