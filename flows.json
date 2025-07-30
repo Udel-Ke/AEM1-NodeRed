@@ -50,7 +50,9 @@
             "d574e9d2ae32d3ae",
             "b3017782a7ed1b07",
             "aff089f10d47c071",
-            "3c13fa52a4957e3a"
+            "3c13fa52a4957e3a",
+            "4b88c132e438cbe5",
+            "425154e1d97155fe"
         ],
         "x": 54,
         "y": 2579,
@@ -2019,7 +2021,7 @@
         "y": 2660,
         "wires": [
             [
-                "3ae3b1dd7f0614df"
+                "425154e1d97155fe"
             ]
         ]
     },
@@ -3050,7 +3052,7 @@
         "z": "0e1f3206f48adf14",
         "g": "a9e7fb168fe4a14b",
         "name": "Get alarms",
-        "func": "// Define the alarm messages\nconst alarms = {\n    \"LT201_Timer.Done\": \"SEP200 low. System will shut down if level remains low.\",\n    \"LT203_Timer.Done\": \"SEP200 over-filled. System will shut down if level remains high.\",\n    \"LT301_Timer.Done\": \"SEP300 low. System will shut down if level remains low.\",\n    \"LT303_Timer.Done\": \"SEP300 over-filled. System will shut down if level remains high.\",\n    \"ResinChange_Alarm\": \"Change resin bottle after this run.\",\n    \"Temp_Alarm\": \"Water temperature approaching shut down limit.\",\n    \"CellTemp_Alarm\": \"Cell temperature approaching shut down limit.\",\n    \"InPressure_Alarm\": \"Inlet pressure approaching limit.\",\n    \"Pressure_Alarm\": \"Backpressure approaching shut down limit.\",\n    \"PressureDrop_Alarm\": \"Backpressure approaching lower shut down limit.\",\n    \"PressureDrop_SDAlarm\": \"Backpressure too low. System will shut down.\",\n    \"Conductivity_Alarm\": \"Conductivity approaching maximum acceptable level.\",\n    \"Flow_Alarm\": \"Flow control may be malfunctioning.\",\n    \"Current_Alarm\": \"Cell current deviating. Power supply may be malfunctioning.\",\n    \"UnderVoltage_Alarm\": \"Cell voltage is dropping below minimum desired voltage.\",\n    \"OverVoltage_Alarm\": \"Cell voltage is rising above maximum desired voltage.\",\n    \"LEL_Alarm\": \"Caution: Lower LEL limit reached.\",\n    \"Leak Detected\": \"Water detected. Check for leaks.\",\n    \"Leak Confirmed\": \"Leak confirmed. System will shut down.\",\n    \"HCDVoltage_Alarm\": \"Voltage powering LEL sensor deviating from required voltage.\",\n    \"Fume Hood OK\": \"Low flow detected in fume hood. System will shut down.\",\n    \"EStop_Not_Tripped\": \"EStop activated. System will shut down.\",\n    \"Air Monitor OK\": \"Room air monitor error. System will shut down.\",\n    \"Temp_SDAlarm\": \"Water temperature reached maximum. System will shut down.\",\n    \"TCError_Alarm\": \"Thermocouple error. System will shut down.\",\n    \"InPressure_SDAlarm\": \"Inlet pressure reached limit. System will shut down.\",\n    \"Pressure_SDAlarm\": \"Backpressure reached limit. System will shut down.\",\n    \"Conductivity_SDAlarm\": \"Conductivity reached limit. System will shut down.\",\n    \"Flow_SDTimer.Done\": \"Flow control malfunctioning. System will shut down.\",\n    \"UnderVoltage_SDTimer.Done\": \"Cell voltage too low. System will shut down.\",\n    \"OverVoltage_SDTimer.Done\": \"Cell voltage too high. System will shut down.\",\n    \"Current_SDTimer.Done\": \"Cell current major deviation from SP. System will shut down.\",\n    \"LT201_SDTimer.Done\": \"SEP200 low level uncorrected. System will shut down.\",\n    \"LT203_SDTimer.Done\": \"SEP200 over-fill uncorrected. System will shut down.\",\n    \"LT301_SDTimer.Done\": \"SEP300 low level uncorrected. System will shut down.\",\n    \"LT303_SDTimer.Done\": \"SEP300 over-fill uncorrected. System will shut down.\",\n    \"HTLC_HTR201\": \"HTR201 temperature limit reached. System will shut down.\",\n    \"HTLC_HTRCell\": \"HTRCell temperature limit reached. System will shut down.\",\n    \"HCDVoltage_SDTimer.Done\": \"Voltage powering LEL sensor uncorrected. System will shut down.\",\n    \"PressureDrop_SDTimer.Done\": \"Backpressure dropped below minimum. System will shut down.\",\n    \"CellTemp_SDAlarm\": \"Cell temperature reached limit. System will shut down.\",\n    \"LEL_SDAlarm\": \"Higher LEL limit reached. System will shut down.\",\n    \"Battery Low\": \"UPS battery low.\",\n    \"Power Lost\": \"Power lost. UPS in battery mode.\",\n    \"Battery Fault\": \"UPS battery fault.\",\n    \"PS110\": \"Nitrogen purge pressure low.\",\n    \"PS110_Bad\": \"PS110 Bad\"\n}\n\n// Store the alarms object as a flow variable\nflow.set(\"alarms\", alarms);\n\nnode.status({ fill: \"green\", shape: \"dot\", text: \"Alarms stored in flow\" });\n\n// Get the number of alarms dynamically\nconst numAlarms = Object.keys(alarms).length;\n\n// Define the starting Modbus address for alarm coils\nconst startAddress = 100;  // Modbus address 00100\n\n// Create the Modbus Flex Read payload\nmsg.payload = {\n    'fc': 1,  // Function code 1 (Read Coils)\n    'unitid': 1,  // Modbus device ID (change if necessary)\n    'address': startAddress,  // Starting coil address\n    'quantity': numAlarms  // Dynamically set quantity based on alarm count\n};\n\nreturn msg;\n",
+        "func": "// Define the alarm messages\nconst alarms = {\n    \"LT201_Timer.Done\": \"SEP200 low. System will shut down if level remains low.\",\n    \"LT203_Timer.Done\": \"SEP200 over-filled. System will shut down if level remains high.\",\n    \"LT301_Timer.Done\": \"SEP300 low. System will shut down if level remains low.\",\n    \"LT303_Timer.Done\": \"SEP300 over-filled. System will shut down if level remains high.\",\n    \"ResinChange_Alarm\": \"Change resin bottle after this run.\",\n    \"Temp_Alarm\": \"Water temperature approaching shut down limit.\",\n    \"CellTemp_Alarm\": \"Cell temperature approaching shut down limit.\",\n    \"InPressure_Alarm\": \"Inlet pressure approaching limit.\",\n    \"Pressure_Alarm\": \"Backpressure approaching shut down limit.\",\n    \"PressureDrop_Alarm\": \"Backpressure approaching lower shut down limit.\",\n    \"PressureDrop_SDAlarm\": \"Backpressure too low. System will shut down.\",\n    \"Conductivity_Alarm\": \"Conductivity approaching maximum acceptable level.\",\n    \"Flow_Alarm\": \"Flow control may be malfunctioning.\",\n    \"Current_Alarm\": \"Cell current deviating. Power supply may be malfunctioning.\",\n    \"UnderVoltage_Alarm\": \"Cell voltage is dropping below minimum desired voltage.\",\n    \"OverVoltage_Alarm\": \"Cell voltage is rising above maximum desired voltage.\",\n    \"LEL_Alarm\": \"Caution: Lower LEL limit reached.\",\n    \"Leak Detected\": \"Water detected. Check for leaks.\",\n    \"Leak Confirmed\": \"Leak confirmed. System will shut down.\",\n    \"HCDVoltage_Alarm\": \"Voltage powering LEL sensor deviating from required voltage.\",\n    \"Fume Hood OK\": \"Low flow detected in fume hood. System will shut down.\",\n    \"EStop_Not_Tripped\": \"EStop activated. System will shut down.\",\n    \"Air Monitor OK\": \"Room air monitor error. System will shut down.\",\n    \"Temp_SDAlarm\": \"Water temperature reached maximum. System will shut down.\",\n    \"TCError_Alarm\": \"Thermocouple error. System will shut down.\",\n    \"InPressure_SDAlarm\": \"Inlet pressure reached limit. System will shut down.\",\n    \"Pressure_SDAlarm\": \"Backpressure reached limit. System will shut down.\",\n    \"Conductivity_SDAlarm\": \"Conductivity reached limit. System will shut down.\",\n    \"Flow_SDTimer.Done\": \"Flow control malfunctioning. System will shut down.\",\n    \"UnderVoltage_SDTimer.Done\": \"Cell voltage too low. System will shut down.\",\n    \"OverVoltage_SDTimer.Done\": \"Cell voltage too high. System will shut down.\",\n    \"Current_SDTimer.Done\": \"Cell current major deviation from SP. System will shut down.\",\n    \"LT201_SDTimer.Done\": \"SEP200 low level uncorrected. System will shut down.\",\n    \"LT203_SDTimer.Done\": \"SEP200 over-fill uncorrected. System will shut down.\",\n    \"LT301_SDTimer.Done\": \"SEP300 low level uncorrected. System will shut down.\",\n    \"LT303_SDTimer.Done\": \"SEP300 over-fill uncorrected. System will shut down.\",\n    \"HTLC_HTR201\": \"HTR201 temperature limit reached. System will shut down.\",\n    \"HTLC_HTRCell\": \"HTRCell temperature limit reached. System will shut down.\",\n    \"HCDVoltage_SDTimer.Done\": \"Voltage powering LEL sensor uncorrected. System will shut down.\",\n    \"PressureDrop_SDTimer.Done\": \"Backpressure dropped below minimum. System will shut down.\",\n    \"CellTemp_SDAlarm\": \"Cell temperature reached limit. System will shut down.\",\n    \"LEL_SDAlarm\": \"Higher LEL limit reached. System will shut down.\",\n    \"Battery Low\": \"UPS battery low.\",\n    \"Power Lost\": \"Power lost. UPS in battery mode.\",\n    \"Battery Fault\": \"UPS battery fault.\",\n    \"PS110\": \"Nitrogen purge pressure low.\",\n}\n\n// Store the alarms object as a flow variable\nflow.set(\"alarms\", alarms);\n\nnode.status({ fill: \"green\", shape: \"dot\", text: \"Alarms stored in flow\" });\n\n// Get the number of alarms dynamically\nconst numAlarms = Object.keys(alarms).length;\n\n// Define the starting Modbus address for alarm coils\nconst startAddress = 100;  // Modbus address 00100\n\n// Create the Modbus Flex Read payload\nmsg.payload = {\n    'fc': 1,  // Function code 1 (Read Coils)\n    'unitid': 1,  // Modbus device ID (change if necessary)\n    'address': startAddress,  // Starting coil address\n    'quantity': numAlarms  // Dynamically set quantity based on alarm count\n};\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3283,7 +3285,7 @@
         "z": "0e1f3206f48adf14",
         "g": "28d6aa434baf0184",
         "name": "debug 21",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -4130,7 +4132,7 @@
         "z": "0e1f3206f48adf14",
         "g": "35a088b350aa3972",
         "name": "Status check",
-        "func": "// Retrieve coil status from flow context\nlet coilStatus = flow.get(\"modbusCoilStatus\") || {};\n\n// Define the relevant test phase tags\nlet phaseTags = [\n    \"Run_Phase_1\",\n    \"Run_Phase_2\",\n    \"RunPhase_3a\",\n    \"RunPhase_3\",\n    \"RunPhase 4\",  // Note the space — double-check your tag naming here\n    \"Finished\"\n];\n\n// Collect which phase tags are currently true\nlet activePhases = phaseTags.filter(tag => coilStatus[tag] === true);\n\n// Decision logic\nif (activePhases.length === 0) {\n    return { payload: \"Test not started\" };\n} else if (activePhases.length === 1) {\n    return { payload: activePhases[0] };\n} else {\n    return { payload: null };\n}\n",
+        "func": "// Retrieve coil status from flow context\nlet coilStatus = flow.get(\"modbusCoilStatus\") || {};\n\n// Define the relevant test phase tags\nlet phaseTags = [\n    \"Run_Phase_1\",\n    \"Run_Phase_2\",\n    \"Run_Phase_3a\",\n    \"Run_Phase_3\",\n    \"Run_Phase 4\",  // Note the space — double-check your tag naming here\n    \"Finished\"\n];\n\n// Collect which phase tags are currently true\nlet activePhases = phaseTags.filter(tag => coilStatus[tag] === true);\n\n// Decision logic\nif (activePhases.length === 0) {\n    return { payload: \"Test not started\" };\n} else if (activePhases.length === 1) {\n    return { payload: activePhases[0] };\n} else {\n    return { payload: null };\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4224,7 +4226,7 @@
         "z": "0e1f3206f48adf14",
         "g": "28d6aa434baf0184",
         "name": "debug 5",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -4241,7 +4243,7 @@
         "z": "0e1f3206f48adf14",
         "g": "28d6aa434baf0184",
         "name": "debug 6",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -4332,7 +4334,7 @@
         "z": "0e1f3206f48adf14",
         "g": "3c0806d8c07e2d4a",
         "name": "Check Last Heartbeat",
-        "func": "const now = Date.now();\nconst last = flow.get(\"lastHeartbeat\") || 0;\n\nif ((now - last) > 5000) {\n    flow.set(\"stopTest\", true);\n    //node.warn(\"PLC UNRESPONSIVE — Aborting test.\");\n    return { payload: \"PLC unresponsive — Test aborted\" };\n} else {\n    return null;\n}\n",
+        "func": "const now = Date.now();\nconst last = flow.get(\"lastHeartbeat\") || 0;\n\nif ((now - last) > 15000) {\n    flow.set(\"stopTest\", true);\n    //node.warn(\"PLC UNRESPONSIVE — Aborting test.\");\n    return { payload: \"PLC unresponsive — Test aborted\" };\n} else {\n    return null;\n}\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -5928,19 +5930,20 @@
         "z": "0e1f3206f48adf14",
         "g": "06c6cdf71851940d",
         "name": "Set currentLogFile",
-        "func": "// Stop any previously scheduled timeout\nlet timeoutID = flow.get(\"csvRotationTimeoutID\");\nif (timeoutID) {\n    clearTimeout(timeoutID);\n    flow.set(\"csvRotationTimeoutID\", null);\n}\n\n// Check system status\nlet isRunning = flow.get(\"System_Running\") === true;\n\nif (isRunning) {\n    // Generate new timestamped file name\n    let timestamp = new Date().toLocaleString(\"sv-SE\").replace(\" \", \"_\").replace(/:/g, \"-\");\n    let filename = `/app/files/Data/${timestamp}.csv`;\n\n    flow.set(\"currentLogFile\", filename);\n\n    // Output the new filename\n    msg.payload = filename;\n    node.send([msg]);\n}\n\n// Schedule the next filename rotation in 1 hour\nlet newTimeout = setTimeout(() => {\n    node.send([{ payload: \"rotateCSV\" }]);  // Loop back via switch node\n}, 30000); // 1 hour in milliseconds\n\nflow.set(\"csvRotationTimeoutID\", newTimeout);\n\nreturn null;\n\n",
+        "func": "// Stop any previously scheduled timeout\nlet timeoutID = flow.get(\"csvRotationTimeoutID\");\nif (timeoutID) {\n    clearTimeout(timeoutID);\n    flow.set(\"csvRotationTimeoutID\", null);\n}\n\n// Check system status\nlet isRunning = flow.get(\"System_Running\") === true;\n\nif (isRunning) {\n    // Generate new timestamped file name\n    let timestamp = new Date().toLocaleString(\"sv-SE\").replace(\" \", \"_\").replace(/:/g, \"-\");\n    let filename = `/app/files/Data/${timestamp}.csv`;\n\n    flow.set(\"currentLogFile\", filename);\n\n    // Output the new filename\n    msg.payload = filename;\n    node.send([msg]);\n}\n\n// Schedule the next filename rotation in 1 hr\nlet newTimeout = setTimeout(() => {\n    node.send([{ payload: \"rotateCSV\" }]);  // Loop back via switch node\n}, 3600000); // 1 hr in milliseconds\n\nflow.set(\"csvRotationTimeoutID\", newTimeout);\n\nreturn null;\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 410,
+        "x": 510,
         "y": 2780,
         "wires": [
             [
                 "95d53dd5427fb178",
-                "4f125d9708a25241"
+                "4f125d9708a25241",
+                "4b88c132e438cbe5"
             ]
         ]
     },
@@ -6056,14 +6059,14 @@
         "z": "0e1f3206f48adf14",
         "g": "06c6cdf71851940d",
         "name": "Trigger",
-        "func": "flow.set(\"influxMeasurement\",\"testID1\");\n\n// Output 1: triggers data logging\nlet logTrigger = { payload: \"triggerLog\" };\n\n// Output 2: triggers CSV file rotation\nlet rotateTrigger = { payload: \"rotateCSV\" };\n\n// flow.set(\"System_Running_test\", true);\n\n// Send each to a different output\nreturn [logTrigger, rotateTrigger];",
+        "func": "let testID = flow.get(\"testID\");\nflow.set(\"influxMeasurement\",\"testID1\");\n\n// Output 1: triggers data logging\nlet logTrigger = { payload: \"triggerLog\" };\n\n// Output 2: triggers CSV file rotation\nlet rotateTrigger = { payload: \"rotateCSV\" };\n\n// flow.set(\"System_Running_test\", true);\n\n// Send each to a different output\nreturn [logTrigger, rotateTrigger];",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 280,
+        "x": 400,
         "y": 2660,
         "wires": [
             [
@@ -6097,8 +6100,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 390,
-        "y": 2700,
+        "x": 490,
+        "y": 2720,
         "wires": [
             [
                 "8bc7b7d40bdb88bf"
@@ -6475,7 +6478,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 620,
+        "x": 700,
         "y": 2780,
         "wires": [
             [
@@ -7802,7 +7805,7 @@
         "z": "0e1f3206f48adf14",
         "g": "a9e7fb168fe4a14b",
         "name": "debug 30",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -7881,7 +7884,7 @@
         "z": "0e1f3206f48adf14",
         "g": "a9e7fb168fe4a14b",
         "name": "debug 23",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -8741,7 +8744,7 @@
         "z": "0e1f3206f48adf14",
         "g": "e1b6d5ba8d3de0b8",
         "name": "debug 17",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -8856,6 +8859,49 @@
         "wires": [
             [
                 "655caca86ec029a9"
+            ]
+        ]
+    },
+    {
+        "id": "4b88c132e438cbe5",
+        "type": "debug",
+        "z": "0e1f3206f48adf14",
+        "g": "06c6cdf71851940d",
+        "name": "debug 29",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 2820,
+        "wires": []
+    },
+    {
+        "id": "425154e1d97155fe",
+        "type": "delay",
+        "z": "0e1f3206f48adf14",
+        "g": "06c6cdf71851940d",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 220,
+        "y": 2660,
+        "wires": [
+            [
+                "3ae3b1dd7f0614df"
             ]
         ]
     }
